@@ -1,0 +1,68 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\psi3451\Documents\T1\aula_3\sc_1
+T_opt
+VecTm35=R]hn3MY=CJ?i4O3
+04 12 4 work step_counter arch 1
+=1-782bcbbffc7d-64380d2f-348-31f8
+o-quiet -auto_acc_if_foreign -work work +acc
+n@_opt
+OL;O;10.1d;51
+Pmy_package
+Z1 w1619651382
+Z2 dC:\Users\psi3451\Documents\T1\aula_3\sc_1
+Z3 8C:/Users/psi3451/Documents/T1/aula_3/sc_1/step_counter_1.vhd
+Z4 FC:/Users/psi3451/Documents/T1/aula_3/sc_1/step_counter_1.vhd
+l0
+L1
+VnV5zPDM00WTa6Vdb[QJHT2
+Z5 OL;C;10.1d;51
+32
+Z6 !s108 1681394983.741000
+Z7 !s90 -reportprogress|300|-work|work|C:/Users/psi3451/Documents/T1/aula_3/sc_1/step_counter_1.vhd|
+Z8 !s107 C:/Users/psi3451/Documents/T1/aula_3/sc_1/step_counter_1.vhd|
+Z9 o-work work
+Z10 tExplicit 1
+!s100 f782;LY59zfOl^N^G>LJR1
+!i10b 1
+Estep_counter
+R1
+Z11 DPx4 work 10 my_package 0 22 nV5zPDM00WTa6Vdb[QJHT2
+Z12 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z13 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z14 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+R2
+R3
+R4
+l0
+L19
+VE6@fZmiUI58gZL`@nd3bD1
+R5
+32
+R6
+R7
+R8
+R9
+R10
+!s100 em3NN4]e`nABC2TEFD`NB3
+!i10b 1
+Aarch
+R11
+R12
+R13
+R14
+DEx4 work 12 step_counter 0 22 E6@fZmiUI58gZL`@nd3bD1
+l50
+L38
+VZDOReg=PUWLh0N`f^]a;Y0
+R5
+32
+R6
+R7
+R8
+R9
+R10
+!s100 MO0>[O8Sb;M4?oieDPVK=2
+!i10b 1

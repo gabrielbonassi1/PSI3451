@@ -1,0 +1,181 @@
+force a_in 0
+force b_in 0
+force c_in 0
+run 50ns
+do C:/Users/psi3451/Documents/T1/aula_3/fa_3/fa_3.tcl
+restart
+do C:/Users/psi3451/Documents/T1/aula_3/fa_3/hamming_1.tcl
+restart -f
+do C:/Users/psi3451/Documents/T1/aula_3/fa_3/hamming_2.tcl
+do hamming_2.tcl
+do hamming_1.tcl
+quit -sim
+cd C:/Users/psi3451/Documents/T1/aula_3/fa_3_ml
+# reading C:\modeltech64_10.1d\win64/../modelsim.ini
+vlib work
+vcom -reportprogress 300 -work work C:/Users/psi3451/Documents/T1/aula_3/fa_3_ml/full_adder_3.vhd
+# Model Technology ModelSim SE-64 vcom 10.1d Compiler 2012.11 Nov  1 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity full_adder
+# -- Compiling architecture behaviour of full_adder
+vsim -gui -voptargs=+acc work.full_adder
+# vsim -gui -voptargs=+acc work.full_adder 
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.full_adder(behaviour)#1
+do hamming_1.tcl
+add wave sim:/full_adder/*
+do hamming_1.tcl
+do hamming_1.tcl
+do hamming_1.tcl
+do hamming_1.tcl
+quit -sim
+cd C:/Users/psi3451/Documents/T1/aula_3/fa_3_m2
+vlib work
+vcom -reportprogress 300 -work work C:/Users/psi3451/Documents/T1/aula_3/fa_3_m2/full_adder_3.vhd
+# Model Technology ModelSim SE-64 vcom 10.1d Compiler 2012.11 Nov  1 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity full_adder
+# -- Compiling architecture behaviour of full_adder
+vsim -gui -voptargs=+acc work.full_adder
+# vsim -gui -voptargs=+acc work.full_adder 
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.full_adder(behaviour)#1
+add wave sim:/full_adder/*
+do hamming_1.tcl
+quit -sim
+vcom -reportprogress 300 -work work C:/Users/psi3451/Documents/T1/aula_3/fa_3_m2/full_adder_3_m2.vhd
+# Model Technology ModelSim SE-64 vcom 10.1d Compiler 2012.11 Nov  1 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity full_adder
+# -- Compiling architecture behaviour of full_adder
+vdel -all -lib work
+vlib work
+vcom -reportprogress 300 -work work C:/Users/psi3451/Documents/T1/aula_3/fa_3_m2/full_adder_3_m2.vhd
+# Model Technology ModelSim SE-64 vcom 10.1d Compiler 2012.11 Nov  1 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity full_adder
+# -- Compiling architecture behaviour of full_adder
+vsim -gui -voptargs=+acc work.full_adder
+# vsim -gui -voptargs=+acc work.full_adder 
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.full_adder(behaviour)#1
+add wave sim:/full_adder/*
+do hamming_1.tcl
+quit -sim
+cd C:/Users/psi3451/Documents/T1/aula_3/fa_4
+vlib work
+vcom -reportprogress 300 -work work C:/Users/psi3451/Documents/T1/aula_3/fa_4/full_adder_4.vhd
+# Model Technology ModelSim SE-64 vcom 10.1d Compiler 2012.11 Nov  1 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity full_adder_4
+# -- Compiling architecture behaviour of full_adder_4
+vsim -gui -voptargs=+acc work.full_adder_4
+# vsim -gui -voptargs=+acc work.full_adder_4 
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.full_adder_4(behaviour)#1
+do hamming_1.tcl
+add wave sim:/full_adder_4/*
+do hamming_1.tcl
+add wave -r sim:/full_adder_4/*
+add wave \
+/full_adder_4/line__19/aux_xor \
+/full_adder_4/line__19/aux_and_1 \
+/full_adder_4/line__19/aux_and_2 \
+/full_adder_4/line__19/aux_and_3 \
+/full_adder_4/line__19/c_out_aux \
+/full_adder_4/line__19/z_out_aux 
+do hamming_1.tcl
+quit -sim
+cd C:/Users/psi3451/Documents/T1/aula_3/fa_4_m
+vlib work
+vcom -reportprogress 300 -work work C:/Users/psi3451/Documents/T1/aula_3/fa_4_m/full_adder_4_m.vhd
+# Model Technology ModelSim SE-64 vcom 10.1d Compiler 2012.11 Nov  1 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity full_adder_4
+# -- Compiling architecture behaviour of full_adder_4
+vsim -gui -voptargs=+acc work.full_adder_4
+# vsim -gui -voptargs=+acc work.full_adder_4 
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.full_adder_4(behaviour)#1
+add wave sim:/full_adder_4/*
+add wave \
+/full_adder_4/line__19/aux_xor \
+/full_adder_4/line__19/aux_and_1 \
+/full_adder_4/line__19/aux_and_2 \
+/full_adder_4/line__19/aux_and_3 \
+/full_adder_4/line__19/c_out_aux \
+/full_adder_4/line__19/z_out_aux 
+do hamming_1.tcl
+quit -sim
+cd C:/Users/psi3451/Documents/T1/aula_3/rb_1
+vlib work
+vcom -reportprogress 300 -work work C:/Users/psi3451/Documents/T1/aula_3/rb_1/reg_bank_simple_1.vhd
+# Model Technology ModelSim SE-64 vcom 10.1d Compiler 2012.11 Nov  1 2012
+# -- Loading package STANDARD
+# -- Compiling package my_package
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package my_package
+# -- Compiling entity reg_bank_simple
+# -- Compiling architecture dataflow_case of reg_bank_simple
+vsim -gui -voptargs=+acc work.reg_bank_simple
+# vsim -gui -voptargs=+acc work.reg_bank_simple 
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.my_package
+# Loading work.reg_bank_simple(dataflow_case)#1
+add wave -r sim:/reg_bank_simple/*
+add wave -r /*
+force -freeze sim:/reg_bank_simple/out_sel INIT_OUT 0
+run 50ns
+force -freeze sim:/reg_bank_simple/out_sel {GURU_OUT} 0
+# ** Error: (vsim-4026) Value "guru_out" does not represent a literal of the enumeration type.
+# ** Error: (vsim-4011) Invalid force value: {GURU_OUT} 0.
+# 
+force -freeze sim:/reg_bank_simple/out_sel {GURU_OUT} 0
+# ** Error: (vsim-4026) Value "guru_out" does not represent a literal of the enumeration type.
+# ** Error: (vsim-4011) Invalid force value: {GURU_OUT} 0.
+# 
+force -freeze sim:/reg_bank_simple/out_sel GURU_OUT 0
+# ** Error: (vsim-4026) Value "guru" does not represent a literal of the enumeration type.
+# ** Error: (vsim-4011) Invalid force value: GURU _OUT 0.
+# 
+force -freeze sim:/reg_bank_simple/out_sel GURU_PREV_OUT 0
+run 50ns
+force -freeze sim:/reg_bank_simple/out_sel GURU_OUT 0
+run 50ns

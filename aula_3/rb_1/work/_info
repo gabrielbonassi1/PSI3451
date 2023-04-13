@@ -1,0 +1,66 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\psi3451\Documents\T1\aula_3\rb_1
+T_opt
+VNTPI?j60Q]JDmeXLA[D2O1
+04 15 13 work reg_bank_simple dataflow_case 1
+=1-782bcbbffc7d-643807bf-143-2a08
+o-quiet -auto_acc_if_foreign -work work +acc
+n@_opt
+OL;O;10.1d;51
+Pmy_package
+Z1 w1680887326
+Z2 dC:\Users\psi3451\Documents\T1\aula_3\rb_1
+Z3 8C:/Users/psi3451/Documents/T1/aula_3/rb_1/reg_bank_simple_1.vhd
+Z4 FC:/Users/psi3451/Documents/T1/aula_3/rb_1/reg_bank_simple_1.vhd
+l0
+L13
+Vn_cKaYkS]]@:zjIM2k5^W1
+Z5 OL;C;10.1d;51
+32
+Z6 !s108 1681393559.378000
+Z7 !s90 -reportprogress|300|-work|work|C:/Users/psi3451/Documents/T1/aula_3/rb_1/reg_bank_simple_1.vhd|
+Z8 !s107 C:/Users/psi3451/Documents/T1/aula_3/rb_1/reg_bank_simple_1.vhd|
+Z9 o-work work
+Z10 tExplicit 1
+!s100 ?=:IZBS7VZA^NIMj`Wcd^2
+!i10b 1
+Ereg_bank_simple
+R1
+Z11 DPx4 work 10 my_package 0 22 n_cKaYkS]]@:zjIM2k5^W1
+Z12 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z13 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+R2
+R3
+R4
+l0
+L32
+V0]beXFzMnnVg2LDC7EYAL3
+R5
+32
+R6
+R7
+R8
+R9
+R10
+!s100 WNLU1A556@D[o8m0[kQd:2
+!i10b 1
+Adataflow_case
+R11
+R12
+R13
+DEx4 work 15 reg_bank_simple 0 22 0]beXFzMnnVg2LDC7EYAL3
+l59
+L50
+VaG8Ql;5n]1I7R?KHz9GYS1
+R5
+32
+R6
+R7
+R8
+R9
+R10
+!s100 HD=D181G@VT?6MPz:f_aa3
+!i10b 1

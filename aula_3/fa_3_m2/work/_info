@@ -1,0 +1,47 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\psi3451\Documents\T1\aula_3\fa_3_m2
+T_opt
+Vnf@aU24<Pj[d=EjZz<O>;1
+04 10 9 work full_adder behaviour 1
+=1-782bcbbffc7d-64380028-3ce-1a50
+o-quiet -auto_acc_if_foreign -work work +acc
+n@_opt
+OL;O;10.1d;51
+Efull_adder
+Z1 w1681391435
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\psi3451\Documents\T1\aula_3\fa_3_m2
+Z5 8C:/Users/psi3451/Documents/T1/aula_3/fa_3_m2/full_adder_3_m2.vhd
+Z6 FC:/Users/psi3451/Documents/T1/aula_3/fa_3_m2/full_adder_3_m2.vhd
+l0
+L4
+V[TBh`Xa[Ro=in=82]DIW73
+Z7 OL;C;10.1d;51
+32
+Z8 !s108 1681391642.914000
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/psi3451/Documents/T1/aula_3/fa_3_m2/full_adder_3_m2.vhd|
+Z10 !s107 C:/Users/psi3451/Documents/T1/aula_3/fa_3_m2/full_adder_3_m2.vhd|
+Z11 o-work work
+Z12 tExplicit 1
+!s100 7PS:lkTa;DYbVlGf1>7=c3
+!i10b 1
+Abehaviour
+R2
+R3
+DEx4 work 10 full_adder 0 22 [TBh`Xa[Ro=in=82]DIW73
+l18
+L14
+Vll=GVa?TUie_;b^RkjFBC3
+R7
+32
+R8
+R9
+R10
+R11
+R12
+!s100 H2K6f:X[6U2_hR0J54BEo2
+!i10b 1
