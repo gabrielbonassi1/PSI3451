@@ -1,0 +1,97 @@
+
+
+
+                        Clock Frequency Report
+
+	Clock                : Frequency
+      ------------------------------------
+
+	clk                  : 370.8 MHz
+
+
+                        Critical Path Report
+
+
+Critical path #1, (path slack =  0.2):
+
+NAME                                               GATE              ARRIVAL              LOAD
+----------------------------------------------------------------------------------------------
+clock information not specified
+delay thru clock network                                             0.00 (worst case)
+
+
+cnt_strat/reg_cnt_s(0)/Q                           dff         0.00  0.41 dn             0.04
+cnt_strat/cnt_s(0)                        (net)                0.00  0.41 dn   (fan)     6.00
+cnt_strat/ix822/A3                                 nand04      0.00  0.41 dn             0.00
+cnt_strat/ix822/Y                                  nand04      0.12  0.53 up             0.01
+cnt_strat/nx821                           (net)                0.00  0.53 up   (fan)     2.00
+cnt_strat/ix929/A                                  inv01       0.00  0.53 up             0.00
+cnt_strat/ix929/Y                                  inv01       0.06  0.59 dn             0.01
+cnt_strat/nx930                           (net)                0.00  0.59 dn   (fan)     1.00
+cnt_strat/ix141/A3                                 and04       0.00  0.59 dn             0.00
+cnt_strat/ix141/Y                                  and04       0.21  0.80 dn             0.03
+cnt_strat/nx509                           (net)                0.00  0.80 dn   (fan)     4.00
+cnt_strat/ix684/A2                                 nand03      0.00  0.80 dn             0.00
+cnt_strat/ix684/Y                                  nand03      0.13  0.92 up             0.02
+cnt_strat/nx683                           (net)                0.00  0.92 up   (fan)     3.00
+cnt_strat/ix937/A                                  inv01       0.00  0.92 up             0.00
+cnt_strat/ix937/Y                                  inv01       0.06  0.99 dn             0.01
+cnt_strat/nx938                           (net)                0.00  0.99 dn   (fan)     1.00
+cnt_strat/ix231/A3                                 and04       0.00  0.99 dn             0.00
+cnt_strat/ix231/Y                                  and04       0.15  1.14 dn             0.01
+cnt_strat/nx515                           (net)                0.00  1.14 dn   (fan)     2.00
+cnt_strat/ix654/A2                                 nand03      0.00  1.14 dn             0.00
+cnt_strat/ix654/Y                                  nand03      0.12  1.26 up             0.02
+cnt_strat/nx653                           (net)                0.00  1.26 up   (fan)     4.00
+cnt_strat/ix943/A                                  inv01       0.00  1.26 up             0.00
+cnt_strat/ix943/Y                                  inv01       0.06  1.32 dn             0.01
+cnt_strat/nx944                           (net)                0.00  1.32 dn   (fan)     1.00
+cnt_strat/ix321/A3                                 and04       0.00  1.32 dn             0.00
+cnt_strat/ix321/Y                                  and04       0.16  1.48 dn             0.01
+cnt_strat/nx521                           (net)                0.00  1.48 dn   (fan)     2.00
+cnt_strat/ix624/A2                                 nand03      0.00  1.48 dn             0.00
+cnt_strat/ix624/Y                                  nand03      0.12  1.60 up             0.02
+cnt_strat/nx623                           (net)                0.00  1.60 up   (fan)     4.00
+cnt_strat/ix949/A                                  inv01       0.00  1.60 up             0.00
+cnt_strat/ix949/Y                                  inv01       0.06  1.66 dn             0.01
+cnt_strat/nx950                           (net)                0.00  1.66 dn   (fan)     1.00
+cnt_strat/ix411/A3                                 and04       0.00  1.66 dn             0.00
+cnt_strat/ix411/Y                                  and04       0.16  1.82 dn             0.01
+cnt_strat/nx529                           (net)                0.00  1.82 dn   (fan)     2.00
+cnt_strat/ix594/A2                                 nand03      0.00  1.82 dn             0.00
+cnt_strat/ix594/Y                                  nand03      0.12  1.94 up             0.02
+cnt_strat/nx593                           (net)                0.00  1.94 up   (fan)     4.00
+cnt_strat/ix955/A                                  inv01       0.00  1.94 up             0.00
+cnt_strat/ix955/Y                                  inv01       0.06  2.00 dn             0.01
+cnt_strat/nx956                           (net)                0.00  2.00 dn   (fan)     1.00
+cnt_strat/ix501/A3                                 and04       0.00  2.00 dn             0.00
+cnt_strat/ix501/Y                                  and04       0.16  2.16 dn             0.01
+cnt_strat/nx534                           (net)                0.00  2.16 dn   (fan)     2.00
+cnt_strat/ix569/A2                                 nand03      0.00  2.16 dn             0.00
+cnt_strat/ix569/Y                                  nand03      0.12  2.28 up             0.02
+cnt_strat/nx568                           (net)                0.00  2.28 up   (fan)     4.00
+cnt_strat/ix927/A                                  inv01       0.00  2.28 up             0.00
+cnt_strat/ix927/Y                                  inv01       0.05  2.33 dn             0.01
+cnt_strat/nx928                           (net)                0.00  2.33 dn   (fan)     1.00
+cnt_strat/ix573/A2                                 nand03      0.00  2.33 dn             0.00
+cnt_strat/ix573/Y                                  nand03      0.11  2.43 up             0.02
+cnt_strat/nx926                           (net)                0.00  2.43 up   (fan)     1.00
+cnt_strat/ix556/A1                                 xnor2       0.00  2.43 up             0.00
+cnt_strat/ix556/Y                                  xnor2       0.07  2.50 dn             0.01
+cnt_strat/nx555                           (net)                0.00  2.50 dn   (fan)     1.00
+cnt_strat/ix579/A0                                 nor02       0.00  2.50 dn             0.00
+cnt_strat/ix579/Y                                  nor02       0.12  2.62 up             0.01
+cnt_strat/nx578                           (net)                0.00  2.62 up   (fan)     1.00
+cnt_strat/reg_cnt_s(31)/D                          dff         0.00  2.62 up             0.00
+data arrival time                                                    2.62
+
+
+data required time  (default specified - setup time)                  2.82
+----------------------------------------------------------------------------------------------
+data required time                                                   2.82
+data arrival time                                                    2.62
+                                                                  ----------
+slack                                                               0.20
+----------------------------------------------------------------------------------------------
+
+

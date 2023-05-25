@@ -1,0 +1,1427 @@
+LeonardoSpectrum Level 3 - 2012b.6 (Release Production Release, compiled Aug  8 2012 at 15:10:47)
+Copyright 1990-2010 Mentor Graphics.  All rights reserved.
+Portions copyright 1991-2010 Compuware Corporation
+
+Session history will be logged to file 'C:/MGC/LeoSpec/LS2012b_6/demo/leospec.his'
+--
+-- Welcome to LeonardoSpectrum Level 3
+-- Run By psi3451@GD-E4
+-- Run Started On Thu May 25 08:39:17 Hora oficial do Brasil 2023
+--
+Reading library file `C:\MGC\LeoSpec\LS2012b_6\\lib\tsmc035_typ.syn`...
+Library version = 3.0 Release : Patch (a) : 09/13/04
+Delays assume: Process=typical Temp= 27.0 C  Voltage=3.30 V  
+Info: setting encoding to auto
+Info, Working Directory is now 'C:/Users/psi3451/Documents/T1/aula_9/base_control_1/sintese'
+Info, History file moved to new working directory
+Info, Log file moved to new working directory
+-- Reading file C:\MGC\LeoSpec\LS2012b_6\\data\standard.vhd for unit standard
+-- Loading package standard into library std
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd into library work
+-- Reading file C:\MGC\LeoSpec\LS2012b_6\\data\std_1164.vhd for unit STD_LOGIC_1164
+-- Loading package std_logic_1164 into library IEEE
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 6: Info, Enumerated type SPEED with 4 elements encoded as binary.
+Encodings for SPEED values
+        value    SPEED[1-0]
+===========================
+          ONE_X  00
+          TWO_X  01
+         FOUR_X  10
+        EIGHT_X  11
+
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 14: Info, Enumerated type CONTROL_SELECT with 2 elements encoded as binary.
+Encodings for CONTROL_SELECT values
+   value    CONTROL_SELECT[0]
+=============================
+     INIT_CONTR  0
+     GURU_CONTR  1
+
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 20: Info, Enumerated type RB_SEL with 5 elements encoded as onehot.
+Encodings for RB_SEL values
+        value    RB_SEL[4-0]
+============================
+       INIT_OUT  ----1
+       GURU_OUT  ---1-
+  GURU_PREV_OUT  --1--
+       DISC_OUT  -1---
+  DISC_PREV_OUT  1----
+
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 29: Info, Enumerated type CODE with 4 elements encoded as binary.
+Encodings for CODE values
+        value    CODE[1-0]
+==========================
+          BLANK  00
+           GURU  01
+           DISC  10
+            DUO  11
+
+-- Loading package wisdom_package into library work
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd into library work
+-- Reading file C:\MGC\LeoSpec\LS2012b_6\\data\numeric_std.vhd for unit NUMERIC_STD
+-- Loading package NUMERIC_STD into library IEEE
+-- Loading entity counter_trigger into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd",line 43: Info, Enumerated type STATE_CNT with 2 elements encoded as binary.
+Encodings for STATE_CNT values
+   value    STATE_CNT[0]
+========================
+           IDLE  0
+          COUNT  1
+
+-- Loading architecture arch of counter_trigger into library work
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd into library work
+-- Searching for SYNOPSYS package std_logic_arith..
+-- Reading file C:\MGC\LeoSpec\LS2012b_6\\data\syn_arit.vhd for unit std_logic_arith
+-- Loading package std_logic_arith into library IEEE
+-- Searching for SYNOPSYS package std_logic_unsigned..
+-- Reading file C:\MGC\LeoSpec\LS2012b_6\\data\syn_unsi.vhd for unit std_logic_unsigned
+-- Loading package STD_LOGIC_UNSIGNED into library IEEE
+-- Loading entity fsm_guru into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 38: Info, Enumerated type STATE_TYPE_MAIN with 11 elements encoded as onehot.
+Encodings for STATE_TYPE_MAIN values
+        value    STATE_TYPE_MAIN[10-0]
+======================================
+  START_WALKING  ----------1
+           RAND  ---------1-
+     WRITE_RAND  --------1--
+WAIT_COUNT_GURU  -------1---
+           INCR  ------1----
+CHECK_SAME_ADDR  -----1-----
+      WRITE_DUO  ----1------
+     WRITE_GURU  ---1-------
+     CHECK_LAST  --1--------
+           LAST  -1---------
+     CLEAR_PREV  1----------
+
+-- Loading architecture arch of fsm_guru into library work
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd into library work
+-- Loading entity fsm_init into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 35: Info, Enumerated type STATE_TYPE_INIT with 4 elements encoded as binary.
+Encodings for STATE_TYPE_INIT values
+        value    STATE_TYPE_INIT[1-0]
+=====================================
+           IDLE  00
+           ZERO  01
+       MEM_WALK  10
+           DONE  11
+
+-- Loading architecture arch of fsm_init into library work
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd into library work
+-- Loading entity fsm_main into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 43: Info, Enumerated type STATE_TYPE_MAIN with 6 elements encoded as onehot.
+Encodings for STATE_TYPE_MAIN values
+        value    STATE_TYPE_MAIN[5-0]
+=====================================
+INIT_ACTIVATION  -----1
+STEP_ACTIVATION  ----1-
+      CHECK_END  ---1--
+      HIT_POINT  --1---
+    CNT_PREPARE  -1----
+      CNT_START  1-----
+
+-- Loading architecture arch of fsm_main into library work
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd into library work
+-- Loading entity base_control into library work
+-- Loading architecture arch of base_control into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd",line 124: Warning, signal go_guru_s is never used.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd",line 124: Warning, signal go_guru_s is never assigned a value.
+-- Compiling root entity base_control(arch)
+-- Compiling entity fsm_main(arch)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 90: Info, others clause is never selected for synthesis.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 157: Info, others clause is never selected for synthesis.
+-- Compiling entity counter_trigger_500(arch)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd",line 40: Warning, initial value for cnt_s is ignored for synthesis.
+-- Compiling entity fsm_init(arch)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 66: Info, others clause is never selected for synthesis.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 127: Info, others clause is never selected for synthesis.
+-- Compiling entity fsm_guru(arch)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 95: Info, others clause is never selected for synthesis.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 237: Info, others clause is never selected for synthesis.
+-- Boundary optimization.
+-- Boundary optimization.
+-- Start pre-optimization for design .work.fsm_main.arch
+-- Start pre-optimization for design .work.counter_trigger_500.arch
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd", line 108:Info, Inferred counter instance 'cnt_s' of type 'counter_up_sclear_clock_32'
+-- Start pre-optimization for design .work.fsm_init.arch_unfold_1611
+-- Start pre-optimization for design .work.fsm_guru.arch_unfold_1626
+-- Start pre-optimization for design .work.base_control.arch
+-- Start pre-optimization for design .work.fsm_main.arch
+-- Start pre-optimization for design .work.counter_trigger_500.arch
+-- Start pre-optimization for design .work.fsm_init.arch_unfold_1611
+-- Start pre-optimization for design .work.fsm_guru.arch_unfold_1626
+-- Start pre-optimization for design .work.base_control.arch
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 6: Info, Enumerated type SPEED with 4 elements encoded as binary.
+Encodings for SPEED values
+        value    SPEED[1-0]
+===========================
+          ONE_X  00
+          TWO_X  01
+         FOUR_X  10
+        EIGHT_X  11
+
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 14: Info, Enumerated type CONTROL_SELECT with 2 elements encoded as binary.
+Encodings for CONTROL_SELECT values
+   value    CONTROL_SELECT[0]
+=============================
+     INIT_CONTR  0
+     GURU_CONTR  1
+
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 20: Info, Enumerated type RB_SEL with 5 elements encoded as onehot.
+Encodings for RB_SEL values
+        value    RB_SEL[4-0]
+============================
+       INIT_OUT  ----1
+       GURU_OUT  ---1-
+  GURU_PREV_OUT  --1--
+       DISC_OUT  -1---
+  DISC_PREV_OUT  1----
+
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 29: Info, Enumerated type CODE with 4 elements encoded as binary.
+Encodings for CODE values
+        value    CODE[1-0]
+==========================
+          BLANK  00
+           GURU  01
+           DISC  10
+            DUO  11
+
+-- Loading package wisdom_package into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 4: Warning, replacing wisdom_package in HDL library work.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd into library work
+-- Loading entity counter_trigger into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd",line 18: Warning, replacing counter_trigger in HDL library work.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd",line 43: Info, Enumerated type STATE_CNT with 2 elements encoded as binary.
+Encodings for STATE_CNT values
+   value    STATE_CNT[0]
+========================
+           IDLE  0
+          COUNT  1
+
+-- Loading architecture arch of counter_trigger into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd",line 34: Warning, replacing arch of entity counter_trigger.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd into library work
+-- Loading entity fsm_guru into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 18: Warning, replacing fsm_guru in HDL library work.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 38: Info, Enumerated type STATE_TYPE_MAIN with 11 elements encoded as onehot.
+Encodings for STATE_TYPE_MAIN values
+        value    STATE_TYPE_MAIN[10-0]
+======================================
+  START_WALKING  ----------1
+           RAND  ---------1-
+     WRITE_RAND  --------1--
+WAIT_COUNT_GURU  -------1---
+           INCR  ------1----
+CHECK_SAME_ADDR  -----1-----
+      WRITE_DUO  ----1------
+     WRITE_GURU  ---1-------
+     CHECK_LAST  --1--------
+           LAST  -1---------
+     CLEAR_PREV  1----------
+
+-- Loading architecture arch of fsm_guru into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 35: Warning, replacing arch of entity fsm_guru.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd into library work
+-- Loading entity fsm_init into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 18: Warning, replacing fsm_init in HDL library work.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 35: Info, Enumerated type STATE_TYPE_INIT with 4 elements encoded as binary.
+Encodings for STATE_TYPE_INIT values
+        value    STATE_TYPE_INIT[1-0]
+=====================================
+           IDLE  00
+           ZERO  01
+       MEM_WALK  10
+           DONE  11
+
+-- Loading architecture arch of fsm_init into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 32: Warning, replacing arch of entity fsm_init.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd into library work
+-- Loading entity fsm_main into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 18: Warning, replacing fsm_main in HDL library work.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 43: Info, Enumerated type STATE_TYPE_MAIN with 6 elements encoded as onehot.
+Encodings for STATE_TYPE_MAIN values
+        value    STATE_TYPE_MAIN[5-0]
+=====================================
+INIT_ACTIVATION  -----1
+STEP_ACTIVATION  ----1-
+      CHECK_END  ---1--
+      HIT_POINT  --1---
+    CNT_PREPARE  -1----
+      CNT_START  1-----
+
+-- Loading architecture arch of fsm_main into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 40: Warning, replacing arch of entity fsm_main.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd into library work
+-- Loading entity base_control into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd",line 20: Warning, replacing base_control in HDL library work.
+-- Loading architecture arch of base_control into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd",line 124: Warning, signal go_guru_s is never used.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd",line 124: Warning, signal go_guru_s is never assigned a value.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd",line 39: Warning, replacing arch of entity base_control.
+-- Compiling root entity base_control(arch)
+-- Compiling entity fsm_main(arch)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 90: Info, others clause is never selected for synthesis.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 157: Info, others clause is never selected for synthesis.
+-- Info, replacing fsm_main(arch)
+-- Compiling entity counter_trigger_500(arch)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd",line 40: Warning, initial value for cnt_s is ignored for synthesis.
+-- Info, replacing counter_trigger_500(arch)
+-- Compiling entity fsm_init(arch)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 66: Info, others clause is never selected for synthesis.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 127: Info, others clause is never selected for synthesis.
+-- Compiling entity fsm_guru(arch)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 95: Info, others clause is never selected for synthesis.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 237: Info, others clause is never selected for synthesis.
+-- Info, replacing base_control(arch)
+-- Boundary optimization.
+-- Boundary optimization.
+-- Start pre-optimization for design .work.fsm_main.arch
+-- Start pre-optimization for design .work.counter_trigger_500.arch
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd", line 108:Info, Inferred counter instance 'cnt_s' of type 'counter_up_sclear_clock_32'
+-- Start pre-optimization for design .work.fsm_init.arch_unfold_1611
+-- Start pre-optimization for design .work.fsm_guru.arch_unfold_1626
+-- Start pre-optimization for design .work.base_control.arch
+-- Start pre-optimization for design .work.fsm_main.arch
+-- Start pre-optimization for design .work.counter_trigger_500.arch
+-- Start pre-optimization for design .work.fsm_init.arch_unfold_1611
+-- Start pre-optimization for design .work.fsm_guru.arch_unfold_1626
+-- Start pre-optimization for design .work.base_control.arch
+-- Writing file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.xdb
+-- Writing XDB version 1999.1
+Info: setting register2register to 2.898551
+Info: setting input2register to 2.898551
+Info: setting register2output to 2.898551
+Info, Instances dissolved by autodissolve in View .work.base_control.arch
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd", line 135: main (fsm_main)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd", line 180: init (fsm_init)
+NO wire table is found
+-- Optimizing netlist .work.counter_trigger_500.arch
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+Re-checking DRC after adjustments
+-- Optimizing netlist .work.fsm_guru.arch_unfold_1626
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+-- Optimizing netlist .work.base_control.arch
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+Re-checking DRC after adjustments
+-- Final Design Rule Check..
+Re-checking DRC after adjustments
+Re-checking DRC after adjustments
+-- Start timing optimization for design .work.counter_trigger_500.arch
+Starting Timing Characterization...
+Starting Timing Analysis...
+NO wire table is found
+Timing analysis done, time = 0 CPU secs.
+Timing characterization done, time = 0 CPU secs.
+
+Initial Timing Optimization Statistics:
+---------------------------------------
+
+	Most Critical Slack    :       -5.7
+	Sum of Negative Slacks :     -146.5
+	Area                   :      308.3
+
+                                                             
+Final Timing Optimization Statistics:
+-------------------------------------
+
+	Most Critical Slack    :       -0.4
+	Sum of Negative Slacks :       -6.3
+	Area                   :      448.8
+
+	Total time taken : 0 cpu secs
+Re-checking DRC after adjustments
+-- Start timing optimization for design .work.fsm_guru.arch_unfold_1626
+No critical paths to optimize at this level
+-- Start timing optimization for design .work.base_control.arch
+Starting Timing Characterization...
+Starting Timing Analysis...
+NO wire table is found
+Timing analysis done, time = 0 CPU secs.
+Timing characterization done, time = 0 CPU secs.
+
+Initial Timing Optimization Statistics:
+---------------------------------------
+
+	Clock                  : Frequency
+      ------------------------------------
+
+	clk                    : 308.9 MHz
+
+
+	Most Critical Slack    :       -0.3
+	Sum of Negative Slacks :      -12.5
+	Area                   :     1147.7
+
+                                                             
+Final Timing Optimization Statistics:
+-------------------------------------
+
+	Clock                  : Frequency
+      ------------------------------------
+
+	clk                    : 308.9 MHz
+
+
+	Most Critical Slack    :       -0.3
+	Sum of Negative Slacks :      -12.5
+	Area                   :     1147.7
+
+	Total time taken : 0 cpu secs
+NO wire table is found
+
+
+
+                        Critical Path Report
+
+
+Critical path #1, (path slack = -0.3):
+
+NAME                                               GATE              ARRIVAL              LOAD
+----------------------------------------------------------------------------------------------
+clock information not specified
+delay thru clock network                                             0.00 (ideal)
+
+
+cnt_strat/reg_cnt_s(4)/Q                           dff         0.00  0.52 dn             0.05
+cnt_strat/ix1125/Y                                 buf16       0.25  0.77 dn             0.07
+cnt_strat/ix1113/Y                                 and04       0.29  1.06 dn             0.02
+cnt_strat/ix1114/Y                                 nand04_2x   0.18  1.24 up             0.02
+cnt_strat/reg_cnt_rdy/Y                            nor02_2x    0.16  1.40 dn             0.03
+cnt_strat/ix790/Y                                  or02        0.43  1.82 dn             0.05
+cnt_strat/ix1127/Y                                 buf16       0.29  2.11 dn             0.09
+cnt_strat/ix1038/Y                                 or03        0.44  2.55 dn             0.02
+cnt_strat/reg_nx564/Y                              oai332      0.25  2.80 up             0.01
+cnt_strat/ix1128/Y                                 buf02       0.22  3.03 up             0.02
+cnt_strat/reg_cnt_s(30)/D                          dff         0.00  3.03 up             0.00
+data arrival time                                                    3.03
+
+
+data required time  (default specified - setup time)                  2.69
+----------------------------------------------------------------------------------------------
+data required time                                                   2.69
+data arrival time                                                    3.03
+                                                                  ----------
+slack                                                               -0.34
+----------------------------------------------------------------------------------------------
+
+
+-- Writing file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.xdb
+-- Writing XDB version 1999.1
+Info: setting propagate_clock_delay to TRUE
+NO wire table is found
+Info: setting novendor_constraint_file to FALSE
+AutoWrite args are : -format VHDL base_control_gt.vhd
+-- Writing file base_control_gt.vhd
+Info, Library tsmc035_typ is already loaded. Setting it as target
+Info: setting encoding to auto
+Info, Working Directory is now 'C:/Users/psi3451/Documents/T1/aula_9/base_control_2'
+Info, History file moved to new working directory
+Info, Log file moved to new working directory
+Info, Library tsmc035_typ is already loaded. Setting it as target
+Info: setting encoding to auto
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 6: Info, Enumerated type SPEED with 4 elements encoded as binary.
+Encodings for SPEED values
+        value    SPEED[1-0]
+===========================
+          ONE_X  00
+          TWO_X  01
+         FOUR_X  10
+        EIGHT_X  11
+
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 14: Info, Enumerated type CONTROL_SELECT with 2 elements encoded as binary.
+Encodings for CONTROL_SELECT values
+   value    CONTROL_SELECT[0]
+=============================
+     INIT_CONTR  0
+     GURU_CONTR  1
+
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 20: Info, Enumerated type RB_SEL with 5 elements encoded as onehot.
+Encodings for RB_SEL values
+        value    RB_SEL[4-0]
+============================
+       INIT_OUT  ----1
+       GURU_OUT  ---1-
+  GURU_PREV_OUT  --1--
+       DISC_OUT  -1---
+  DISC_PREV_OUT  1----
+
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 29: Info, Enumerated type CODE with 4 elements encoded as binary.
+Encodings for CODE values
+        value    CODE[1-0]
+==========================
+          BLANK  00
+           GURU  01
+           DISC  10
+            DUO  11
+
+-- Loading package wisdom_package into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 4: Warning, replacing wisdom_package in HDL library work.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd into library work
+-- Loading entity counter_trigger into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd",line 18: Warning, replacing counter_trigger in HDL library work.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd",line 43: Info, Enumerated type STATE_CNT with 2 elements encoded as binary.
+Encodings for STATE_CNT values
+   value    STATE_CNT[0]
+========================
+           IDLE  0
+          COUNT  1
+
+-- Loading architecture arch of counter_trigger into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd",line 34: Warning, replacing arch of entity counter_trigger.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd into library work
+-- Loading entity fsm_guru into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 18: Warning, replacing fsm_guru in HDL library work.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 38: Info, Enumerated type STATE_TYPE_MAIN with 11 elements encoded as onehot.
+Encodings for STATE_TYPE_MAIN values
+        value    STATE_TYPE_MAIN[10-0]
+======================================
+  START_WALKING  ----------1
+           RAND  ---------1-
+     WRITE_RAND  --------1--
+WAIT_COUNT_GURU  -------1---
+           INCR  ------1----
+CHECK_SAME_ADDR  -----1-----
+      WRITE_DUO  ----1------
+     WRITE_GURU  ---1-------
+     CHECK_LAST  --1--------
+           LAST  -1---------
+     CLEAR_PREV  1----------
+
+-- Loading architecture arch of fsm_guru into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 35: Warning, replacing arch of entity fsm_guru.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd into library work
+-- Loading entity fsm_init into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 18: Warning, replacing fsm_init in HDL library work.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 35: Info, Enumerated type STATE_TYPE_INIT with 4 elements encoded as binary.
+Encodings for STATE_TYPE_INIT values
+        value    STATE_TYPE_INIT[1-0]
+=====================================
+           IDLE  00
+           ZERO  01
+       MEM_WALK  10
+           DONE  11
+
+-- Loading architecture arch of fsm_init into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 32: Warning, replacing arch of entity fsm_init.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd into library work
+-- Loading entity fsm_main into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 18: Warning, replacing fsm_main in HDL library work.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 43: Info, Enumerated type STATE_TYPE_MAIN with 6 elements encoded as onehot.
+Encodings for STATE_TYPE_MAIN values
+        value    STATE_TYPE_MAIN[5-0]
+=====================================
+INIT_ACTIVATION  -----1
+STEP_ACTIVATION  ----1-
+      CHECK_END  ---1--
+      HIT_POINT  --1---
+    CNT_PREPARE  -1----
+      CNT_START  1-----
+
+-- Loading architecture arch of fsm_main into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 40: Warning, replacing arch of entity fsm_main.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd into library work
+-- Loading entity base_control into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd",line 20: Warning, replacing base_control in HDL library work.
+-- Loading architecture arch of base_control into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd",line 124: Warning, signal go_guru_s is never used.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd",line 124: Warning, signal go_guru_s is never assigned a value.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd",line 39: Warning, replacing arch of entity base_control.
+-- Compiling root entity base_control(arch)
+-- Compiling entity fsm_main(arch)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 90: Info, others clause is never selected for synthesis.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 157: Info, others clause is never selected for synthesis.
+-- Info, replacing fsm_main(arch)
+-- Compiling entity counter_trigger_500(arch)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd",line 40: Warning, initial value for cnt_s is ignored for synthesis.
+-- Info, replacing counter_trigger_500(arch)
+-- Compiling entity fsm_init(arch)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 66: Info, others clause is never selected for synthesis.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 127: Info, others clause is never selected for synthesis.
+-- Compiling entity fsm_guru(arch)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 95: Info, others clause is never selected for synthesis.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 237: Info, others clause is never selected for synthesis.
+-- Info, replacing base_control(arch)
+-- Boundary optimization.
+-- Boundary optimization.
+-- Start pre-optimization for design .work.fsm_main.arch
+-- Start pre-optimization for design .work.counter_trigger_500.arch
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd", line 108:Info, Inferred counter instance 'cnt_s' of type 'counter_up_sclear_clock_32'
+-- Start pre-optimization for design .work.fsm_init.arch_unfold_1611
+-- Start pre-optimization for design .work.fsm_guru.arch_unfold_1626
+-- Start pre-optimization for design .work.base_control.arch
+-- Start pre-optimization for design .work.fsm_main.arch
+-- Start pre-optimization for design .work.counter_trigger_500.arch
+-- Start pre-optimization for design .work.fsm_init.arch_unfold_1611
+-- Start pre-optimization for design .work.fsm_guru.arch_unfold_1626
+-- Start pre-optimization for design .work.base_control.arch
+Info: setting register2register to 6.666667
+Info: setting input2register to 6.666667
+Info: setting register2output to 6.666667
+Info, Instances dissolved by autodissolve in View .work.base_control.arch
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd", line 135: main (fsm_main)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd", line 180: init (fsm_init)
+NO wire table is found
+-- Optimizing netlist .work.counter_trigger_500.arch
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+Re-checking DRC after adjustments
+-- Optimizing netlist .work.fsm_guru.arch_unfold_1626
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+-- Optimizing netlist .work.base_control.arch
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+Re-checking DRC after adjustments
+-- Final Design Rule Check..
+Re-checking DRC after adjustments
+-- Start timing optimization for design .work.counter_trigger_500.arch
+Starting Timing Characterization...
+Starting Timing Analysis...
+NO wire table is found
+Timing analysis done, time = 0 CPU secs.
+Timing characterization done, time = 0 CPU secs.
+NO wire table is found
+
+
+
+                        Critical Path Report
+
+
+Critical path #1, (path slack =  0.7):
+
+NAME                                               GATE              ARRIVAL              LOAD
+----------------------------------------------------------------------------------------------
+clock information not specified
+delay thru clock network                                             0.00 (worst case)
+
+
+cnt_strat/reg_cnt_s(0)/Q                           dff         0.00  0.56 dn             0.07
+cnt_strat/ix841/Y                                  nand04      0.31  0.86 up             0.04
+cnt_strat/ix141/Y                                  nor04       0.13  0.99 dn             0.01
+cnt_strat/ix845/Y                                  inv01       0.28  1.27 up             0.04
+cnt_strat/ix966/Y                                  inv02       0.22  1.48 dn             0.08
+cnt_strat/ix195/Y                                  and04       0.54  2.03 dn             0.06
+cnt_strat/ix249/Y                                  and04       0.52  2.55 dn             0.05
+cnt_strat/ix303/Y                                  and04       0.50  3.05 dn             0.05
+cnt_strat/ix357/Y                                  and04       0.50  3.55 dn             0.05
+cnt_strat/ix411/Y                                  and04       0.50  4.06 dn             0.05
+cnt_strat/ix465/Y                                  and04       0.50  4.56 dn             0.05
+cnt_strat/ix519/Y                                  and04       0.50  5.06 dn             0.05
+cnt_strat/ix573/Y                                  and04       0.42  5.48 dn             0.03
+cnt_strat/ix556/Y                                  xnor2       0.17  5.65 up             0.02
+cnt_strat/ix579/Y                                  nor02_2x    0.14  5.79 dn             0.02
+cnt_strat/reg_cnt_s(31)/D                          dff         0.00  5.79 dn             0.00
+data arrival time                                                    5.79
+
+
+data required time  (default specified - setup time)                  6.46
+----------------------------------------------------------------------------------------------
+data required time                                                   6.46
+data arrival time                                                    5.79
+                                                                  ----------
+slack                                                               0.67
+----------------------------------------------------------------------------------------------
+
+
+NO wire table is found
+Info: setting novendor_constraint_file to FALSE
+AutoWrite args are : -format VHDL base_control_gt.vhd
+-- Writing file base_control_gt.vhd
+Info, Working Directory is now 'C:/Users/psi3451/Documents/T1/aula_9/base_control_3'
+Info, History file moved to new working directory
+Info, Log file moved to new working directory
+Reading library file `C:\MGC\LeoSpec\LS2012b_6\\lib\tsmc025_typ.syn`...
+Library version =  Release : Patch (a) : (Sep 23, 2005)
+Delays assume: Process=typical Temp=  0.0 C  Voltage=2.50 V  
+Info: setting encoding to auto
+Info, Working Directory is now 'C:/Users/psi3451/Documents/T1/aula_9/base_control_3/sintese'
+Info, History file moved to new working directory
+Info, Log file moved to new working directory
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 6: Info, Enumerated type SPEED with 4 elements encoded as binary.
+Encodings for SPEED values
+        value    SPEED[1-0]
+===========================
+          ONE_X  00
+          TWO_X  01
+         FOUR_X  10
+        EIGHT_X  11
+
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 14: Info, Enumerated type CONTROL_SELECT with 2 elements encoded as binary.
+Encodings for CONTROL_SELECT values
+   value    CONTROL_SELECT[0]
+=============================
+     INIT_CONTR  0
+     GURU_CONTR  1
+
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 20: Info, Enumerated type RB_SEL with 5 elements encoded as onehot.
+Encodings for RB_SEL values
+        value    RB_SEL[4-0]
+============================
+       INIT_OUT  ----1
+       GURU_OUT  ---1-
+  GURU_PREV_OUT  --1--
+       DISC_OUT  -1---
+  DISC_PREV_OUT  1----
+
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 29: Info, Enumerated type CODE with 4 elements encoded as binary.
+Encodings for CODE values
+        value    CODE[1-0]
+==========================
+          BLANK  00
+           GURU  01
+           DISC  10
+            DUO  11
+
+-- Loading package wisdom_package into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 4: Warning, replacing wisdom_package in HDL library work.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd into library work
+-- Loading entity counter_trigger into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd",line 18: Warning, replacing counter_trigger in HDL library work.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd",line 43: Info, Enumerated type STATE_CNT with 2 elements encoded as binary.
+Encodings for STATE_CNT values
+   value    STATE_CNT[0]
+========================
+           IDLE  0
+          COUNT  1
+
+-- Loading architecture arch of counter_trigger into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd",line 34: Warning, replacing arch of entity counter_trigger.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd into library work
+-- Loading entity fsm_guru into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 18: Warning, replacing fsm_guru in HDL library work.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 38: Info, Enumerated type STATE_TYPE_MAIN with 11 elements encoded as onehot.
+Encodings for STATE_TYPE_MAIN values
+        value    STATE_TYPE_MAIN[10-0]
+======================================
+  START_WALKING  ----------1
+           RAND  ---------1-
+     WRITE_RAND  --------1--
+WAIT_COUNT_GURU  -------1---
+           INCR  ------1----
+CHECK_SAME_ADDR  -----1-----
+      WRITE_DUO  ----1------
+     WRITE_GURU  ---1-------
+     CHECK_LAST  --1--------
+           LAST  -1---------
+     CLEAR_PREV  1----------
+
+-- Loading architecture arch of fsm_guru into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 35: Warning, replacing arch of entity fsm_guru.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd into library work
+-- Loading entity fsm_init into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 18: Warning, replacing fsm_init in HDL library work.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 35: Info, Enumerated type STATE_TYPE_INIT with 4 elements encoded as binary.
+Encodings for STATE_TYPE_INIT values
+        value    STATE_TYPE_INIT[1-0]
+=====================================
+           IDLE  00
+           ZERO  01
+       MEM_WALK  10
+           DONE  11
+
+-- Loading architecture arch of fsm_init into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 32: Warning, replacing arch of entity fsm_init.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd into library work
+-- Loading entity fsm_main into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 18: Warning, replacing fsm_main in HDL library work.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 43: Info, Enumerated type STATE_TYPE_MAIN with 6 elements encoded as onehot.
+Encodings for STATE_TYPE_MAIN values
+        value    STATE_TYPE_MAIN[5-0]
+=====================================
+INIT_ACTIVATION  -----1
+STEP_ACTIVATION  ----1-
+      CHECK_END  ---1--
+      HIT_POINT  --1---
+    CNT_PREPARE  -1----
+      CNT_START  1-----
+
+-- Loading architecture arch of fsm_main into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 40: Warning, replacing arch of entity fsm_main.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd into library work
+-- Loading entity base_control into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd",line 20: Warning, replacing base_control in HDL library work.
+-- Loading architecture arch of base_control into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd",line 124: Warning, signal go_guru_s is never used.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd",line 124: Warning, signal go_guru_s is never assigned a value.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd",line 39: Warning, replacing arch of entity base_control.
+-- Compiling root entity base_control(arch)
+-- Compiling entity fsm_main(arch)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 90: Info, others clause is never selected for synthesis.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 157: Info, others clause is never selected for synthesis.
+-- Info, replacing fsm_main(arch)
+-- Compiling entity counter_trigger_500(arch)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd",line 40: Warning, initial value for cnt_s is ignored for synthesis.
+-- Info, replacing counter_trigger_500(arch)
+-- Compiling entity fsm_init(arch)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 66: Info, others clause is never selected for synthesis.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 127: Info, others clause is never selected for synthesis.
+-- Compiling entity fsm_guru(arch)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 95: Info, others clause is never selected for synthesis.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 237: Info, others clause is never selected for synthesis.
+-- Info, replacing base_control(arch)
+-- Boundary optimization.
+-- Boundary optimization.
+-- Start pre-optimization for design .work.fsm_main.arch
+-- Start pre-optimization for design .work.counter_trigger_500.arch
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd", line 108:Info, Inferred counter instance 'cnt_s' of type 'counter_up_sclear_clock_32'
+-- Start pre-optimization for design .work.fsm_init.arch_unfold_1611
+-- Start pre-optimization for design .work.fsm_guru.arch_unfold_1626
+-- Start pre-optimization for design .work.base_control.arch
+-- Start pre-optimization for design .work.fsm_main.arch
+-- Start pre-optimization for design .work.counter_trigger_500.arch
+-- Start pre-optimization for design .work.fsm_init.arch_unfold_1611
+-- Start pre-optimization for design .work.fsm_guru.arch_unfold_1626
+-- Start pre-optimization for design .work.base_control.arch
+Info: setting register2register to 2.898551
+Info: setting input2register to 2.898551
+Info: setting register2output to 2.898551
+Info, Instances dissolved by autodissolve in View .work.base_control.arch
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd", line 135: main (fsm_main)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd", line 180: init (fsm_init)
+NO wire table is found
+-- Optimizing netlist .work.counter_trigger_500.arch
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+Re-checking DRC after adjustments
+-- Optimizing netlist .work.fsm_guru.arch_unfold_1626
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+-- Optimizing netlist .work.base_control.arch
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+Re-checking DRC after adjustments
+-- Final Design Rule Check..
+-- Start timing optimization for design .work.counter_trigger_500.arch
+Starting Timing Characterization...
+Starting Timing Analysis...
+NO wire table is found
+Timing analysis done, time = 0 CPU secs.
+Timing characterization done, time = 0 CPU secs.
+
+Initial Timing Optimization Statistics:
+---------------------------------------
+
+	Most Critical Slack    :       -1.4
+	Sum of Negative Slacks :      -20.8
+	Area                   :      325.4
+
+                                                             
+Final Timing Optimization Statistics:
+-------------------------------------
+
+	Most Critical Slack    :        0.3
+	Sum of Negative Slacks :        0.0
+	Area                   :      432.5
+
+	Total time taken : 2 cpu secs
+-- Start timing optimization for design .work.fsm_guru.arch_unfold_1626
+Starting Timing Characterization...
+Starting Timing Analysis...
+NO wire table is found
+Timing analysis done, time = 0 CPU secs.
+Timing characterization done, time = 0 CPU secs.
+NO wire table is found
+Info: setting novendor_constraint_file to FALSE
+AutoWrite args are : -format VHDL base_control_gt.vhd
+-- Writing file base_control_gt.vhd
+Info, Working Directory is now 'C:/Users/psi3451/Documents/T1/aula_9/base_control_4'
+Info, History file moved to new working directory
+Info, Log file moved to new working directory
+Reading library file `C:\MGC\LeoSpec\LS2012b_6\\lib\tsmc018_typ.syn`...
+Library version = v3.1 Release : Patch (a) : (Aug 26, 2005)
+Delays assume: Process=typical Temp=  0.0 C  Voltage=1.80 V  
+Info: setting encoding to auto
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 6: Info, Enumerated type SPEED with 4 elements encoded as binary.
+Encodings for SPEED values
+        value    SPEED[1-0]
+===========================
+          ONE_X  00
+          TWO_X  01
+         FOUR_X  10
+        EIGHT_X  11
+
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 14: Info, Enumerated type CONTROL_SELECT with 2 elements encoded as binary.
+Encodings for CONTROL_SELECT values
+   value    CONTROL_SELECT[0]
+=============================
+     INIT_CONTR  0
+     GURU_CONTR  1
+
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 20: Info, Enumerated type RB_SEL with 5 elements encoded as onehot.
+Encodings for RB_SEL values
+        value    RB_SEL[4-0]
+============================
+       INIT_OUT  ----1
+       GURU_OUT  ---1-
+  GURU_PREV_OUT  --1--
+       DISC_OUT  -1---
+  DISC_PREV_OUT  1----
+
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 29: Info, Enumerated type CODE with 4 elements encoded as binary.
+Encodings for CODE values
+        value    CODE[1-0]
+==========================
+          BLANK  00
+           GURU  01
+           DISC  10
+            DUO  11
+
+-- Loading package wisdom_package into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 4: Warning, replacing wisdom_package in HDL library work.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd into library work
+-- Loading entity counter_trigger into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd",line 18: Warning, replacing counter_trigger in HDL library work.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd",line 43: Info, Enumerated type STATE_CNT with 2 elements encoded as binary.
+Encodings for STATE_CNT values
+   value    STATE_CNT[0]
+========================
+           IDLE  0
+          COUNT  1
+
+-- Loading architecture arch of counter_trigger into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd",line 34: Warning, replacing arch of entity counter_trigger.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd into library work
+-- Loading entity fsm_guru into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 18: Warning, replacing fsm_guru in HDL library work.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 38: Info, Enumerated type STATE_TYPE_MAIN with 11 elements encoded as onehot.
+Encodings for STATE_TYPE_MAIN values
+        value    STATE_TYPE_MAIN[10-0]
+======================================
+  START_WALKING  ----------1
+           RAND  ---------1-
+     WRITE_RAND  --------1--
+WAIT_COUNT_GURU  -------1---
+           INCR  ------1----
+CHECK_SAME_ADDR  -----1-----
+      WRITE_DUO  ----1------
+     WRITE_GURU  ---1-------
+     CHECK_LAST  --1--------
+           LAST  -1---------
+     CLEAR_PREV  1----------
+
+-- Loading architecture arch of fsm_guru into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 35: Warning, replacing arch of entity fsm_guru.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd into library work
+-- Loading entity fsm_init into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 18: Warning, replacing fsm_init in HDL library work.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 35: Info, Enumerated type STATE_TYPE_INIT with 4 elements encoded as binary.
+Encodings for STATE_TYPE_INIT values
+        value    STATE_TYPE_INIT[1-0]
+=====================================
+           IDLE  00
+           ZERO  01
+       MEM_WALK  10
+           DONE  11
+
+-- Loading architecture arch of fsm_init into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 32: Warning, replacing arch of entity fsm_init.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd into library work
+-- Loading entity fsm_main into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 18: Warning, replacing fsm_main in HDL library work.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 43: Info, Enumerated type STATE_TYPE_MAIN with 6 elements encoded as onehot.
+Encodings for STATE_TYPE_MAIN values
+        value    STATE_TYPE_MAIN[5-0]
+=====================================
+INIT_ACTIVATION  -----1
+STEP_ACTIVATION  ----1-
+      CHECK_END  ---1--
+      HIT_POINT  --1---
+    CNT_PREPARE  -1----
+      CNT_START  1-----
+
+-- Loading architecture arch of fsm_main into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 40: Warning, replacing arch of entity fsm_main.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd into library work
+-- Loading entity base_control into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd",line 20: Warning, replacing base_control in HDL library work.
+-- Loading architecture arch of base_control into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd",line 124: Warning, signal go_guru_s is never used.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd",line 124: Warning, signal go_guru_s is never assigned a value.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd",line 39: Warning, replacing arch of entity base_control.
+-- Compiling root entity base_control(arch)
+-- Compiling entity fsm_main(arch)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 90: Info, others clause is never selected for synthesis.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 157: Info, others clause is never selected for synthesis.
+-- Info, replacing fsm_main(arch)
+-- Compiling entity counter_trigger_500(arch)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd",line 40: Warning, initial value for cnt_s is ignored for synthesis.
+-- Info, replacing counter_trigger_500(arch)
+-- Compiling entity fsm_init(arch)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 66: Info, others clause is never selected for synthesis.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 127: Info, others clause is never selected for synthesis.
+-- Compiling entity fsm_guru(arch)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 95: Info, others clause is never selected for synthesis.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 237: Info, others clause is never selected for synthesis.
+-- Info, replacing base_control(arch)
+-- Boundary optimization.
+-- Boundary optimization.
+-- Start pre-optimization for design .work.fsm_main.arch
+-- Start pre-optimization for design .work.counter_trigger_500.arch
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd", line 108:Info, Inferred counter instance 'cnt_s' of type 'counter_up_sclear_clock_32'
+-- Start pre-optimization for design .work.fsm_init.arch_unfold_1611
+-- Start pre-optimization for design .work.fsm_guru.arch_unfold_1626
+-- Start pre-optimization for design .work.base_control.arch
+-- Start pre-optimization for design .work.fsm_main.arch
+-- Start pre-optimization for design .work.counter_trigger_500.arch
+-- Start pre-optimization for design .work.fsm_init.arch_unfold_1611
+-- Start pre-optimization for design .work.fsm_guru.arch_unfold_1626
+-- Start pre-optimization for design .work.base_control.arch
+Info, Instances dissolved by autodissolve in View .work.base_control.arch
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd", line 135: main (fsm_main)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd", line 180: init (fsm_init)
+NO wire table is found
+-- Optimizing netlist .work.counter_trigger_500.arch
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+Re-checking DRC after adjustments
+-- Optimizing netlist .work.fsm_guru.arch_unfold_1626
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+-- Optimizing netlist .work.base_control.arch
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+Re-checking DRC after adjustments
+-- Final Design Rule Check..
+Re-checking DRC after adjustments
+-- Start timing optimization for design .work.counter_trigger_500.arch
+Starting Timing Characterization...
+Starting Timing Analysis...
+NO wire table is found
+Timing analysis done, time = 0 CPU secs.
+Timing characterization done, time = 0 CPU secs.
+Info, Working Directory is now 'C:/Users/psi3451/Documents/T1/aula_9/base_control_4/sintese'
+Info, History file moved to new working directory
+Info, Log file moved to new working directory
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 6: Info, Enumerated type SPEED with 4 elements encoded as binary.
+Encodings for SPEED values
+        value    SPEED[1-0]
+===========================
+          ONE_X  00
+          TWO_X  01
+         FOUR_X  10
+        EIGHT_X  11
+
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 14: Info, Enumerated type CONTROL_SELECT with 2 elements encoded as binary.
+Encodings for CONTROL_SELECT values
+   value    CONTROL_SELECT[0]
+=============================
+     INIT_CONTR  0
+     GURU_CONTR  1
+
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 20: Info, Enumerated type RB_SEL with 5 elements encoded as onehot.
+Encodings for RB_SEL values
+        value    RB_SEL[4-0]
+============================
+       INIT_OUT  ----1
+       GURU_OUT  ---1-
+  GURU_PREV_OUT  --1--
+       DISC_OUT  -1---
+  DISC_PREV_OUT  1----
+
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 29: Info, Enumerated type CODE with 4 elements encoded as binary.
+Encodings for CODE values
+        value    CODE[1-0]
+==========================
+          BLANK  00
+           GURU  01
+           DISC  10
+            DUO  11
+
+-- Loading package wisdom_package into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 4: Warning, replacing wisdom_package in HDL library work.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd into library work
+-- Loading entity counter_trigger into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd",line 18: Warning, replacing counter_trigger in HDL library work.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd",line 43: Info, Enumerated type STATE_CNT with 2 elements encoded as binary.
+Encodings for STATE_CNT values
+   value    STATE_CNT[0]
+========================
+           IDLE  0
+          COUNT  1
+
+-- Loading architecture arch of counter_trigger into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd",line 34: Warning, replacing arch of entity counter_trigger.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd into library work
+-- Loading entity fsm_guru into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 18: Warning, replacing fsm_guru in HDL library work.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 38: Info, Enumerated type STATE_TYPE_MAIN with 11 elements encoded as onehot.
+Encodings for STATE_TYPE_MAIN values
+        value    STATE_TYPE_MAIN[10-0]
+======================================
+  START_WALKING  ----------1
+           RAND  ---------1-
+     WRITE_RAND  --------1--
+WAIT_COUNT_GURU  -------1---
+           INCR  ------1----
+CHECK_SAME_ADDR  -----1-----
+      WRITE_DUO  ----1------
+     WRITE_GURU  ---1-------
+     CHECK_LAST  --1--------
+           LAST  -1---------
+     CLEAR_PREV  1----------
+
+-- Loading architecture arch of fsm_guru into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 35: Warning, replacing arch of entity fsm_guru.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd into library work
+-- Loading entity fsm_init into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 18: Warning, replacing fsm_init in HDL library work.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 35: Info, Enumerated type STATE_TYPE_INIT with 4 elements encoded as binary.
+Encodings for STATE_TYPE_INIT values
+        value    STATE_TYPE_INIT[1-0]
+=====================================
+           IDLE  00
+           ZERO  01
+       MEM_WALK  10
+           DONE  11
+
+-- Loading architecture arch of fsm_init into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 32: Warning, replacing arch of entity fsm_init.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd into library work
+-- Loading entity fsm_main into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 18: Warning, replacing fsm_main in HDL library work.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 43: Info, Enumerated type STATE_TYPE_MAIN with 6 elements encoded as onehot.
+Encodings for STATE_TYPE_MAIN values
+        value    STATE_TYPE_MAIN[5-0]
+=====================================
+INIT_ACTIVATION  -----1
+STEP_ACTIVATION  ----1-
+      CHECK_END  ---1--
+      HIT_POINT  --1---
+    CNT_PREPARE  -1----
+      CNT_START  1-----
+
+-- Loading architecture arch of fsm_main into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 40: Warning, replacing arch of entity fsm_main.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd into library work
+-- Loading entity base_control into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd",line 20: Warning, replacing base_control in HDL library work.
+-- Loading architecture arch of base_control into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd",line 124: Warning, signal go_guru_s is never used.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd",line 124: Warning, signal go_guru_s is never assigned a value.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd",line 39: Warning, replacing arch of entity base_control.
+-- Compiling root entity base_control(arch)
+-- Compiling entity fsm_main(arch)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 90: Info, others clause is never selected for synthesis.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 157: Info, others clause is never selected for synthesis.
+-- Info, replacing fsm_main(arch)
+-- Compiling entity counter_trigger_500(arch)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd",line 40: Warning, initial value for cnt_s is ignored for synthesis.
+-- Info, replacing counter_trigger_500(arch)
+-- Compiling entity fsm_init(arch)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 66: Info, others clause is never selected for synthesis.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 127: Info, others clause is never selected for synthesis.
+-- Compiling entity fsm_guru(arch)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 95: Info, others clause is never selected for synthesis.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 237: Info, others clause is never selected for synthesis.
+-- Info, replacing base_control(arch)
+-- Boundary optimization.
+-- Boundary optimization.
+-- Start pre-optimization for design .work.fsm_main.arch
+-- Start pre-optimization for design .work.counter_trigger_500.arch
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd", line 108:Info, Inferred counter instance 'cnt_s' of type 'counter_up_sclear_clock_32'
+-- Start pre-optimization for design .work.fsm_init.arch_unfold_1611
+-- Start pre-optimization for design .work.fsm_guru.arch_unfold_1626
+-- Start pre-optimization for design .work.base_control.arch
+-- Start pre-optimization for design .work.fsm_main.arch
+-- Start pre-optimization for design .work.counter_trigger_500.arch
+-- Start pre-optimization for design .work.fsm_init.arch_unfold_1611
+-- Start pre-optimization for design .work.fsm_guru.arch_unfold_1626
+-- Start pre-optimization for design .work.base_control.arch
+Info, Instances dissolved by autodissolve in View .work.base_control.arch
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd", line 135: main (fsm_main)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd", line 180: init (fsm_init)
+NO wire table is found
+-- Optimizing netlist .work.counter_trigger_500.arch
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+Re-checking DRC after adjustments
+-- Optimizing netlist .work.fsm_guru.arch_unfold_1626
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+-- Optimizing netlist .work.base_control.arch
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+Re-checking DRC after adjustments
+-- Final Design Rule Check..
+Re-checking DRC after adjustments
+-- Start timing optimization for design .work.counter_trigger_500.arch
+Starting Timing Characterization...
+Starting Timing Analysis...
+NO wire table is found
+Timing analysis done, time = 0 CPU secs.
+Timing characterization done, time = 0 CPU secs.
+NO wire table is found
+Info: setting novendor_constraint_file to FALSE
+AutoWrite args are : -format VHDL base_control_gt.vhd
+-- Writing file base_control_gt.vhd
+Info, Working Directory is now 'C:/Users/psi3451/Documents/T1/aula_9/base_control_1'
+Info, History file moved to new working directory
+Info, Log file moved to new working directory
+Info, Working Directory is now 'C:/Users/psi3451/Documents/T1/aula_9/base_control_extra'
+Info, History file moved to new working directory
+Info, Log file moved to new working directory
+Info, Library tsmc035_typ is already loaded. Setting it as target
+Info: setting encoding to auto
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 6: Info, Enumerated type SPEED with 4 elements encoded as binary.
+Encodings for SPEED values
+        value    SPEED[1-0]
+===========================
+          ONE_X  00
+          TWO_X  01
+         FOUR_X  10
+        EIGHT_X  11
+
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 14: Info, Enumerated type CONTROL_SELECT with 2 elements encoded as binary.
+Encodings for CONTROL_SELECT values
+   value    CONTROL_SELECT[0]
+=============================
+     INIT_CONTR  0
+     GURU_CONTR  1
+
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 20: Info, Enumerated type RB_SEL with 5 elements encoded as onehot.
+Encodings for RB_SEL values
+        value    RB_SEL[4-0]
+============================
+       INIT_OUT  ----1
+       GURU_OUT  ---1-
+  GURU_PREV_OUT  --1--
+       DISC_OUT  -1---
+  DISC_PREV_OUT  1----
+
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 29: Info, Enumerated type CODE with 4 elements encoded as binary.
+Encodings for CODE values
+        value    CODE[1-0]
+==========================
+          BLANK  00
+           GURU  01
+           DISC  10
+            DUO  11
+
+-- Loading package wisdom_package into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd",line 4: Warning, replacing wisdom_package in HDL library work.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd into library work
+-- Loading entity counter_trigger into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd",line 18: Warning, replacing counter_trigger in HDL library work.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd",line 43: Info, Enumerated type STATE_CNT with 2 elements encoded as binary.
+Encodings for STATE_CNT values
+   value    STATE_CNT[0]
+========================
+           IDLE  0
+          COUNT  1
+
+-- Loading architecture arch of counter_trigger into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd",line 34: Warning, replacing arch of entity counter_trigger.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd into library work
+-- Loading entity fsm_guru into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 18: Warning, replacing fsm_guru in HDL library work.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 38: Info, Enumerated type STATE_TYPE_MAIN with 11 elements encoded as onehot.
+Encodings for STATE_TYPE_MAIN values
+        value    STATE_TYPE_MAIN[10-0]
+======================================
+  START_WALKING  ----------1
+           RAND  ---------1-
+     WRITE_RAND  --------1--
+WAIT_COUNT_GURU  -------1---
+           INCR  ------1----
+CHECK_SAME_ADDR  -----1-----
+      WRITE_DUO  ----1------
+     WRITE_GURU  ---1-------
+     CHECK_LAST  --1--------
+           LAST  -1---------
+     CLEAR_PREV  1----------
+
+-- Loading architecture arch of fsm_guru into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 35: Warning, replacing arch of entity fsm_guru.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd into library work
+-- Loading entity fsm_init into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 18: Warning, replacing fsm_init in HDL library work.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 35: Info, Enumerated type STATE_TYPE_INIT with 4 elements encoded as binary.
+Encodings for STATE_TYPE_INIT values
+        value    STATE_TYPE_INIT[1-0]
+=====================================
+           IDLE  00
+           ZERO  01
+       MEM_WALK  10
+           DONE  11
+
+-- Loading architecture arch of fsm_init into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 32: Warning, replacing arch of entity fsm_init.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd into library work
+-- Loading entity fsm_main into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 18: Warning, replacing fsm_main in HDL library work.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 43: Info, Enumerated type STATE_TYPE_MAIN with 6 elements encoded as onehot.
+Encodings for STATE_TYPE_MAIN values
+        value    STATE_TYPE_MAIN[5-0]
+=====================================
+INIT_ACTIVATION  -----1
+STEP_ACTIVATION  ----1-
+      CHECK_END  ---1--
+      HIT_POINT  --1---
+    CNT_PREPARE  -1----
+      CNT_START  1-----
+
+-- Loading architecture arch of fsm_main into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 40: Warning, replacing arch of entity fsm_main.
+-- Reading vhdl file C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd into library work
+-- Loading entity base_control into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd",line 20: Warning, replacing base_control in HDL library work.
+-- Loading architecture arch of base_control into library work
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd",line 124: Warning, signal go_guru_s is never used.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd",line 124: Warning, signal go_guru_s is never assigned a value.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd",line 39: Warning, replacing arch of entity base_control.
+-- Compiling root entity base_control(arch)
+-- Compiling entity fsm_main(arch)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 90: Info, others clause is never selected for synthesis.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd",line 157: Info, others clause is never selected for synthesis.
+-- Info, replacing fsm_main(arch)
+-- Compiling entity counter_trigger_500(arch)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd",line 40: Warning, initial value for cnt_s is ignored for synthesis.
+-- Info, replacing counter_trigger_500(arch)
+-- Compiling entity fsm_init(arch)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 66: Info, others clause is never selected for synthesis.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd",line 127: Info, others clause is never selected for synthesis.
+-- Compiling entity fsm_guru(arch)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 95: Info, others clause is never selected for synthesis.
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd",line 237: Info, others clause is never selected for synthesis.
+-- Info, replacing base_control(arch)
+-- Boundary optimization.
+-- Boundary optimization.
+-- Start pre-optimization for design .work.fsm_main.arch
+-- Start pre-optimization for design .work.counter_trigger_500.arch
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd", line 108:Info, Inferred counter instance 'cnt_s' of type 'counter_up_sclear_clock_32'
+-- Start pre-optimization for design .work.fsm_init.arch_unfold_1611
+-- Start pre-optimization for design .work.fsm_guru.arch_unfold_1626
+-- Start pre-optimization for design .work.base_control.arch
+-- Start pre-optimization for design .work.fsm_main.arch
+-- Start pre-optimization for design .work.counter_trigger_500.arch
+-- Start pre-optimization for design .work.fsm_init.arch_unfold_1611
+-- Start pre-optimization for design .work.fsm_guru.arch_unfold_1626
+-- Start pre-optimization for design .work.base_control.arch
+Info: setting register2register to 2.857143
+Info: setting input2register to 2.857143
+Info: setting register2output to 2.857143
+Info, Instances dissolved by autodissolve in View .work.base_control.arch
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd", line 135: main (fsm_main)
+"C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd", line 180: init (fsm_init)
+NO wire table is found
+-- Optimizing netlist .work.counter_trigger_500.arch
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+Re-checking DRC after adjustments
+-- Optimizing netlist .work.fsm_guru.arch_unfold_1626
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+-- Optimizing netlist .work.base_control.arch
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+Re-checking DRC after adjustments
+-- Final Design Rule Check..
+Re-checking DRC after adjustments
+-- Start timing optimization for design .work.counter_trigger_500.arch
+Starting Timing Characterization...
+Starting Timing Analysis...
+NO wire table is found
+Timing analysis done, time = 0 CPU secs.
+Timing characterization done, time = 0 CPU secs.
+
+Initial Timing Optimization Statistics:
+---------------------------------------
+
+	Most Critical Slack    :       -3.1
+	Sum of Negative Slacks :      -75.8
+	Area                   :      366.4
+
+                                                             
+Final Timing Optimization Statistics:
+-------------------------------------
+
+	Most Critical Slack    :       -0.3
+	Sum of Negative Slacks :       -5.2
+	Area                   :      496.1
+
+	Total time taken : 1 cpu secs
+Re-checking DRC after adjustments
+-- Start timing optimization for design .work.fsm_guru.arch_unfold_1626
+No critical paths to optimize at this level
+-- Start timing optimization for design .work.base_control.arch
+Starting Timing Characterization...
+Starting Timing Analysis...
+NO wire table is found
+Timing analysis done, time = 0 CPU secs.
+Timing characterization done, time = 0 CPU secs.
+
+Initial Timing Optimization Statistics:
+---------------------------------------
+
+	Clock                  : Frequency
+      ------------------------------------
+
+	clk                    : 331.7 MHz
+
+
+	Most Critical Slack    :       -0.2
+	Sum of Negative Slacks :       -2.3
+	Area                   :     1278.0
+
+                                                             
+Final Timing Optimization Statistics:
+-------------------------------------
+
+	Clock                  : Frequency
+      ------------------------------------
+
+	clk                    : 331.7 MHz
+
+
+	Most Critical Slack    :       -0.2
+	Sum of Negative Slacks :       -2.3
+	Area                   :     1278.0
+
+	Total time taken : 0 cpu secs
+NO wire table is found
+Info: setting novendor_constraint_file to FALSE
+AutoWrite args are : -format VHDL base_control_gt.vhd
+-- Writing file base_control_gt.vhd

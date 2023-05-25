@@ -1,0 +1,64 @@
+
+
+
+                        Clock Frequency Report
+
+	Clock                : Frequency
+      ------------------------------------
+
+	clk                  : 308.9 MHz
+
+
+                        Critical Path Report
+
+
+Critical path #1, (path slack = -0.3):
+
+NAME                                               GATE              ARRIVAL              LOAD
+----------------------------------------------------------------------------------------------
+clock information not specified
+delay thru clock network                                             0.00 (worst case)
+
+
+cnt_strat/reg_cnt_s(4)/Q                           dff         0.00  0.52 dn             0.05
+cnt_strat/cnt_s(4)                        (net)                0.00  0.52 dn   (fan)     2.00
+cnt_strat/ix1125/A                                 buf16       0.00  0.52 dn             0.00
+cnt_strat/ix1125/Y                                 buf16       0.25  0.77 dn             0.07
+cnt_strat/nx1021                          (net)                0.00  0.77 dn   (fan)     5.00
+cnt_strat/ix1113/A1                                and04       0.00  0.77 dn             0.00
+cnt_strat/ix1113/Y                                 and04       0.29  1.06 dn             0.02
+cnt_strat/nx1009                          (net)                0.00  1.06 dn   (fan)     1.00
+cnt_strat/ix1114/A1                                nand04_2x   0.00  1.06 dn             0.00
+cnt_strat/ix1114/Y                                 nand04_2x   0.18  1.24 up             0.02
+cnt_strat/nx1010                          (net)                0.00  1.24 up   (fan)     1.00
+cnt_strat/reg_cnt_rdy/A0                           nor02_2x    0.00  1.24 up             0.00
+cnt_strat/reg_cnt_rdy/Y                            nor02_2x    0.16  1.40 dn             0.03
+cnt_start_f_s                             (net)                0.00  1.40 dn   (fan)     3.00
+cnt_strat/ix790/A0                                 or02        0.00  1.40 dn             0.00
+cnt_strat/ix790/Y                                  or02        0.43  1.82 dn             0.05
+cnt_strat/nx500                           (net)                0.00  1.82 dn   (fan)     2.00
+cnt_strat/ix1127/A                                 buf16       0.00  1.82 dn             0.00
+cnt_strat/ix1127/Y                                 buf16       0.29  2.11 dn             0.09
+cnt_strat/nx1023                          (net)                0.00  2.11 dn   (fan)     5.00
+cnt_strat/ix1038/A0                                or03        0.00  2.11 dn             0.00
+cnt_strat/ix1038/Y                                 or03        0.44  2.55 dn             0.02
+cnt_strat/nx934                           (net)                0.00  2.55 dn   (fan)     1.00
+cnt_strat/reg_nx564/A2                             oai332      0.00  2.55 dn             0.00
+cnt_strat/reg_nx564/Y                              oai332      0.25  2.80 up             0.01
+cnt_strat/nx564                           (net)                0.00  2.80 up   (fan)     1.00
+cnt_strat/ix1128/A                                 buf02       0.00  2.80 up             0.00
+cnt_strat/ix1128/Y                                 buf02       0.22  3.03 up             0.02
+cnt_strat/nx1129                          (net)                0.00  3.03 up   (fan)     1.00
+cnt_strat/reg_cnt_s(30)/D                          dff         0.00  3.03 up             0.00
+data arrival time                                                    3.03
+
+
+data required time  (default specified - setup time)                  2.69
+----------------------------------------------------------------------------------------------
+data required time                                                   2.69
+data arrival time                                                    3.03
+                                                                  ----------
+slack                                                               -0.34
+----------------------------------------------------------------------------------------------
+
+

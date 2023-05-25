@@ -1,0 +1,93 @@
+#
+#
+# 
+# 05/25/23 08:39:17
+load_library tsmc035_typ
+set_working_dir C:/Users/psi3451/Documents/T1/aula_9/base_control_1/sintese
+read -technology "tsmc035_typ"  { C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd }
+pre_optimize -common_logic -unused_logic -boundary -xor_comparator_optimize 
+pre_optimize -extract 
+read -technology "tsmc035_typ"  { C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd }
+pre_optimize -common_logic -unused_logic -boundary -xor_comparator_optimize 
+pre_optimize -extract 
+view_schematic -rtl -view
+save_project_script C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.scr
+set register2register 2.898551
+set input2register 2.898551
+set register2output 2.898551
+optimize .work.base_control.arch -target tsmc035_typ -macro -auto -effort standard -hierarchy auto 
+optimize_timing .work.base_control.arch 
+view_schematic -view
+view_schematic -view
+report_delay -num_paths 1 -show_schematic 1 -critical_paths
+save_project_script C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.scr
+report_area C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/area.txt -cell_usage -hierarchy -all_leafs 
+set propagate_clock_delay TRUE
+report_delay C:/Users/psi3451/Documents/T1/aula_9/base_control_1/relatorios/delay.txt -num_paths 1 -critical_paths -show_nets -show_input_pins -clock_frequency
+set novendor_constraint_file FALSE
+auto_write -format VHDL base_control_gt.vhd
+load_library tsmc035_typ
+set_working_dir C:/Users/psi3451/Documents/T1/aula_9/base_control_2
+load_library tsmc035_typ
+read -technology "tsmc035_typ"  { C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd }
+pre_optimize -common_logic -unused_logic -boundary -xor_comparator_optimize 
+pre_optimize -extract 
+view_schematic -rtl -view
+set register2register 6.666667
+set input2register 6.666667
+set register2output 6.666667
+optimize .work.base_control.arch -target tsmc035_typ -macro -delay -effort standard -hierarchy auto 
+optimize_timing .work.base_control.arch 
+view_schematic -view
+report_delay -num_paths 1 -show_schematic 1 -critical_paths
+report_delay C:/Users/psi3451/Documents/T1/aula_9/base_control_2/relatorios/delay.txt -num_paths 1 -critical_paths -show_nets -show_input_pins -clock_frequency
+set novendor_constraint_file FALSE
+auto_write -format VHDL base_control_gt.vhd
+report_area C:/Users/psi3451/Documents/T1/aula_9/base_control_2/relatorios/area.txt -cell_usage -hierarchy -all_leafs 
+set_working_dir C:/Users/psi3451/Documents/T1/aula_9/base_control_3
+load_library tsmc025_typ
+set_working_dir C:/Users/psi3451/Documents/T1/aula_9/base_control_3/sintese
+read -technology "tsmc025_typ"  { C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd }
+pre_optimize -common_logic -unused_logic -boundary -xor_comparator_optimize 
+pre_optimize -extract 
+set register2register 2.898551
+set input2register 2.898551
+set register2output 2.898551
+optimize .work.base_control.arch -target tsmc025_typ -macro -delay -effort standard -hierarchy auto 
+optimize_timing .work.base_control.arch 
+report_area C:/Users/psi3451/Documents/T1/aula_9/base_control_3/relatorios/area.txt -cell_usage -hierarchy -all_leafs 
+report_delay C:/Users/psi3451/Documents/T1/aula_9/base_control_3/relatorios/delay.txt -num_paths 1 -critical_paths -show_nets -show_input_pins -clock_frequency
+set novendor_constraint_file FALSE
+auto_write -format VHDL base_control_gt.vhd
+set_working_dir C:/Users/psi3451/Documents/T1/aula_9/base_control_4
+load_library tsmc018_typ
+read -technology "tsmc018_typ"  { C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd }
+pre_optimize -common_logic -unused_logic -boundary -xor_comparator_optimize 
+pre_optimize -extract 
+optimize .work.base_control.arch -target tsmc018_typ -macro -delay -effort standard -hierarchy auto 
+optimize_timing .work.base_control.arch 
+set_working_dir C:/Users/psi3451/Documents/T1/aula_9/base_control_4/sintese
+read -technology "tsmc018_typ"  { C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd }
+pre_optimize -common_logic -unused_logic -boundary -xor_comparator_optimize 
+pre_optimize -extract 
+optimize .work.base_control.arch -target tsmc018_typ -macro -delay -effort standard -hierarchy auto 
+optimize_timing .work.base_control.arch 
+report_delay C:/Users/psi3451/Documents/T1/aula_9/base_control_4/relatorios/delay.txt -num_paths 1 -critical_paths -show_nets -show_input_pins -clock_frequency
+report_area C:/Users/psi3451/Documents/T1/aula_9/base_control_4/relatorios/area.txt -cell_usage -hierarchy -all_leafs 
+set novendor_constraint_file FALSE
+auto_write -format VHDL base_control_gt.vhd
+set_working_dir C:/Users/psi3451/Documents/T1/aula_9/base_control_1
+set_working_dir C:/Users/psi3451/Documents/T1/aula_9/base_control_extra
+load_library tsmc035_typ
+read -technology "tsmc035_typ"  { C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/wisdom_package.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/counter_trigger.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_guru.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_init.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/fsm_main.vhd C:/Users/psi3451/Documents/T1/aula_9/base_control_1/fonte/base_control.vhd }
+pre_optimize -common_logic -unused_logic -boundary -xor_comparator_optimize 
+pre_optimize -extract 
+set register2register 2.857143
+set input2register 2.857143
+set register2output 2.857143
+optimize .work.base_control.arch -target tsmc035_typ -macro -delay -effort standard -hierarchy auto 
+optimize_timing .work.base_control.arch 
+report_area C:/Users/psi3451/Documents/T1/aula_9/base_control_extra/area.txt -cell_usage -hierarchy -all_leafs 
+report_delay C:/Users/psi3451/Documents/T1/aula_9/base_control_extra/delay.txt -num_paths 1 -critical_paths -show_nets -show_input_pins -clock_frequency
+set novendor_constraint_file FALSE
+auto_write -format VHDL base_control_gt.vhd

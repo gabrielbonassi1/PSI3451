@@ -1,0 +1,20 @@
+#         (C) Copyright 1991 - 1997 Exemplar Logic, Inc.  All Rights Reserved.
+#
+#
+#                                      NOTICE
+#
+#          This file belongs to Exemplar Logic, Inc.  It is
+#          considered trade secret and is not to be divulged or used by
+#          parties who have not received written authorization from
+#          the owner.
+#
+############ Project Settings ############
+set input2register "2.898551"
+set register2output "2.898551"
+set register2register "2.898551"
+set encoding "auto"
+
+if ![is_var_set dont_restore_design] {
+###### Loading technology libraries #######
+    load_library tsmc035_typ
+}
