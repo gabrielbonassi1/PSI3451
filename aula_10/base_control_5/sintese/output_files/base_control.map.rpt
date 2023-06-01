@@ -1,0 +1,434 @@
+Analysis & Synthesis report for base_control
+Thu Jun 01 10:28:06 2023
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |base_control|fsm_guru:guru|STATE
+  9. State Machine - |base_control|fsm_init:init|STATE
+ 10. State Machine - |base_control|fsm_main:main|STATE
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: counter_trigger:cnt_prep
+ 14. Parameter Settings for User Entity Instance: counter_trigger:cnt_strat
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++---------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Jun 01 10:28:06 2023           ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name                   ; base_control                                    ;
+; Top-level Entity Name           ; base_control                                    ;
+; Family                          ; Cyclone V                                       ;
+; Logic utilization (in ALMs)     ; N/A                                             ;
+; Total registers                 ; 87                                              ;
+; Total pins                      ; 45                                              ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 0                                               ;
+; Total DSP Blocks                ; 0                                               ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0                                               ;
+; Total DLLs                      ; 0                                               ;
++---------------------------------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; base_control       ; base_control       ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                          ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                   ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
+; ../fonte/wisdom_package.vhd      ; yes             ; User VHDL File  ; C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/wisdom_package.vhd  ;         ;
+; ../fonte/fsm_main.vhd            ; yes             ; User VHDL File  ; C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/fsm_main.vhd        ;         ;
+; ../fonte/fsm_init.vhd            ; yes             ; User VHDL File  ; C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/fsm_init.vhd        ;         ;
+; ../fonte/fsm_guru.vhd            ; yes             ; User VHDL File  ; C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/fsm_guru.vhd        ;         ;
+; ../fonte/counter_trigger.vhd     ; yes             ; User VHDL File  ; C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/counter_trigger.vhd ;         ;
+; ../fonte/base_control.vhd        ; yes             ; User VHDL File  ; C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/base_control.vhd    ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 67        ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 116       ;
+;     -- 7 input functions                    ; 1         ;
+;     -- 6 input functions                    ; 16        ;
+;     -- 5 input functions                    ; 2         ;
+;     -- 4 input functions                    ; 8         ;
+;     -- <=3 input functions                  ; 89        ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 87        ;
+;                                             ;           ;
+; I/O pins                                    ; 45        ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 87        ;
+; Total fan-out                               ; 648       ;
+; Average fan-out                             ; 2.21      ;
++---------------------------------------------+-----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                     ; Entity Name     ; Library Name ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------+-----------------+--------------+
+; |base_control                  ; 116 (12)            ; 87 (0)                    ; 0                 ; 0          ; 45   ; 0            ; |base_control                           ; base_control    ; work         ;
+;    |counter_trigger:cnt_prep|  ; 41 (41)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |base_control|counter_trigger:cnt_prep  ; counter_trigger ; work         ;
+;    |counter_trigger:cnt_strat| ; 41 (41)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |base_control|counter_trigger:cnt_strat ; counter_trigger ; work         ;
+;    |fsm_guru:guru|             ; 11 (11)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |base_control|fsm_guru:guru             ; fsm_guru        ; work         ;
+;    |fsm_init:init|             ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |base_control|fsm_init:init             ; fsm_init        ; work         ;
+;    |fsm_main:main|             ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |base_control|fsm_main:main             ; fsm_main        ; work         ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |base_control|fsm_guru:guru|STATE                                                                                                                                                                                ;
++-----------------------+------------------+------------+------------------+------------------+-----------------+-----------------------+------------+-----------------------+------------------+------------+---------------------+
+; Name                  ; STATE.CLEAR_PREV ; STATE.LAST ; STATE.CHECK_LAST ; STATE.WRITE_GURU ; STATE.WRITE_DUO ; STATE.CHECK_SAME_ADDR ; STATE.INCR ; STATE.WAIT_COUNT_GURU ; STATE.WRITE_RAND ; STATE.RAND ; STATE.START_WALKING ;
++-----------------------+------------------+------------+------------------+------------------+-----------------+-----------------------+------------+-----------------------+------------------+------------+---------------------+
+; STATE.START_WALKING   ; 0                ; 0          ; 0                ; 0                ; 0               ; 0                     ; 0          ; 0                     ; 0                ; 0          ; 0                   ;
+; STATE.RAND            ; 0                ; 0          ; 0                ; 0                ; 0               ; 0                     ; 0          ; 0                     ; 0                ; 1          ; 1                   ;
+; STATE.WRITE_RAND      ; 0                ; 0          ; 0                ; 0                ; 0               ; 0                     ; 0          ; 0                     ; 1                ; 0          ; 1                   ;
+; STATE.WAIT_COUNT_GURU ; 0                ; 0          ; 0                ; 0                ; 0               ; 0                     ; 0          ; 1                     ; 0                ; 0          ; 1                   ;
+; STATE.INCR            ; 0                ; 0          ; 0                ; 0                ; 0               ; 0                     ; 1          ; 0                     ; 0                ; 0          ; 1                   ;
+; STATE.CHECK_SAME_ADDR ; 0                ; 0          ; 0                ; 0                ; 0               ; 1                     ; 0          ; 0                     ; 0                ; 0          ; 1                   ;
+; STATE.WRITE_DUO       ; 0                ; 0          ; 0                ; 0                ; 1               ; 0                     ; 0          ; 0                     ; 0                ; 0          ; 1                   ;
+; STATE.WRITE_GURU      ; 0                ; 0          ; 0                ; 1                ; 0               ; 0                     ; 0          ; 0                     ; 0                ; 0          ; 1                   ;
+; STATE.CHECK_LAST      ; 0                ; 0          ; 1                ; 0                ; 0               ; 0                     ; 0          ; 0                     ; 0                ; 0          ; 1                   ;
+; STATE.LAST            ; 0                ; 1          ; 0                ; 0                ; 0               ; 0                     ; 0          ; 0                     ; 0                ; 0          ; 1                   ;
+; STATE.CLEAR_PREV      ; 1                ; 0          ; 0                ; 0                ; 0               ; 0                     ; 0          ; 0                     ; 0                ; 0          ; 1                   ;
++-----------------------+------------------+------------+------------------+------------------+-----------------+-----------------------+------------+-----------------------+------------------+------------+---------------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------+
+; State Machine - |base_control|fsm_init:init|STATE                      ;
++----------------+------------+----------------+------------+------------+
+; Name           ; STATE.DONE ; STATE.MEM_WALK ; STATE.ZERO ; STATE.IDLE ;
++----------------+------------+----------------+------------+------------+
+; STATE.IDLE     ; 0          ; 0              ; 0          ; 0          ;
+; STATE.ZERO     ; 0          ; 0              ; 1          ; 1          ;
+; STATE.MEM_WALK ; 0          ; 1              ; 0          ; 1          ;
+; STATE.DONE     ; 1          ; 0              ; 0          ; 1          ;
++----------------+------------+----------------+------------+------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |base_control|fsm_main:main|STATE                                                                                               ;
++-----------------------+-----------------+-------------------+-----------------+-----------------+-----------------------+-----------------------+
+; Name                  ; STATE.CNT_START ; STATE.CNT_PREPARE ; STATE.HIT_POINT ; STATE.CHECK_END ; STATE.STEP_ACTIVATION ; STATE.INIT_ACTIVATION ;
++-----------------------+-----------------+-------------------+-----------------+-----------------+-----------------------+-----------------------+
+; STATE.INIT_ACTIVATION ; 0               ; 0                 ; 0               ; 0               ; 0                     ; 0                     ;
+; STATE.STEP_ACTIVATION ; 0               ; 0                 ; 0               ; 0               ; 1                     ; 1                     ;
+; STATE.CHECK_END       ; 0               ; 0                 ; 0               ; 1               ; 0                     ; 1                     ;
+; STATE.HIT_POINT       ; 0               ; 0                 ; 1               ; 0               ; 0                     ; 1                     ;
+; STATE.CNT_PREPARE     ; 0               ; 1                 ; 0               ; 0               ; 0                     ; 1                     ;
+; STATE.CNT_START       ; 1               ; 0                 ; 0               ; 0               ; 0                     ; 1                     ;
++-----------------------+-----------------+-------------------+-----------------+-----------------+-----------------------+-----------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 87    ;
+; Number of registers using Synchronous Clear  ; 73    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |base_control|counter_trigger:cnt_prep|cnt_s[18] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |base_control|counter_trigger:cnt_strat|cnt_s[4] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |base_control|fsm_guru:guru|STATE                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter_trigger:cnt_prep ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; count_max      ; 500   ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter_trigger:cnt_strat ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; count_max      ; 500   ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 87                          ;
+;     SCLR              ; 73                          ;
+;     plain             ; 14                          ;
+; arriav_lcell_comb     ; 120                         ;
+;     arith             ; 64                          ;
+;         1 data inputs ; 64                          ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 55                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 8                           ;
+;         3 data inputs ; 17                          ;
+;         4 data inputs ; 8                           ;
+;         5 data inputs ; 2                           ;
+;         6 data inputs ; 16                          ;
+; boundary_port         ; 45                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.10                        ;
+; Average LUT depth     ; 2.80                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Processing started: Thu Jun 01 10:27:54 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off base_control -c base_control
+Info (16303): High Performance Effort optimization mode selected -- timing performance will be prioritized at the potential cost of increased compilation time
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 0 entities, in source file /users/psi3451/documents/t1/aula_10/base_control_5/fonte/wisdom_package.vhd
+    Info (12022): Found design unit 1: wisdom_package File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/wisdom_package.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/psi3451/documents/t1/aula_10/base_control_5/fonte/fsm_main.vhd
+    Info (12022): Found design unit 1: fsm_main-arch File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/fsm_main.vhd Line: 40
+    Info (12023): Found entity 1: fsm_main File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/fsm_main.vhd Line: 18
+Info (12021): Found 2 design units, including 1 entities, in source file /users/psi3451/documents/t1/aula_10/base_control_5/fonte/fsm_init.vhd
+    Info (12022): Found design unit 1: fsm_init-arch File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/fsm_init.vhd Line: 32
+    Info (12023): Found entity 1: fsm_init File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/fsm_init.vhd Line: 18
+Info (12021): Found 2 design units, including 1 entities, in source file /users/psi3451/documents/t1/aula_10/base_control_5/fonte/fsm_guru.vhd
+    Info (12022): Found design unit 1: fsm_guru-arch File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/fsm_guru.vhd Line: 35
+    Info (12023): Found entity 1: fsm_guru File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/fsm_guru.vhd Line: 18
+Info (12021): Found 2 design units, including 1 entities, in source file /users/psi3451/documents/t1/aula_10/base_control_5/fonte/counter_trigger.vhd
+    Info (12022): Found design unit 1: counter_trigger-arch File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/counter_trigger.vhd Line: 34
+    Info (12023): Found entity 1: counter_trigger File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/counter_trigger.vhd Line: 18
+Info (12021): Found 2 design units, including 1 entities, in source file /users/psi3451/documents/t1/aula_10/base_control_5/fonte/base_control.vhd
+    Info (12022): Found design unit 1: base_control-arch File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/base_control.vhd Line: 39
+    Info (12023): Found entity 1: base_control File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/base_control.vhd Line: 20
+Info (12127): Elaborating entity "base_control" for the top level hierarchy
+Info (12128): Elaborating entity "fsm_main" for hierarchy "fsm_main:main" File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/base_control.vhd Line: 135
+Info (12128): Elaborating entity "counter_trigger" for hierarchy "counter_trigger:cnt_prep" File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/base_control.vhd Line: 155
+Info (12128): Elaborating entity "fsm_init" for hierarchy "fsm_init:init" File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/base_control.vhd Line: 180
+Warning (10873): Using initial value X (don't care) for net "flags_2_dp.rb_GURU_en" at fsm_init.vhd(26) File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/fsm_init.vhd Line: 26
+Warning (10873): Using initial value X (don't care) for net "flags_2_dp.rb_PRE_GURU_en" at fsm_init.vhd(26) File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/fsm_init.vhd Line: 26
+Warning (10873): Using initial value X (don't care) for net "flags_2_mem.mem_a_addr" at fsm_init.vhd(27) File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/fsm_init.vhd Line: 27
+Warning (10873): Using initial value X (don't care) for net "flags_2_mem.data_a" at fsm_init.vhd(27) File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/fsm_init.vhd Line: 27
+Info (12128): Elaborating entity "fsm_guru" for hierarchy "fsm_guru:guru" File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/base_control.vhd Line: 194
+Warning (10873): Using initial value X (don't care) for net "flags_2_dp.rb_INIT_en" at fsm_guru.vhd(28) File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/fsm_guru.vhd Line: 28
+Warning (10873): Using initial value X (don't care) for net "flags_2_mem.mem_a_addr" at fsm_guru.vhd(29) File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/fsm_guru.vhd Line: 29
+Warning (10873): Using initial value X (don't care) for net "flags_2_mem.data_a" at fsm_guru.vhd(29) File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/fsm_guru.vhd Line: 29
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "ctrl_2_dp.cg_sel.DISC" is stuck at GND File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/base_control.vhd Line: 32
+    Warning (13410): Pin "ctrl_2_dp.rb_out_sel.DISC_PREV_OUT" is stuck at GND File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/base_control.vhd Line: 32
+    Warning (13410): Pin "ctrl_2_dp.rb_out_sel.DISC_OUT" is stuck at GND File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/base_control.vhd Line: 32
+    Warning (13410): Pin "ctrl_2_mem.cg_sel.DISC" is stuck at GND File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/base_control.vhd Line: 33
+    Warning (13410): Pin "ctrl_2_mem.data_a[0]" is stuck at GND File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/base_control.vhd Line: 33
+    Warning (13410): Pin "ctrl_2_mem.data_a[1]" is stuck at GND File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/base_control.vhd Line: 33
+    Warning (13410): Pin "ctrl_2_mem.data_a[2]" is stuck at GND File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/base_control.vhd Line: 33
+    Warning (13410): Pin "ctrl_2_mem.data_a[3]" is stuck at GND File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/base_control.vhd Line: 33
+    Warning (13410): Pin "ctrl_2_mem.data_a[4]" is stuck at GND File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/base_control.vhd Line: 33
+    Warning (13410): Pin "ctrl_2_mem.data_a[5]" is stuck at GND File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/base_control.vhd Line: 33
+    Warning (13410): Pin "ctrl_2_mem.data_a[6]" is stuck at GND File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/base_control.vhd Line: 33
+    Warning (13410): Pin "ctrl_2_mem.data_a[7]" is stuck at GND File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/base_control.vhd Line: 33
+    Warning (13410): Pin "ctrl_2_mem.mem_a_addr[0]" is stuck at GND File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/base_control.vhd Line: 33
+    Warning (13410): Pin "ctrl_2_mem.mem_a_addr[1]" is stuck at GND File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/base_control.vhd Line: 33
+    Warning (13410): Pin "ctrl_2_mem.mem_a_addr[2]" is stuck at GND File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/base_control.vhd Line: 33
+    Warning (13410): Pin "ctrl_2_mem.mem_a_addr[3]" is stuck at GND File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/base_control.vhd Line: 33
+    Warning (13410): Pin "ctrl_2_mem.mem_a_addr[4]" is stuck at GND File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/base_control.vhd Line: 33
+    Warning (13410): Pin "ctrl_2_mem.mem_a_addr[5]" is stuck at GND File: C:/Users/psi3451/Documents/T1/aula_10/base_control_5/fonte/base_control.vhd Line: 33
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 162 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
+    Info (21059): Implemented 36 output pins
+    Info (21061): Implemented 117 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
+    Info: Peak virtual memory: 4855 megabytes
+    Info: Processing ended: Thu Jun 01 10:28:06 2023
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:26
+
+
