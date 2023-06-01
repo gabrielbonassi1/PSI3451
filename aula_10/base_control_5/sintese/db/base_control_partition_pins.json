@@ -1,0 +1,117 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "en_cnt_step",
+					"strict" : false
+				},
+				{
+					"name" : "start_step",
+					"strict" : false
+				},
+				{
+					"name" : "ctrl_2_dp.cg_sel.DUO",
+					"strict" : false
+				},
+				{
+					"name" : "ctrl_2_dp.cg_sel.GURU",
+					"strict" : false
+				},
+				{
+					"name" : "ctrl_2_dp.cg_sel.BLANK",
+					"strict" : false
+				},
+				{
+					"name" : "ctrl_2_dp.rb_out_sel.GURU_PREV_OUT",
+					"strict" : false
+				},
+				{
+					"name" : "ctrl_2_dp.rb_out_sel.GURU_OUT",
+					"strict" : false
+				},
+				{
+					"name" : "ctrl_2_dp.rb_out_sel.INIT_OUT",
+					"strict" : false
+				},
+				{
+					"name" : "ctrl_2_dp.rb_PRE_GURU_en",
+					"strict" : false
+				},
+				{
+					"name" : "ctrl_2_dp.rb_GURU_en",
+					"strict" : false
+				},
+				{
+					"name" : "ctrl_2_dp.rb_INIT_en",
+					"strict" : false
+				},
+				{
+					"name" : "ctrl_2_dp.alu_ctrl",
+					"strict" : false
+				},
+				{
+					"name" : "ctrl_2_dp.ng_rand_zero",
+					"strict" : false
+				},
+				{
+					"name" : "ctrl_2_dp.ng_cte_incr",
+					"strict" : false
+				},
+				{
+					"name" : "ctrl_2_mem.cg_sel.DUO",
+					"strict" : false
+				},
+				{
+					"name" : "ctrl_2_mem.cg_sel.GURU",
+					"strict" : false
+				},
+				{
+					"name" : "ctrl_2_mem.cg_sel.BLANK",
+					"strict" : false
+				},
+				{
+					"name" : "ctrl_2_mem.mem_wr_en",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "en_disc",
+					"strict" : false
+				},
+				{
+					"name" : "dp_2_ctrl.end_of_guru",
+					"strict" : false
+				},
+				{
+					"name" : "disc_2_base.end_of_disc",
+					"strict" : false
+				},
+				{
+					"name" : "ref_2_base.duo_formed",
+					"strict" : false
+				},
+				{
+					"name" : "res",
+					"strict" : false
+				},
+				{
+					"name" : "ref_2_base.go_guru",
+					"strict" : false
+				},
+				{
+					"name" : "cnt_guru_rdy",
+					"strict" : false
+				},
+				{
+					"name" : "dp_2_ctrl.ovf_of_y",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
