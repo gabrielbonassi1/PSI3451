@@ -1,0 +1,267 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1
+Eclock_generator
+Z1 w1686568423
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 1
+R0
+Z4 8/home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/clock_generator.vhd
+Z5 F/home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/clock_generator.vhd
+l0
+L4 1
+V=0nZVmlidf0Yo8R0@oFMh2
+!s100 X^JdaX4Oe>YcKeiJ8`lQI2
+Z6 OV;C;2020.1;71
+32
+Z7 !s110 1686568533
+!i10b 1
+Z8 !s108 1686568533.000000
+Z9 !s90 -reportprogress|300|-work|work|/home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/clock_generator.vhd|
+Z10 !s107 /home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/clock_generator.vhd|
+!i113 1
+Z11 o-work work
+Z12 tExplicit 1 CvgOpt 0
+Atest
+R2
+R3
+DEx4 work 15 clock_generator 0 22 =0nZVmlidf0Yo8R0@oFMh2
+!i122 1
+l20
+L18 12
+VOMjS5z>FaGB22=HTN@BSS0
+!s100 ]k`QeK95PKLA35SzZ@bPb3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ed_reg
+R1
+Z13 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R2
+R3
+!i122 0
+R0
+Z14 8/home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/reg_d.vhd
+Z15 F/home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/reg_d.vhd
+l0
+L6 1
+V8fAh>mR;Jg_0FNGdkg6Xn0
+!s100 Poj[OPe;K>fkeiY<IgW9c0
+R6
+32
+Z16 !s110 1686568524
+!i10b 1
+Z17 !s108 1686568523.000000
+Z18 !s90 -reportprogress|300|-work|work|/home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/reg_d.vhd|
+Z19 !s107 /home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/reg_d.vhd|
+!i113 1
+R11
+R12
+Aarch
+R13
+R2
+R3
+DEx4 work 5 d_reg 0 22 8fAh>mR;Jg_0FNGdkg6Xn0
+!i122 0
+l23
+Z20 L19 19
+VE`BfPIbb1^fFBA5<<4KDQ1
+!s100 EPS_0BMN<55l6mTBba5eH1
+R6
+32
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R11
+R12
+Elfsr
+R1
+R13
+R2
+R3
+!i122 2
+R0
+Z21 8/home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/lfsr.vhd
+Z22 F/home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/lfsr.vhd
+l0
+L6 1
+VOUob_K95[0BB4lNeRB4Tg2
+!s100 7z4@689`7YKg_PB19LzU]2
+R6
+32
+Z23 !s110 1686568534
+!i10b 1
+Z24 !s108 1686568534.000000
+Z25 !s90 -reportprogress|300|-work|work|/home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/lfsr.vhd|
+Z26 !s107 /home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/lfsr.vhd|
+!i113 1
+R11
+R12
+Aarch
+R13
+R2
+R3
+DEx4 work 4 lfsr 0 22 OUob_K95[0BB4lNeRB4Tg2
+!i122 2
+l31
+L16 39
+VB?EQ]KzJ671D;Eock^4aL2
+!s100 kSm`BJNkYGc:3>c0_5R<?3
+R6
+32
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R11
+R12
+Erand_num
+R1
+R13
+R2
+R3
+!i122 3
+R0
+Z27 8/home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/rand_num.vhd
+Z28 F/home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/rand_num.vhd
+l0
+L6 1
+VOOgPD2`1?oD2bP=[gAk2;1
+!s100 kV8BQYMUW0IV7GXW5IY^T0
+R6
+32
+Z29 !s110 1686568535
+!i10b 1
+Z30 !s108 1686568535.000000
+Z31 !s90 -reportprogress|300|-work|work|/home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/rand_num.vhd|
+Z32 !s107 /home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/rand_num.vhd|
+!i113 1
+R11
+R12
+Astructural
+R13
+R2
+R3
+DEx4 work 8 rand_num 0 22 OOgPD2`1?oD2bP=[gAk2;1
+!i122 3
+l31
+R20
+VJQ0ZJ4MKX<:SP=77a8F?j0
+!s100 >KHa34f3i]49Yg`K]oEoR2
+R6
+32
+R29
+!i10b 1
+R30
+R31
+R32
+!i113 1
+R11
+R12
+Estimuli_rand_num
+Z33 w1686569605
+R13
+R2
+R3
+!i122 6
+R0
+Z34 8/home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/stimuli_rand_num.vhd
+Z35 F/home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/stimuli_rand_num.vhd
+l0
+L5 1
+VFmLKd^YBW@XLgdJ3Lzj`l3
+!s100 >O>n=J;5812kDh:J78F;M2
+R6
+32
+Z36 !s110 1686569615
+!i10b 1
+Z37 !s108 1686569615.000000
+Z38 !s90 -reportprogress|300|-work|work|/home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/stimuli_rand_num.vhd|
+Z39 !s107 /home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/stimuli_rand_num.vhd|
+!i113 1
+R11
+R12
+Aarch_stimuli
+R13
+R2
+R3
+DEx4 work 16 stimuli_rand_num 0 22 FmLKd^YBW@XLgdJ3Lzj`l3
+!i122 6
+l32
+L18 52
+Vd3:z=Xe59V<D<bMQ8EdVl2
+!s100 nA58d6PHVF9^eIeJ?A59z0
+R6
+32
+R36
+!i10b 1
+R37
+R38
+R39
+!i113 1
+R11
+R12
+Etb_rand_num
+R1
+R13
+R2
+R3
+!i122 8
+R0
+Z40 8/home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/testbench_rand_num.vhd
+Z41 F/home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/testbench_rand_num.vhd
+l0
+L6 1
+VG=AhE5QcHh>BT4Q2536671
+!s100 I?5FNomAnFmT=B_>bQ?NF1
+R6
+32
+Z42 !s110 1686569620
+!i10b 1
+Z43 !s108 1686569620.000000
+Z44 !s90 -reportprogress|300|-work|work|/home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/testbench_rand_num.vhd|
+Z45 !s107 /home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/testbench_rand_num.vhd|
+!i113 1
+R11
+R12
+Aarch
+R13
+R2
+R3
+Z46 DEx4 work 11 tb_rand_num 0 22 G=AhE5QcHh>BT4Q2536671
+!i122 8
+l40
+Z47 L13 44
+Z48 VQdVX6_La_9Od0h;m:c_SS2
+Z49 !s100 X=U:Z`eA[4B@Fl6X]ocWB1
+R6
+32
+R42
+!i10b 1
+R43
+R44
+R45
+!i113 1
+R11
+R12
