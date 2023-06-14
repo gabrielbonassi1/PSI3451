@@ -1,0 +1,92 @@
+vcom -reportprogress 300 -work work /home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/clock_generator.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+vcom -reportprogress 300 -work work /home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/reg_d.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:45:40 on Jun 14,2023
+# Start time: 09:45:38 on Jun 14,2023
+# vcom -reportprogress 300 -work work /home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/reg_d.vhd 
+# vcom -reportprogress 300 -work work /home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/clock_generator.vhd 
+# ** Warning: (vcom-6) -- Waiting for lock by "gabriel-personal@gabrielbonassi-Lenovo-V14-G2-ITL, pid = 6736". Lockfile is "/home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/work/_lock".
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity d_reg
+# -- Compiling architecture arch of d_reg
+# End time: 09:45:40 on Jun 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity clock_generator
+# ** Warning: /home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/clock_generator.vhd(7): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# -- Compiling architecture test of clock_generator
+# End time: 09:45:41 on Jun 14,2023, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 2
+vcom -reportprogress 300 -work work /home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/lfsr.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:45:42 on Jun 14,2023
+# vcom -reportprogress 300 -work work /home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/lfsr.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity lfsr
+# -- Compiling architecture arch of lfsr
+# End time: 09:45:42 on Jun 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/rand_num.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:45:43 on Jun 14,2023
+# vcom -reportprogress 300 -work work /home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/rand_num.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity rand_num
+# -- Compiling architecture structural of rand_num
+# ** Warning: /home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/rand_num.vhd(36): (vcom-1074) Non-locally static OTHERS choice is allowed only if it is the only choice of the only association.
+# End time: 09:45:44 on Jun 14,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+vcom -reportprogress 300 -work work /home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/stimuli_rand_num.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:45:45 on Jun 14,2023
+# vcom -reportprogress 300 -work work /home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/stimuli_rand_num.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity stimuli_rand_num
+# ** Warning: /home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/stimuli_rand_num.vhd(8): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# -- Compiling architecture arch_stimuli of stimuli_rand_num
+# ** Warning: /home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/stimuli_rand_num.vhd(23): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 09:45:45 on Jun 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+vcom -reportprogress 300 -work work /home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/testbench_rand_num.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:45:46 on Jun 14,2023
+# vcom -reportprogress 300 -work work /home/gabriel-personal/Documents/GitHub/PSI3451/projeto_1/testbench_rand_num.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_rand_num
+# -- Compiling architecture arch of tb_rand_num
+# End time: 09:45:46 on Jun 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_rand_num
+# vsim work.tb_rand_num 
+# Start time: 09:46:00 on Jun 14,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_rand_num(arch)
+# Loading work.rand_num(structural)
+# Loading work.lfsr(arch)
+# Loading work.d_reg(arch)
+# Loading work.stimuli_rand_num(arch_stimuli)
+# Loading work.clock_generator(test)
+quit -sim
+# End time: 10:13:47 on Jun 14,2023, Elapsed time: 0:27:47
+# Errors: 0, Warnings: 0
