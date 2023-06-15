@@ -1,0 +1,44 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate -label CLK<--in /tb_base_circuit_extended/clk_s
+add wave -noupdate -label RST<--in   /tb_base_circuit_extended/rst_s 
+
+add wave -noupdate -label BUTTON_ENABLE<--in /tb_base_circuit_extended/enable_s 
+add wave -noupdate -label BUTTON_SPEED<--in /tb_base_circuit_extended/sys_speed_s 
+
+add wave -noupdate -label START_STEP<--signal /tb_base_circuit_extended/start_step_s 
+
+add wave -noupdate -label CNT_GURU_RDY---signal /tb_base_circuit_extended/dut/step/cnt_guru_rdy 
+add wave -noupdate -label CNT_DISC_RDY---signal /tb_base_circuit_extended/dut/step/cnt_disc_rdy 
+
+add wave -noupdate -label END_GURU---signal /tb_base_circuit_extended/dut/basis/control/guru/end_of_guru 
+add wave -noupdate -label END_DISC<--from_disc_circ /tb_base_circuit_extended/disc_2_base_s.end_of_disc
+
+add wave -noupdate -label GO_GURU---signal 	/tb_base_circuit_extended/dut/ref/go_guru  
+add wave -noupdate -label GO_DISC--->out	/tb_base_circuit_extended/ref_2_disc_s.go_disc
+add wave -noupdate -label GURU_RIGHT_BEH-->out  /tb_base_circuit_extended/ref_2_disc_s.guru_right_behind
+add wave -noupdate -label DUO_FORMED--signal  /tb_base_circuit_extended/ref_2_disc_s.duo_formed
+
+add wave -noupdate -label DISC_ADDR<--from_disc_circ  /tb_base_circuit_extended/disc_2_ref_s.disc_addr
+
+add wave -noupdate -label RB_OUTPUT---signal /tb_base_circuit_extended/dut/basis/data/rb/rb_out 
+
+add wave -noupdate -group MEM_A -label MEM_ADDR(signal) /tb_base_circuit_extended/dut/mem/address_a
+add wave -noupdate -group MEM_A -label W_EN(signal) /tb_base_circuit_extended/dut/mem/wren_a 
+add wave -noupdate -group MEM_A -label DATA_IN(signal) /tb_base_circuit_extended/dut/mem/data_a 
+add wave -noupdate -group MEM_A -label DATA_CG(code)   /tb_base_circuit_extended/dut/basis/control/ctrl_2_dp.cg_sel 
+add wave -noupdate -group MEM_A -label DATA_OUT(out) /tb_base_circuit_extended/dut/mem/q_a
+
+add wave -noupdate -group MEM_B -label MEM_ADDR(signal) /tb_base_circuit_extended/dut/mem/address_b
+add wave -noupdate -group MEM_B -label W_EN(signal) /tb_base_circuit_extended/dut/mem/wren_b 
+add wave -noupdate -group MEM_B -label DATA_IN(signal) /tb_base_circuit_extended/dut/mem/data_b 
+add wave -noupdate -group MEM_B -label DATA_OUT(out) /tb_base_circuit_extended/dut/mem/q_b
+
+add wave -noupdate -group STATES -label MAIN---signal /tb_base_circuit_extended/dut/basis/control/main/STATE
+add wave -noupdate -group STATES -label INIT---signal /tb_base_circuit_extended/dut/basis/control/init/STATE
+add wave -noupdate -group STATES -label GURU---signal /tb_base_circuit_extended/dut/basis/control/guru/STATE
+
+
+run 5200 ns
+
+
