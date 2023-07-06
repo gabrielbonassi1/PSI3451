@@ -1,0 +1,396 @@
+INICIO DA SIMULACAO
+
+
+ DE NUMERO ALEATORIO
+
+
+ NOVO PASSO 
+
+
+  Escrita realizada para DISC
+  Endereço atual= 52
+
+
+  Escrita realizada para BLANK
+  Endereço atual= 60
+
+
+ NOVO PASSO 
+
+
+  Escrita realizada para DISC
+  Endereço atual= 44
+
+
+  Escrita realizada para BLANK
+  Endereço atual= 52
+
+
+ NOVO PASSO 
+
+
+  Escrita realizada para DISC
+  Endereço atual= 36
+
+
+  Escrita realizada para BLANK
+  Endereço atual= 44
+
+
+ NOVO PASSO 
+
+
+  Escrita realizada para DISC
+  Endereço atual= 28
+
+
+  Escrita realizada para BLANK
+  Endereço atual= 36
+
+
+ NOVO PASSO 
+
+
+  Escrita realizada para DISC
+  Endereço atual= 20
+
+
+  Escrita realizada para BLANK
+  Endereço atual= 28
+
+
+ NOVO PASSO 
+
+
+  Escrita realizada para DISC
+  Endereço atual= 12
+
+
+  Escrita realizada para BLANK
+  Endereço atual= 20
+
+
+ NOVO PASSO 
+
+
+INDO PARA A PRIMEIRA LINHA
+
+
+  Escrita realizada para DISC
+  Endereço atual= 4
+
+
+  Escrita realizada para BLANK
+  Endereço atual= 12
+
+
+ NOVO PASSO 
+
+
+PRIMEIRA LINHA CRUZADA
+
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+segue 
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+NOVA RODADA PARA VERIFICAR DUO-FORMED
+
+
+PASSO 1   
+
+
+GERACAO DE NUMERO ALEATORIO
+
+
+  Escrita realizada
+  Endereço atual= 62
+
+
+ NOVO PASSO 
+
+
+  Escrita realizada para DISC
+  Endereço atual= 54
+
+
+  Escrita realizada para BLANK
+  Endereço atual= 62
+
+
+ NOVO PASSO 
+
+
+  Escrita realizada para DISC
+  Endereço atual= 46
+
+
+  Escrita realizada para BLANK
+  Endereço atual= 54
+
+
+ NOVO PASSO 
+
+
+  Escrita realizada para DISC
+  Endereço atual= 38
+
+
+  Escrita realizada para BLANK
+  Endereço atual= 46
+
+
+ NOVO PASSO 
+
+
+  Escrita realizada para DISC
+  Endereço atual= 30
+
+
+  Escrita realizada para BLANK
+  Endereço atual= 38
+
+
+ NOVO PASSO 
+
+
+  Escrita realizada para DISC
+  Endereço atual= 22
+
+
+  Escrita realizada para BLANK
+  Endereço atual= 30
+
+
+ NOVO PASSO 
+
+
+  Escrita realizada para DISC
+  Endereço atual= 14
+
+
+  Escrita realizada para BLANK
+  Endereço atual= 22
+
+
+ NOVO PASSO 
+
+
+INDO PARA A PRIMEIRA LINHA
+
+
+  Escrita realizada para DUO
+  Endereço atual= 6
+
+
+  Escrita realizada para BLANK
+  Endereço atual= 14
+
+
+ULTRAPASSADA A PRIMEIRA LINHA
+
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+ NOVO PASSO 
+
+
+NOVA RODADA PARA VERIFICAR RIGHT-BEHIND
+
+
+PASSO 1   
+
+
+GERACAO DE NUMERO ALEATORIO
+
+
+  Escrita realizada
+  Endereço atual= 62
+
+
+ NOVO PASSO 
+
+
+  Escrita realizada para DISC
+  Endereço atual= 52
+
+
+  Escrita realizada para BLANK
+  Endereço atual= 60
+
+
+ NOVO PASSO 
+
+
+  Escrita realizada para DISC
+  Endereço atual= 44
+
+
+  Escrita realizada para BLANK
+  Endereço atual= 52
+
+
+ NOVO PASSO 
+
+
+  Escrita realizada para DISC
+  Endereço atual= 36
+
+
+  Escrita realizada para BLANK
+  Endereço atual= 44
+
+
+ NOVO PASSO 
+
+
+  Escrita realizada para DISC
+  Endereço atual= 28
+
+
+  Escrita realizada para BLANK
+  Endereço atual= 36
+
+
+ NOVO PASSO 
+
+
+  Escrita realizada para DISC
+  Endereço atual= 20
+
+
+  Escrita realizada para BLANK
+  Endereço atual= 28
+
+
+ NOVO PASSO 
+
+
+  Escrita realizada para DISC
+  Endereço atual= 12
+
+
+  Escrita realizada para BLANK
+  Endereço atual= 20
+
+
+ NOVO PASSO 
+
+
+  Escrita realizada para DISC
+  Endereço atual= 4
+
+
+  Escrita realizada para BLANK
+  Endereço atual= 12
+
+
+ NOVO PASSO 
+
+
+ULTRAPASSADA A PRIMEIRA LINHA
+
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+DETECTADO: sinal end_of_disciple ativado
+
+ NOVO PASSO 
+
+

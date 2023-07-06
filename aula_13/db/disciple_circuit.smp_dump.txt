@@ -1,0 +1,16 @@
+
+State Machine - |disciple_circuit|disc_control:control|state
+Name state.LAST_WITH_GURU state.LAST state.CHECK_BEHIND_DUO state.CLEAR_PREV state.WRITE_DISC state.WRITE_DUO state.CHECK_DUO state.CHECK_LAST state.INCR state.WAIT_CONT_DISC state.WRITE_RAND state.RAND state.START 
+state.START 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.RAND 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.WRITE_RAND 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.WAIT_CONT_DISC 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.INCR 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.CHECK_LAST 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.CHECK_DUO 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.WRITE_DUO 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.WRITE_DISC 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.CLEAR_PREV 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.CHECK_BEHIND_DUO 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.LAST 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.LAST_WITH_GURU 1 0 0 0 0 0 0 0 0 0 0 0 1 

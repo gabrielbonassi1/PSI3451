@@ -1,0 +1,31 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate -label CLK<--in /tb_disciple/clk_s
+add wave -noupdate -label RST<--in   /tb_disciple/rst_s 
+
+add wave -noupdate -label COUNT_STEP /tb_disciple/cnt_disc_rdy_s 
+add wave -noupdate -label START_STEP /tb_disciple/start_step_s 
+
+add wave -noupdate -label END_OF_DISC /tb_disciple/end_of_disc_s
+
+add wave -noupdate -label GO_DISC  /tb_disciple/go_disc_s 
+add wave -noupdate -label DUO_FORMED   /tb_disciple/duo_formed_s 
+add wave -noupdate -label GURU_RIGHT_BEHIND  /tb_disciple/guru_right_behind_s 
+
+add wave -noupdate -decimal -group DISC -label DISC_ADDR  /tb_disciple/disc_address_s 
+add wave -noupdate -decimal -group DISC -label DISC_PREV_ADDR /tb_disciple/disc_address_prev_s 
+
+
+add wave -noupdate -decimal -group MEM -label MEM_ADDR  /tb_disciple/disc_address_to_mem_s
+add wave -noupdate -group MEM -label W_EN               /tb_disciple/disc_wr_en_s 
+add wave -noupdate -decimal -group MEM -label DATA_IN   /tb_disciple/disc_data_s 
+
+add wave -noupdate -group STATES -label DISC /tb_disciple/dut/control/state
+add wave -noupdate -group RAND -label num_aleatorio /tb_disciple/dut/data/n_g/rand_num_output_gen/rand_num_output
+add wave -noupdate -decimal -label FASE-PASSO  /tb_disciple/fase_s 
+
+wave zoom full
+
+run 10 us
+
+

@@ -1,0 +1,129 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "disc_wr_en",
+					"strict" : false
+				},
+				{
+					"name" : "disc_address_2_mem[0]",
+					"strict" : false
+				},
+				{
+					"name" : "disc_address_2_mem[1]",
+					"strict" : false
+				},
+				{
+					"name" : "disc_address_2_mem[2]",
+					"strict" : false
+				},
+				{
+					"name" : "disc_address_2_mem[3]",
+					"strict" : false
+				},
+				{
+					"name" : "disc_address_2_mem[4]",
+					"strict" : false
+				},
+				{
+					"name" : "disc_address_2_mem[5]",
+					"strict" : false
+				},
+				{
+					"name" : "disc_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "disc_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "disc_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "end_of_disc",
+					"strict" : false
+				},
+				{
+					"name" : "disc_addr_prev[0]",
+					"strict" : false
+				},
+				{
+					"name" : "disc_addr_prev[1]",
+					"strict" : false
+				},
+				{
+					"name" : "disc_addr_prev[2]",
+					"strict" : false
+				},
+				{
+					"name" : "disc_addr_prev[3]",
+					"strict" : false
+				},
+				{
+					"name" : "disc_addr_prev[4]",
+					"strict" : false
+				},
+				{
+					"name" : "disc_addr_prev[5]",
+					"strict" : false
+				},
+				{
+					"name" : "disc_addr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "disc_addr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "disc_addr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "disc_addr[3]",
+					"strict" : false
+				},
+				{
+					"name" : "disc_addr[4]",
+					"strict" : false
+				},
+				{
+					"name" : "disc_addr[5]",
+					"strict" : false
+				},
+				{
+					"name" : "duo_formed",
+					"strict" : false
+				},
+				{
+					"name" : "guru_right_behind",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "res",
+					"strict" : false
+				},
+				{
+					"name" : "start_step",
+					"strict" : false
+				},
+				{
+					"name" : "go_disc",
+					"strict" : false
+				},
+				{
+					"name" : "cnt_disc_rdy",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

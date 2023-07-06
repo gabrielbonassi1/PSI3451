@@ -71,13 +71,13 @@ architecture arch of disc_datapath is
         (
             WIDTH		: NATURAL	:= 8
         );
-
+    
         port
         (
-            one_op		     : in STD_LOGIC_VECTOR(WIDTH-1 downto 0); 
-            rb_op			 : in STD_LOGIC_VECTOR(WIDTH-1 downto 0);
-            alu_ctrl         : in STD_LOGIC;
-            alu_result		 : out STD_LOGIC_VECTOR(WIDTH-1 downto 0)
+            one_op		     : in STD_LOGIC_VECTOR(WIDTH-1 downto 0); -- uma constante (00000001).
+            rb_op			     : in STD_LOGIC_VECTOR(WIDTH-1 downto 0); -- operandos Rb_op s�o oriundos de Reg Bank (sa�das de REG_GURU ou REG_INIT).
+            alu_ctrl         : in STD_LOGIC;                          -- controle a saida da ula: 
+            alu_result		  : out STD_LOGIC_VECTOR(WIDTH-1 downto 0) -- resultado_soma(proxima posicao do GURU) ou posicao atual do GURU
         );
     end component;
 
@@ -139,7 +139,7 @@ architecture arch of disc_datapath is
             );
             
         
-        alu_1:	alu 				
+        alu_1:	alu				
             generic map(
                 WIDTH	=> WIDTH
             )
