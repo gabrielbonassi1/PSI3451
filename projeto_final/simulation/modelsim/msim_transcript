@@ -1,0 +1,672 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do wisdom_circuit_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/xor2.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:16 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/xor2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity xor2
+# -- Compiling architecture dataflow of xor2
+# End time: 20:14:16 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/wisdom_package.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:16 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/wisdom_package.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package wisdom_package
+# End time: 20:14:16 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/reg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:16 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity reg
+# -- Compiling architecture arch of reg
+# End time: 20:14:16 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/referee.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:16 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/referee.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity referee
+# -- Compiling architecture fsm_arch of referee
+# End time: 20:14:16 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/rc_adder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:16 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/rc_adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rc_adder
+# -- Compiling architecture structural of rc_adder
+# End time: 20:14:16 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/or2.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:17 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/or2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity or_2
+# -- Compiling architecture dataflow of or_2
+# End time: 20:14:17 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/mem_2port.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:17 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/mem_2port.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mem_2port
+# -- Compiling architecture SYN of mem_2port
+# End time: 20:14:17 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/lfsr.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:17 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/lfsr.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity lfsr
+# -- Compiling architecture lfsr_arch of lfsr
+# End time: 20:14:17 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/holder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:17 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/holder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity holder
+# -- Compiling architecture fsm_arch of holder
+# End time: 20:14:17 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/galois_2bits.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:17 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/galois_2bits.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Galois_2bits
+# ** Warning: C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/galois_2bits.vhd(14): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# -- Compiling architecture arch of Galois_2bits
+# End time: 20:14:17 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/full_adder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:17 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/full_adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity full_adder_1
+# -- Compiling architecture dataflow of full_adder_1
+# End time: 20:14:17 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/d_reg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:17 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/d_reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity d_reg
+# -- Compiling architecture arch of d_reg
+# End time: 20:14:17 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/counter_trigger.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:17 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/counter_trigger.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter_trigger
+# -- Compiling architecture arch of counter_trigger
+# End time: 20:14:17 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/alu.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:17 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/alu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity alu
+# -- Compiling architecture with_RCA of alu
+# End time: 20:14:17 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/rand_num_disc.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:17 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/rand_num_disc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity rand_num_disc
+# -- Compiling architecture structural of rand_num_disc
+# ** Warning: C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/rand_num_disc.vhd(44): (vcom-1074) Non-locally static OTHERS choice is allowed only if it is the only choice of the only association.
+# End time: 20:14:17 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/wisdom_circuit.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:17 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/wisdom_circuit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package wisdom_package
+# -- Compiling entity wisdom_circuit
+# -- Compiling architecture arch of wisdom_circuit
+# End time: 20:14:17 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/step_counter.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:17 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/step_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package wisdom_package
+# -- Compiling entity step_counter
+# -- Compiling architecture arch of step_counter
+# End time: 20:14:17 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/reg_bank_disc.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:18 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/reg_bank_disc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package wisdom_package
+# -- Compiling entity reg_bank_disc
+# -- Compiling architecture arch of reg_bank_disc
+# End time: 20:14:18 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/reg_bank.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:18 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/reg_bank.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package wisdom_package
+# -- Compiling entity reg_bank
+# -- Compiling architecture arch of reg_bank
+# End time: 20:14:18 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/rand_num.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:18 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/rand_num.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package wisdom_package
+# -- Loading package NUMERIC_STD
+# -- Compiling entity rand_num
+# ** Warning: C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/rand_num.vhd(13): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# -- Compiling architecture arch of rand_num
+# ** Warning: C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/rand_num.vhd(32): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 20:14:18 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/num_gen_disc.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:18 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/num_gen_disc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package wisdom_package
+# -- Compiling entity num_gen_disc
+# -- Compiling architecture arch of num_gen_disc
+# End time: 20:14:18 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/num_gen.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:18 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/num_gen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package wisdom_package
+# -- Loading package NUMERIC_STD
+# -- Compiling entity num_gen
+# ** Warning: C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/num_gen.vhd(13): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# -- Compiling architecture arch of num_gen
+# ** Warning: C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/num_gen.vhd(34): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 20:14:18 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/fsm_main.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:18 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/fsm_main.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package wisdom_package
+# -- Compiling entity fsm_main
+# -- Compiling architecture arch of fsm_main
+# End time: 20:14:18 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/fsm_init.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:18 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/fsm_init.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package wisdom_package
+# -- Compiling entity fsm_init
+# -- Compiling architecture arch of fsm_init
+# End time: 20:14:18 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/fsm_guru.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:18 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/fsm_guru.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package wisdom_package
+# -- Compiling entity fsm_guru
+# -- Compiling architecture arch of fsm_guru
+# End time: 20:14:18 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/disc_datapath.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:18 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/disc_datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package wisdom_package
+# -- Compiling entity disc_datapath
+# -- Compiling architecture arch of disc_datapath
+# End time: 20:14:18 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/disc_control.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:18 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/disc_control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package wisdom_package
+# -- Compiling entity disc_control
+# -- Compiling architecture arch of disc_control
+# End time: 20:14:18 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/disciple_circuit.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:18 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/disciple_circuit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package wisdom_package
+# -- Compiling entity disciple_circuit
+# -- Compiling architecture arch of disciple_circuit
+# End time: 20:14:18 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/coll_ovf_disc.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:18 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/coll_ovf_disc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package wisdom_package
+# -- Compiling entity coll_ovf_disc
+# -- Compiling architecture arch of coll_ovf_disc
+# End time: 20:14:18 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/coll_ovf.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:19 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/coll_ovf.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package wisdom_package
+# -- Compiling entity coll_ovf
+# -- Compiling architecture arch of coll_ovf
+# End time: 20:14:19 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/code_gen.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:19 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/code_gen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package wisdom_package
+# -- Compiling entity code_gen
+# -- Compiling architecture arch of code_gen
+# End time: 20:14:19 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/button_handler.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:19 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/button_handler.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package wisdom_package
+# -- Compiling entity button_handler
+# -- Compiling architecture arch of button_handler
+# End time: 20:14:19 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/base_datapath.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:19 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/base_datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package wisdom_package
+# -- Compiling entity base_datapath
+# -- Compiling architecture arch of base_datapath
+# End time: 20:14:19 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/base_control.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:19 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/base_control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package wisdom_package
+# -- Compiling entity base_control
+# -- Compiling architecture arch of base_control
+# End time: 20:14:19 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/base_circuit_extended.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:19 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/base_circuit_extended.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package wisdom_package
+# -- Compiling entity base_circuit_extended
+# -- Compiling architecture arch of base_circuit_extended
+# End time: 20:14:19 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/base_circuit.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:19 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/base_circuit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package wisdom_package
+# -- Compiling entity base_circuit
+# -- Compiling architecture arch of base_circuit
+# End time: 20:14:19 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/stimuli_wisdom.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:19 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/stimuli_wisdom.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package wisdom_package
+# -- Compiling entity stimuli_wisdom
+# ** Warning: C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/stimuli_wisdom.vhd(11): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# -- Compiling architecture test of stimuli_wisdom
+# ** Warning: C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/stimuli_wisdom.vhd(29): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 20:14:19 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/tb_wisdom.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:19 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/tb_wisdom.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package wisdom_package
+# -- Compiling entity tb_wisdom
+# -- Compiling architecture test of tb_wisdom
+# ** Warning: C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/tb_wisdom.vhd(34): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 20:14:19 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/map_monitor.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:19 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/map_monitor.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity map_monitor
+# -- Compiling architecture arch of map_monitor
+# End time: 20:14:19 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/clock_generator.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:19 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/clock_generator.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity clock_generator
+# ** Warning: C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/clock_generator.vhd(7): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# -- Compiling architecture test of clock_generator
+# End time: 20:14:19 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vcom -93 -work work {C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/address_counter.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:19 on Jul 11,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/address_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity address_counter
+# -- Compiling architecture Behavioral of address_counter
+# End time: 20:14:19 on Jul 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  tb_wisdom
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" tb_wisdom 
+# Start time: 20:14:20 on Jul 11,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.wisdom_package
+# Loading work.tb_wisdom(test)
+# Loading work.wisdom_circuit(arch)
+# Loading work.base_circuit_extended(arch)
+# Loading work.button_handler(arch)
+# Loading work.mem_2port(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+# Loading work.base_circuit(arch)
+# Loading work.base_control(arch)
+# Loading work.fsm_main(arch)
+# Loading work.counter_trigger(arch)
+# Loading work.fsm_init(arch)
+# Loading work.fsm_guru(arch)
+# Loading work.base_datapath(arch)
+# Loading work.num_gen(arch)
+# Loading work.rand_num(arch)
+# Loading work.galois_2bits(arch)
+# Loading work.or_2(dataflow)
+# Loading work.reg(arch)
+# Loading work.xor2(dataflow)
+# Loading work.reg_bank(arch)
+# Loading work.alu(with_rca)
+# Loading work.rc_adder(structural)
+# Loading work.full_adder_1(dataflow)
+# Loading work.code_gen(arch)
+# Loading work.coll_ovf(arch)
+# Loading work.step_counter(arch)
+# Loading work.referee(fsm_arch)
+# Loading work.holder(fsm_arch)
+# Loading work.disciple_circuit(arch)
+# Loading work.disc_control(arch)
+# Loading work.disc_datapath(arch)
+# Loading work.num_gen_disc(arch)
+# Loading work.rand_num_disc(structural)
+# Loading work.lfsr(lfsr_arch)
+# Loading work.d_reg(arch)
+# Loading work.reg_bank_disc(arch)
+# Loading work.coll_ovf_disc(arch)
+# Loading work.stimuli_wisdom(test)
+# Loading work.clock_generator(test)
+# Loading work.map_monitor(arch)
+# Loading work.address_counter(behavioral)
+# ** Warning: Design size of 11001 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# ** Warning: (vsim-8684) No drivers exist on out port /tb_wisdom/dut/cir1/basis/control/init/flags_2_dp.rb_GURU_en, and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /tb_wisdom/dut/cir1/basis/control/init_2_dp_s.rb_GURU_en.
+# ** Warning: (vsim-8684) No drivers exist on out port /tb_wisdom/dut/cir1/basis/control/init/flags_2_dp.rb_PRE_GURU_en, and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /tb_wisdom/dut/cir1/basis/control/init_2_dp_s.rb_PRE_GURU_en.
+# ** Warning: (vsim-8684) No drivers exist on out port /tb_wisdom/dut/cir1/basis/control/init/flags_2_dp.cg_sel, and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /tb_wisdom/dut/cir1/basis/control/init_2_dp_s.cg_sel.
+# ** Warning: (vsim-8684) No drivers exist on out port /tb_wisdom/dut/cir1/basis/control/init/flags_2_mem.mem_a_addr(5 downto 0), and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /tb_wisdom/dut/cir1/basis/control/init_2_mem_s.mem_a_addr(5 downto 0).
+# ** Warning: (vsim-8684) No drivers exist on out port /tb_wisdom/dut/cir1/basis/control/init/flags_2_mem.data_a(7 downto 0), and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /tb_wisdom/dut/cir1/basis/control/init_2_mem_s.data_a(7 downto 0).
+# ** Warning: (vsim-8684) No drivers exist on out port /tb_wisdom/dut/cir1/basis/control/guru/flags_2_dp.rb_INIT_en, and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /tb_wisdom/dut/cir1/basis/control/guru_2_dp_s.rb_INIT_en.
+# ** Warning: (vsim-8684) No drivers exist on out port /tb_wisdom/dut/cir1/basis/control/guru/flags_2_mem.mem_a_addr(5 downto 0), and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /tb_wisdom/dut/cir1/basis/control/guru_2_mem_s.mem_a_addr(5 downto 0).
+# ** Warning: (vsim-8684) No drivers exist on out port /tb_wisdom/dut/cir1/basis/control/guru/flags_2_mem.data_a(7 downto 0), and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /tb_wisdom/dut/cir1/basis/control/guru_2_mem_s.data_a(7 downto 0).
+# ** Warning: (vsim-8684) No drivers exist on out port /tb_wisdom/dut/cir1/basis/data/mem_data.mem_wr_en, and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /tb_wisdom/dut/cir1/basis/dp_2_mem_s.mem_wr_en.
+# 
+# do C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/run_sim.txt
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate -label CLK /tb_wisdom/clk_s
+# add wave -noupdate -label RST   /tb_wisdom/rst_s 
+# 
+# add wave -noupdate -label BUTTON_ENABLE /tb_wisdom/enable_s 
+# add wave -noupdate -label BUTTON_SPEED /tb_wisdom/sys_speed_s 
+# 
+# add wave -noupdate -label START_STEP /tb_wisdom/start_step_s 
+# 
+# add wave -noupdate -label PRINT_READY /tb_wisdom/print_rdy_s 
+# 
+# add wave -noupdate -label CNT_GURU_RDY /tb_wisdom/dut/cir1/cnt_guru_rdy_s 
+# add wave -noupdate -label CNT_DISC_RDY /tb_wisdom/dut/cir1/cnt_disc_rdy 
+# 
+# add wave -noupdate -label GURU_END  /tb_wisdom/dut/cir1/basis/dp_2_ctrl_s.end_of_guru 
+# add wave -noupdate -label DISC_END  /tb_wisdom/dut/cir1/disc_2_base_s.end_of_disc
+# 
+# add wave -noupdate -label GO_GURU          /tb_wisdom/dut/cir1/ref_2_base_s.go_guru 
+# add wave -noupdate -label GO_DISC          /tb_wisdom/dut/cir2/control/go_disc 
+# add wave -noupdate -label DUO_FORMED       /tb_wisdom/dut/cir2/duo_formed_s
+# add wave -noupdate -label GURU_RIGHT_BEHIND /tb_wisdom/dut/cir1/ref_2_disc_s.guru_right_behind 
+# 
+# add wave -noupdate -decimal -label DISC_ADDR        /tb_wisdom/dut/cir1/disc_2_ref_s.disc_addr 
+# add wave -noupdate -decimal -label DISC_PREV_ADDR   /tb_wisdom/dut/cir1/disc_2_ref_s.disc_prev_addr 
+# add wave -noupdate -decimal -label GURU_ADDR        /tb_wisdom/dut/cir1/base_2_ref_s.guru_addr 
+# add wave -noupdate -decimal -label GURU_PREV_ADDR   /tb_wisdom/dut/cir1/base_2_ref_s.guru_prev_addr 
+# add wave -noupdate -decimal -label DISC_ADDR        /tb_wisdom/dut/cir2/data/disc_addr
+# add wave -noupdate -decimal -label DISC_PREV_ADDR   /tb_wisdom/dut/cir2/data/disc_addr_prev
+# 
+# 
+# add wave -noupdate -group MEM -unsigned -label MEM_ADDR_A(signal)    /tb_wisdom/dut/cir1/mem/address_a 
+# add wave -noupdate -group MEM -unsigned -label MEM_ADDR_B(signal)    /tb_wisdom/dut/cir1/mem/address_b 
+# add wave -noupdate -group MEM -label W_EN_A(signal)  	   /tb_wisdom/dut/cir1/mem/wren_a 
+# add wave -noupdate -group MEM -label W_EN_B(signal)  	   /tb_wisdom/dut/cir1/mem/wren_b 
+# add wave -noupdate -group MEM -label DATA_IN_A(signal)     /tb_wisdom/dut/cir1/mem/data_a 
+# add wave -noupdate -group MEM -label DATA_IN_B(signal)     /tb_wisdom/dut/cir1/mem/data_b
+# add wave -noupdate -group MEM -label DATA_OUT_A(out) 	   /tb_wisdom/dut/cir1/mem/q_a 
+# add wave -noupdate -group MEM -label DATA_OUT_B(out) 	   /tb_wisdom/dut/cir1/mem/q_b 
+# 
+# 
+# 
+# add wave -noupdate -group STATES -label MAIN   /tb_wisdom/dut/cir1/basis/control/main/STATE 
+# add wave -noupdate -group STATES -label INIT   /tb_wisdom/dut/cir1/basis/control/init/STATE 
+# add wave -noupdate -group STATES -label GURU   /tb_wisdom/dut/cir1/basis/control/guru/STATE 
+# add wave -noupdate -group STATES -label DISC   /tb_wisdom/dut/cir2/control/state 
+# 
+# add wave -noupdate -group RAND -label ADDR /tb_wisdom/dut/cir2/data/n_g/rand_num_output_gen/rand_num_output
+# add wave -noupdate -group RAND -label RAND_NUM /tb_wisdom/dut/cir2/data/n_g/rand_num_output_gen/q_s
+# 
+# 
+# 
+# run 600 us
+# 
+# 
+vsim -wlf item_3_b.wlf
+# No design specified
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/simulation/modelsim/wave.do
+# End time: 01:33:53 on Jul 12,2023, Elapsed time: 5:19:33
+# Errors: 0, Warnings: 10

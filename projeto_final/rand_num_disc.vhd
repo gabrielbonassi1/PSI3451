@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.NUMERIC_STD.all;
 
-entity rand_num is
+entity rand_num_disc is
 	generic
 	(
 		width : natural := 8
@@ -12,9 +12,9 @@ entity rand_num is
 		rst: in std_logic;
 		rand_num_output : out std_logic_vector(width-1 downto 0)
 	);
-end rand_num;
+end rand_num_disc;
 
-architecture structural of rand_num is
+architecture structural of rand_num_disc is
     COMPONENT lfsr
 	port
 	(

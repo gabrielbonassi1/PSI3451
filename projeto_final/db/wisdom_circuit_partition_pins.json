@@ -1,0 +1,101 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "print_rdy",
+					"strict" : false
+				},
+				{
+					"name" : "start_step",
+					"strict" : false
+				},
+				{
+					"name" : "mem_a_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_a_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_a_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_a_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_a_data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_a_data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_a_data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_a_data[7]",
+					"strict" : false
+				},
+				{
+					"name" : "enable",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "res",
+					"strict" : false
+				},
+				{
+					"name" : "sys_speed[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sys_speed[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sys_speed[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sys_speed[3]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_a_addr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_a_addr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_a_addr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_a_addr[3]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_a_addr[4]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_a_addr[5]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

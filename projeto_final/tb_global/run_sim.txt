@@ -21,12 +21,12 @@ add wave -noupdate -label GO_DISC          /tb_wisdom/dut/cir2/control/go_disc
 add wave -noupdate -label DUO_FORMED       /tb_wisdom/dut/cir2/duo_formed_s
 add wave -noupdate -label GURU_RIGHT_BEHIND /tb_wisdom/dut/cir1/ref_2_disc_s.guru_right_behind 
 
-add wave -noupdate -decimal -label DISC_ADDR        /tb_wisdom/dut/cir2/disc_2_ref_s.disc_addr 
-add wave -noupdate -decimal -label DISC_PREV_ADDR   /tb_wisdom/dut/cir2/disc_2_ref_s.disc_prev_addr 
+add wave -noupdate -decimal -label DISC_ADDR        /tb_wisdom/dut/cir1/disc_2_ref_s.disc_addr 
+add wave -noupdate -decimal -label DISC_PREV_ADDR   /tb_wisdom/dut/cir1/disc_2_ref_s.disc_prev_addr 
 add wave -noupdate -decimal -label GURU_ADDR        /tb_wisdom/dut/cir1/base_2_ref_s.guru_addr 
 add wave -noupdate -decimal -label GURU_PREV_ADDR   /tb_wisdom/dut/cir1/base_2_ref_s.guru_prev_addr 
-add wave -noupdate -decimal -label DISC_ADDR        /tb_wisdom/dut/cir2/data/disc_addres
-add wave -noupdate -decimal -label DISC_PREV_ADDR   /tb_wisdom/dut/cir2/data/disc_addres_prev
+add wave -noupdate -decimal -label DISC_ADDR        /tb_wisdom/dut/cir2/data/disc_addr
+add wave -noupdate -decimal -label DISC_PREV_ADDR   /tb_wisdom/dut/cir2/data/disc_addr_prev
 
 
 add wave -noupdate -group MEM -unsigned -label MEM_ADDR_A(signal)    /tb_wisdom/dut/cir1/mem/address_a 
@@ -45,8 +45,8 @@ add wave -noupdate -group STATES -label INIT   /tb_wisdom/dut/cir1/basis/control
 add wave -noupdate -group STATES -label GURU   /tb_wisdom/dut/cir1/basis/control/guru/STATE 
 add wave -noupdate -group STATES -label DISC   /tb_wisdom/dut/cir2/control/state 
 
-add wave -noupdate -group RAND -label ADDR /tb_wisdom/dut/cir2/data/n_g/rand_num_discber_gen/rand_num_discber
-add wave -noupdate -group RAND -label RAND_NUM /tb_wisdom/dut/cir2/data/n_g/rand_num_discber_gen/q_s
+add wave -noupdate -group RAND -label ADDR /tb_wisdom/dut/cir2/data/n_g/rand_num_output_gen/rand_num_output
+add wave -noupdate -group RAND -label RAND_NUM /tb_wisdom/dut/cir2/data/n_g/rand_num_output_gen/q_s
 
 
 

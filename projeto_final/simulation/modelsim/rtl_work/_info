@@ -1,0 +1,1699 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/simulation/modelsim
+Eaddress_counter
+Z1 w1593736256
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/address_counter.vhd
+Z6 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/address_counter.vhd
+l0
+L5
+VD]kQOoWIXF>7;zg2O3Coa2
+!s100 bQo?PRg@kFSjaDASE^>B@1
+Z7 OV;C;10.5b;63
+31
+Z8 !s110 1689117259
+!i10b 1
+Z9 !s108 1689117259.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/address_counter.vhd|
+Z11 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/address_counter.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+R4
+DEx4 work 15 address_counter 0 22 D]kQOoWIXF>7;zg2O3Coa2
+l23
+L20
+VIb71>6X3@9QcEXgZ722XA2
+!s100 ?Sb[C[:8oQVDZD=Ka40Vf0
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ealu
+Z14 w1688043135
+R2
+R3
+R4
+R0
+Z15 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/alu.vhd
+Z16 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/alu.vhd
+l0
+L24
+V<lWz_BQ2T>GG428^bHzT71
+!s100 mh45zo5cJ7]gAQG_mZ<[J1
+R7
+31
+Z17 !s110 1689117257
+!i10b 1
+Z18 !s108 1689117257.000000
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/alu.vhd|
+Z20 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/alu.vhd|
+!i113 1
+R12
+R13
+Awith_rca
+R2
+R3
+R4
+DEx4 work 3 alu 0 22 <lWz_BQ2T>GG428^bHzT71
+l68
+L41
+VKPPlf;J[GWRcL^L:CjJM;0
+!s100 :JBN7BiA@@BGJPHEb3ll23
+R7
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Ebase_circuit
+Z21 w1592517794
+Z22 DPx4 work 14 wisdom_package 0 22 3Hef<B3nadS1Vf>JOnLD81
+Z23 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z24 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R3
+R4
+R0
+Z25 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/base_circuit.vhd
+Z26 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/base_circuit.vhd
+l0
+L7
+VN?][>l1m@<K90Y8z^1i>Y3
+!s100 6f0;eU90S;F<?<9A5TRa;0
+R7
+31
+R8
+!i10b 1
+R9
+Z27 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/base_circuit.vhd|
+Z28 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/base_circuit.vhd|
+!i113 1
+R12
+R13
+Aarch
+R22
+R23
+R24
+R3
+R4
+DEx4 work 12 base_circuit 0 22 N?][>l1m@<K90Y8z^1i>Y3
+l88
+L25
+V4UaieGHRFF1fSCO5oFZJO0
+!s100 7^?R@1hG8olX2PWEm7jB?3
+R7
+31
+R8
+!i10b 1
+R9
+R27
+R28
+!i113 1
+R12
+R13
+Ebase_circuit_extended
+Z29 w1626305526
+R22
+R2
+R3
+R4
+R0
+Z30 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/base_circuit_extended.vhd
+Z31 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/base_circuit_extended.vhd
+l0
+L12
+V?hd]DNb<6JC=^=ALZ]QhE2
+!s100 ;jf8fHBaL47?mF7dE:an20
+R7
+31
+R8
+!i10b 1
+R9
+Z32 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/base_circuit_extended.vhd|
+Z33 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/base_circuit_extended.vhd|
+!i113 1
+R12
+R13
+Aarch
+R22
+R2
+R3
+R4
+DEx4 work 21 base_circuit_extended 0 22 ?hd]DNb<6JC=^=ALZ]QhE2
+l172
+L37
+VYLRAZeUM`TmPjMJ_mEF@W2
+!s100 O2A[XJeQ9`d>N4?_lc[@H0
+R7
+31
+R8
+!i10b 1
+R9
+R32
+R33
+!i113 1
+R12
+R13
+Ebase_control
+Z34 w1655953274
+R22
+R23
+R24
+R3
+R4
+R0
+Z35 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/base_control.vhd
+Z36 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/base_control.vhd
+l0
+L20
+Vi8[7z1OI?GX9`?3]cVOWd2
+!s100 g5[TUcOcJcj093LUOhHP^3
+R7
+31
+R8
+!i10b 1
+R9
+Z37 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/base_control.vhd|
+Z38 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/base_control.vhd|
+!i113 1
+R12
+R13
+Aarch
+R22
+R23
+R24
+R3
+R4
+DEx4 work 12 base_control 0 22 i8[7z1OI?GX9`?3]cVOWd2
+l129
+L39
+V6a0k^[BSN7:P4;XYF?VQ?1
+!s100 QL90XO4C2LQHCV];zA8YA0
+R7
+31
+R8
+!i10b 1
+R9
+R37
+R38
+!i113 1
+R12
+R13
+Ebase_datapath
+Z39 w1655952932
+R22
+R3
+R4
+R0
+Z40 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/base_datapath.vhd
+Z41 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/base_datapath.vhd
+l0
+L5
+VQA`oJOn]JPR1a1^9XZijm0
+!s100 Q^@Od[V8KJ3m`[863WG@<0
+R7
+31
+R8
+!i10b 1
+R9
+Z42 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/base_datapath.vhd|
+Z43 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/base_datapath.vhd|
+!i113 1
+R12
+R13
+Aarch
+R22
+R3
+R4
+DEx4 work 13 base_datapath 0 22 QA`oJOn]JPR1a1^9XZijm0
+l133
+L24
+VDUzLKk0cNHAdYVYA<aKYA3
+!s100 7<L@LIoId>L[PS64<GeGW2
+R7
+31
+R8
+!i10b 1
+R9
+R42
+R43
+!i113 1
+R12
+R13
+Ebutton_handler
+Z44 w1590874142
+R22
+R3
+R4
+R0
+Z45 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/button_handler.vhd
+Z46 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/button_handler.vhd
+l0
+L25
+VXaUVaAK`_Gc;5_jfP@NHc2
+!s100 jYD06=3AWzlG^nnmX3:[`3
+R7
+31
+R8
+!i10b 1
+R9
+Z47 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/button_handler.vhd|
+Z48 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/button_handler.vhd|
+!i113 1
+R12
+R13
+Aarch
+R22
+R3
+R4
+DEx4 work 14 button_handler 0 22 XaUVaAK`_Gc;5_jfP@NHc2
+l49
+L38
+V]^@ddPeH89FT:7Ya[F:KF3
+!s100 I5Sz<A^;ik^0fUjYUeAW11
+R7
+31
+R8
+!i10b 1
+R9
+R47
+R48
+!i113 1
+R12
+R13
+Eclock_generator
+R44
+R3
+R4
+R0
+Z49 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/clock_generator.vhd
+Z50 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/clock_generator.vhd
+l0
+L4
+Vd0No>ID:cWi_7A64in@:E0
+!s100 X^JdaX4Oe>YcKeiJ8`lQI2
+R7
+31
+R8
+!i10b 1
+R9
+Z51 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/clock_generator.vhd|
+Z52 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/clock_generator.vhd|
+!i113 1
+R12
+R13
+Atest
+R3
+R4
+DEx4 work 15 clock_generator 0 22 d0No>ID:cWi_7A64in@:E0
+l20
+L18
+VWkDNoW15ZeF^B_RQI[UYn2
+!s100 ]k`QeK95PKLA35SzZ@bPb3
+R7
+31
+R8
+!i10b 1
+R9
+R51
+R52
+!i113 1
+R12
+R13
+Ecode_gen
+Z53 w1688044921
+R22
+R3
+R4
+R0
+Z54 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/code_gen.vhd
+Z55 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/code_gen.vhd
+l0
+L5
+VDCRzNbgY`_eWVfOZ`9nGS0
+!s100 ;j<SS2]COF3Z9co`jP@3:2
+R7
+31
+R8
+!i10b 1
+R9
+Z56 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/code_gen.vhd|
+Z57 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/code_gen.vhd|
+!i113 1
+R12
+R13
+Aarch
+R22
+R3
+R4
+DEx4 work 8 code_gen 0 22 DCRzNbgY`_eWVfOZ`9nGS0
+l16
+L14
+VffAlmA0i^h=njY@iG]M^h2
+!s100 CiSAS^Q`YOJ;<0_]nHjkg2
+R7
+31
+R8
+!i10b 1
+R9
+R56
+R57
+!i113 1
+R12
+R13
+Ecoll_ovf
+R44
+R22
+R3
+R4
+R0
+Z58 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/coll_ovf.vhd
+Z59 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/coll_ovf.vhd
+l0
+L5
+V80nXkg9_PEY=_EC]LbT_d0
+!s100 XN3CZBNmS_?j2Dend4ZNj2
+R7
+31
+R8
+!i10b 1
+R9
+Z60 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/coll_ovf.vhd|
+Z61 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/coll_ovf.vhd|
+!i113 1
+R12
+R13
+Aarch
+R22
+R3
+R4
+DEx4 work 8 coll_ovf 0 22 80nXkg9_PEY=_EC]LbT_d0
+l27
+L16
+VNIG[O=?9CSlWB_K^_b88M1
+!s100 Ve1[zAehPIISgjaBEN6QA3
+R7
+31
+R8
+!i10b 1
+R9
+R60
+R61
+!i113 1
+R12
+R13
+Ecoll_ovf_disc
+Z62 w1688045000
+R22
+R3
+R4
+R0
+Z63 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/coll_ovf_disc.vhd
+Z64 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/coll_ovf_disc.vhd
+l0
+L5
+VJh;=1eKm`]?[E91F57PdX2
+!s100 Yc=ZzXQ4bFE=m?ecn0Ohg0
+R7
+31
+Z65 !s110 1689117258
+!i10b 1
+Z66 !s108 1689117258.000000
+Z67 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/coll_ovf_disc.vhd|
+Z68 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/coll_ovf_disc.vhd|
+!i113 1
+R12
+R13
+Aarch
+R22
+R3
+R4
+DEx4 work 13 coll_ovf_disc 0 22 Jh;=1eKm`]?[E91F57PdX2
+l21
+L16
+VFkb;e]QOeZCj?;NIKcINC3
+!s100 IZO5G]ec70cfoOjjUi9PU0
+R7
+31
+R65
+!i10b 1
+R66
+R67
+R68
+!i113 1
+R12
+R13
+Ecounter_trigger
+Z69 w1592515342
+R2
+R3
+R4
+R0
+Z70 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/counter_trigger.vhd
+Z71 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/counter_trigger.vhd
+l0
+L18
+VCgi3lo1fGMj`6075WV0_m3
+!s100 99VhbmoW`L3LP;d=8JE0`2
+R7
+31
+R17
+!i10b 1
+R18
+Z72 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/counter_trigger.vhd|
+Z73 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/counter_trigger.vhd|
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+R4
+DEx4 work 15 counter_trigger 0 22 Cgi3lo1fGMj`6075WV0_m3
+l46
+L34
+V4c>O8KSKfVz1mc1lifD?k3
+!s100 8><Y?SR3YTkU<DKf>=3QB0
+R7
+31
+R17
+!i10b 1
+R18
+R72
+R73
+!i113 1
+R12
+R13
+Ed_reg
+Z74 w1688044063
+R2
+R3
+R4
+R0
+Z75 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/d_reg.vhd
+Z76 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/d_reg.vhd
+l0
+L6
+V7V0DN1CnC0CJ?H=<V4EdJ2
+!s100 Poj[OPe;K>fkeiY<IgW9c0
+R7
+31
+R17
+!i10b 1
+R18
+Z77 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/d_reg.vhd|
+Z78 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/d_reg.vhd|
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+R4
+DEx4 work 5 d_reg 0 22 7V0DN1CnC0CJ?H=<V4EdJ2
+l23
+L19
+VfnBaf?1FUTRDkblCKMBHF3
+!s100 EPS_0BMN<55l6mTBba5eH1
+R7
+31
+R17
+!i10b 1
+R18
+R77
+R78
+!i113 1
+R12
+R13
+Edisc_control
+Z79 w1688042117
+R22
+R2
+R3
+R4
+R0
+Z80 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/disc_control.vhd
+Z81 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/disc_control.vhd
+l0
+L7
+V=FACK:WoTXO3Rm`hh3bDj3
+!s100 ^YS<Y6IG=Va?z>FYoM[l51
+R7
+31
+R65
+!i10b 1
+R66
+Z82 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/disc_control.vhd|
+Z83 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/disc_control.vhd|
+!i113 1
+R12
+R13
+Aarch
+R22
+R2
+R3
+R4
+DEx4 work 12 disc_control 0 22 =FACK:WoTXO3Rm`hh3bDj3
+l32
+L28
+VZDA2`GVOXnlobn;ZVeIE23
+!s100 hzVaGh[f4Ehk7fBoOSDN:1
+R7
+31
+R65
+!i10b 1
+R66
+R82
+R83
+!i113 1
+R12
+R13
+Edisc_datapath
+Z84 w1688682396
+R22
+R3
+R4
+R0
+Z85 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/disc_datapath.vhd
+Z86 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/disc_datapath.vhd
+l0
+L5
+V94;3hFAk1DJoi7fT=@]NO2
+!s100 Ti2l^FJEWU<`:@>O6NG>@1
+R7
+31
+R65
+!i10b 1
+R66
+Z87 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/disc_datapath.vhd|
+Z88 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/disc_datapath.vhd|
+!i113 1
+R12
+R13
+Aarch
+R22
+R3
+R4
+DEx4 work 13 disc_datapath 0 22 94;3hFAk1DJoi7fT=@]NO2
+l111
+L32
+VFzmOI2NZJX9CA9@G>z3_M3
+!s100 ;JbMiY<:na`9XbEDVf4EA2
+R7
+31
+R65
+!i10b 1
+R66
+R87
+R88
+!i113 1
+R12
+R13
+Edisciple_circuit
+Z89 w1688046894
+R22
+R23
+R24
+R3
+R4
+R0
+Z90 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/disciple_circuit.vhd
+Z91 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/disciple_circuit.vhd
+l0
+L7
+VPaKRFgSFhJHWaA^kNMW;F3
+!s100 Cc:]Blck89:Y@:@jWSKgK0
+R7
+31
+R65
+!i10b 1
+R66
+Z92 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/disciple_circuit.vhd|
+Z93 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/disciple_circuit.vhd|
+!i113 1
+R12
+R13
+Aarch
+R22
+R23
+R24
+R3
+R4
+DEx4 work 16 disciple_circuit 0 22 PaKRFgSFhJHWaA^kNMW;F3
+l103
+L33
+Vo@TCTjkMh2g1G=EMhVY233
+!s100 Jhd5Q65fz0zmG^?:TH?[c0
+R7
+31
+R65
+!i10b 1
+R66
+R92
+R93
+!i113 1
+R12
+R13
+Efsm_guru
+Z94 w1649110006
+R22
+R23
+R24
+R3
+R4
+R0
+Z95 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/fsm_guru.vhd
+Z96 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/fsm_guru.vhd
+l0
+L18
+V[Wd^o1d_??noDVe7nY[:H3
+!s100 CkW`__0mASEQ77o40n19k1
+R7
+31
+R65
+!i10b 1
+R66
+Z97 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/fsm_guru.vhd|
+Z98 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/fsm_guru.vhd|
+!i113 1
+R12
+R13
+Aarch
+R22
+R23
+R24
+R3
+R4
+DEx4 work 8 fsm_guru 0 22 [Wd^o1d_??noDVe7nY[:H3
+l45
+L35
+V2JZA4HBg>0XGgLo[I2Ded0
+!s100 6_>42Vd;Pel]3L0j_SSSf1
+R7
+31
+R65
+!i10b 1
+R66
+R97
+R98
+!i113 1
+R12
+R13
+Efsm_init
+R44
+R22
+R23
+R24
+R3
+R4
+R0
+Z99 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/fsm_init.vhd
+Z100 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/fsm_init.vhd
+l0
+L18
+V>LLRS^]XU?oEhn;mIBekM0
+!s100 1CkAmOQo[^HOmfgX^G>Z`0
+R7
+31
+R65
+!i10b 1
+R66
+Z101 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/fsm_init.vhd|
+Z102 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/fsm_init.vhd|
+!i113 1
+R12
+R13
+Aarch
+R22
+R23
+R24
+R3
+R4
+DEx4 work 8 fsm_init 0 22 >LLRS^]XU?oEhn;mIBekM0
+l41
+L32
+V>;z8Bi=nCOZG2W@HoW3gS0
+!s100 ZiLZoObCK?;kjE:G^]MM42
+R7
+31
+R65
+!i10b 1
+R66
+R101
+R102
+!i113 1
+R12
+R13
+Efsm_main
+Z103 w1651960408
+R22
+R23
+R24
+R3
+R4
+R0
+Z104 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/fsm_main.vhd
+Z105 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/fsm_main.vhd
+l0
+L18
+V^To3PF`?UA97PLO4c=TXU0
+!s100 :KzEOfk78E3EE7TV;c1H=1
+R7
+31
+R65
+!i10b 1
+R66
+Z106 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/fsm_main.vhd|
+Z107 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/fsm_main.vhd|
+!i113 1
+R12
+R13
+Aarch
+R22
+R23
+R24
+R3
+R4
+DEx4 work 8 fsm_main 0 22 ^To3PF`?UA97PLO4c=TXU0
+l50
+L40
+VkU]?]IH2ejWLIHZOfmgjd3
+!s100 1bg@og=O<IT2<<cWan2:n2
+R7
+31
+R65
+!i10b 1
+R66
+R106
+R107
+!i113 1
+R12
+R13
+Efull_adder_1
+Z108 w1688044052
+R3
+R4
+R0
+Z109 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/full_adder.vhd
+Z110 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/full_adder.vhd
+l0
+L4
+Vfzj^zKCALBT`?T?bDCL]T1
+!s100 U7E7o[EM5h^><nHQIozZa0
+R7
+31
+R17
+!i10b 1
+R18
+Z111 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/full_adder.vhd|
+Z112 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/full_adder.vhd|
+!i113 1
+R12
+R13
+Adataflow
+R3
+R4
+DEx4 work 12 full_adder_1 0 22 fzj^zKCALBT`?T?bDCL]T1
+l19
+L15
+V;5D4`L6Di=[0`IFKUPW<Q1
+!s100 XOml`[VzmK4MELTgB=>C]0
+R7
+31
+R17
+!i10b 1
+R18
+R111
+R112
+!i113 1
+R12
+R13
+Egalois_2bits
+Z113 w1627434026
+R2
+R24
+R23
+R3
+R4
+R0
+Z114 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/galois_2bits.vhd
+Z115 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/galois_2bits.vhd
+l0
+L8
+Vg6DcLlaf27gY8eSVVHGUL3
+!s100 U[H;G[CFNl<3S_`Z3k`1_0
+R7
+31
+R17
+!i10b 1
+R18
+Z116 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/galois_2bits.vhd|
+Z117 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/galois_2bits.vhd|
+!i113 1
+R12
+R13
+Aarch
+R2
+R24
+R23
+R3
+R4
+DEx4 work 12 galois_2bits 0 22 g6DcLlaf27gY8eSVVHGUL3
+l70
+L24
+VHPjM7cS[z0R@lShXJX_Q42
+!s100 [0]V6::GAnl?hi5@10X:m1
+R7
+31
+R17
+!i10b 1
+R18
+R116
+R117
+!i113 1
+R12
+R13
+Eholder
+Z118 w1591913482
+R3
+R4
+R0
+Z119 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/holder.vhd
+Z120 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/holder.vhd
+l0
+L4
+VH5@:3@gj`P0zd73N<@0O90
+!s100 TT2EPP`mWY7=YK?AILg4E2
+R7
+31
+R17
+!i10b 1
+R18
+Z121 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/holder.vhd|
+Z122 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/holder.vhd|
+!i113 1
+R12
+R13
+Afsm_arch
+R3
+R4
+DEx4 work 6 holder 0 22 H5@:3@gj`P0zd73N<@0O90
+l18
+L11
+VCGJMk8bUJ4D<X`lgB0G2:3
+!s100 O7<G[DU@mFnh1kNDG?kh>3
+R7
+31
+R17
+!i10b 1
+R18
+R121
+R122
+!i113 1
+R12
+R13
+Elfsr
+Z123 w1689098843
+R2
+R3
+R4
+R0
+Z124 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/lfsr.vhd
+Z125 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/lfsr.vhd
+l0
+L8
+V^BieCY?bQ:WdPk6Tm9WoT1
+!s100 YN3DQG=Q4PaRLG>OZg<L]0
+R7
+31
+R17
+!i10b 1
+R18
+Z126 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/lfsr.vhd|
+Z127 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/lfsr.vhd|
+!i113 1
+R12
+R13
+Alfsr_arch
+R2
+R3
+R4
+DEx4 work 4 lfsr 0 22 ^BieCY?bQ:WdPk6Tm9WoT1
+l30
+L17
+VWOniIAE_S7RLNA9?jBnaT1
+!s100 RjXCNVJKKYdY[LA:mY;1j2
+R7
+31
+R17
+!i10b 1
+R18
+R126
+R127
+!i113 1
+R12
+R13
+Emap_monitor
+Z128 w1593901106
+R3
+R4
+R0
+Z129 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/map_monitor.vhd
+Z130 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/map_monitor.vhd
+l0
+L5
+VRPYV2<AKiU^aNk]>dJFV23
+!s100 A@7iH`Sf2bE6M3kmP^L^O1
+R7
+31
+R8
+!i10b 1
+R9
+Z131 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/map_monitor.vhd|
+Z132 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/map_monitor.vhd|
+!i113 1
+R12
+R13
+Aarch
+R3
+R4
+DEx4 work 11 map_monitor 0 22 RPYV2<AKiU^aNk]>dJFV23
+l65
+L23
+VbDEO67`5I71bEHG:Hm[YP3
+!s100 ?IYPCinmnQ3c5T^gnd7kE0
+R7
+31
+R8
+!i10b 1
+R9
+R131
+R132
+!i113 1
+R12
+R13
+Emem_2port
+Z133 w1593650156
+R3
+R4
+R0
+Z134 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/mem_2port.vhd
+Z135 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/mem_2port.vhd
+l0
+L42
+VW@`m]fbkE?[8NizTh1hUD0
+!s100 8T:mK8:B2bd2KoSdJEhf?2
+R7
+31
+R17
+!i10b 1
+R18
+Z136 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/mem_2port.vhd|
+Z137 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/mem_2port.vhd|
+!i113 1
+R12
+R13
+Asyn
+R3
+R4
+DEx4 work 9 mem_2port 0 22 W@`m]fbkE?[8NizTh1hUD0
+l105
+L58
+VQ<@_Kb<_JF8eOYS00>H9E1
+!s100 hO?R=FMimJm4RPk][>gT01
+R7
+31
+R17
+!i10b 1
+R18
+R136
+R137
+!i113 1
+R12
+R13
+Enum_gen
+Z138 w1655953058
+R2
+R3
+R4
+R22
+R0
+Z139 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/num_gen.vhd
+Z140 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/num_gen.vhd
+l0
+L7
+V0UN56^B5L3gV8F^JgcSk;3
+!s100 `db3`16?LLP_^UM6Ahb6T3
+R7
+31
+R65
+!i10b 1
+R66
+Z141 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/num_gen.vhd|
+Z142 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/num_gen.vhd|
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+R4
+R22
+DEx4 work 7 num_gen 0 22 0UN56^B5L3gV8F^JgcSk;3
+l52
+L25
+VUEUVh=S4`dJ?6=UR6]eLK3
+!s100 0624BFLR7WE`Lj5:`1ULd1
+R7
+31
+R65
+!i10b 1
+R66
+R141
+R142
+!i113 1
+R12
+R13
+Enum_gen_disc
+Z143 w1689098781
+R22
+R2
+R3
+R4
+R0
+Z144 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/num_gen_disc.vhd
+Z145 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/num_gen_disc.vhd
+l0
+L7
+VP=DPOWAYZoh8GI[DPb5W43
+!s100 ]VW7Bd3nOOg5nBAG4]YB73
+R7
+31
+R65
+!i10b 1
+R66
+Z146 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/num_gen_disc.vhd|
+Z147 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/num_gen_disc.vhd|
+!i113 1
+R12
+R13
+Aarch
+R22
+R2
+R3
+R4
+DEx4 work 12 num_gen_disc 0 22 P=DPOWAYZoh8GI[DPb5W43
+l43
+L22
+VgQFYYQTaG<Pnc@0UMc[?n2
+!s100 h3_fiRhR6OFVAhSR_:eRQ1
+R7
+31
+R65
+!i10b 1
+R66
+R146
+R147
+!i113 1
+R12
+R13
+Eor_2
+R44
+R3
+R4
+R0
+Z148 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/or2.vhd
+Z149 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/or2.vhd
+l0
+L4
+VPonZWB4S017P2[Gh60oDI0
+!s100 7I@QW:Y56oEnl[Q3Ve]b?3
+R7
+31
+R17
+!i10b 1
+R18
+Z150 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/or2.vhd|
+Z151 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/or2.vhd|
+!i113 1
+R12
+R13
+Adataflow
+R3
+R4
+DEx4 work 4 or_2 0 22 PonZWB4S017P2[Gh60oDI0
+l12
+L10
+VE0UI5Z45n;?kI:<DNOo:43
+!s100 5Q4_1niMk_2]aRdQBLD?21
+R7
+31
+R17
+!i10b 1
+R18
+R150
+R151
+!i113 1
+R12
+R13
+Erand_num
+Z152 w1627434358
+R2
+R3
+R4
+R22
+R0
+Z153 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/rand_num.vhd
+Z154 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/rand_num.vhd
+l0
+L7
+VaX7g:hU3M<OX5AgYfaMdY3
+!s100 hG6eOU]WmXbg^<:z4MjX>1
+R7
+31
+R65
+!i10b 1
+R66
+Z155 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/rand_num.vhd|
+Z156 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/rand_num.vhd|
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+R4
+R22
+DEx4 work 8 rand_num 0 22 aX7g:hU3M<OX5AgYfaMdY3
+l47
+L23
+V_cUJPjQ1zIUk7d69EZ;Oa3
+!s100 d6To>dS7Oj:A3@:n]_BB50
+R7
+31
+R65
+!i10b 1
+R66
+R155
+R156
+!i113 1
+R12
+R13
+Erand_num_disc
+Z157 w1689099908
+R2
+R3
+R4
+R0
+Z158 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/rand_num_disc.vhd
+Z159 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/rand_num_disc.vhd
+l0
+L5
+VEAJ4g_[7GjTb_?mJJ:]?12
+!s100 5D?G9[G^lN1>eW1l58>0G2
+R7
+31
+R17
+!i10b 1
+R18
+Z160 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/rand_num_disc.vhd|
+Z161 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/rand_num_disc.vhd|
+!i113 1
+R12
+R13
+Astructural
+R2
+R3
+R4
+DEx4 work 13 rand_num_disc 0 22 EAJ4g_[7GjTb_?mJJ:]?12
+l31
+L17
+Vi3S0@RGaMo;W]26EnTQL61
+!s100 4e7FQ]lIBUTjbNK[6o8A`2
+R7
+31
+R17
+!i10b 1
+R18
+R160
+R161
+!i113 1
+R12
+R13
+Erc_adder
+Z162 w1688043462
+R3
+R4
+R0
+Z163 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/rc_adder.vhd
+Z164 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/rc_adder.vhd
+l0
+L4
+V31D@D7D`<c<?3JaCRPEVK3
+!s100 dh9P[e_Qjd:K:FFd_iH9E3
+R7
+31
+Z165 !s110 1689117256
+!i10b 1
+Z166 !s108 1689117256.000000
+Z167 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/rc_adder.vhd|
+Z168 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/rc_adder.vhd|
+!i113 1
+R12
+R13
+Astructural
+R3
+R4
+DEx4 work 8 rc_adder 0 22 31D@D7D`<c<?3JaCRPEVK3
+l36
+L20
+V]PJV[QDd3C9j;d@>aA0L[2
+!s100 cSMGQXGC@WHM?Rm1N5Da53
+R7
+31
+R165
+!i10b 1
+R166
+R167
+R168
+!i113 1
+R12
+R13
+Ereferee
+Z169 w1627435608
+R3
+R4
+R0
+Z170 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/referee.vhd
+Z171 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/referee.vhd
+l0
+L4
+V>ha7>L445oJnBF==_k^cS2
+!s100 `oza8;8CJSF:W;>Wo<mF`1
+R7
+31
+R165
+!i10b 1
+R166
+Z172 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/referee.vhd|
+Z173 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/referee.vhd|
+!i113 1
+R12
+R13
+Afsm_arch
+R3
+R4
+DEx4 work 7 referee 0 22 >ha7>L445oJnBF==_k^cS2
+l30
+L14
+V2;0mWXgadPY@37GUnGzgH1
+!s100 WSlUVdYhDiIWc:XE0lZa]3
+R7
+31
+R165
+!i10b 1
+R166
+R172
+R173
+!i113 1
+R12
+R13
+Ereg
+R44
+R2
+R3
+R4
+R0
+Z174 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/reg.vhd
+Z175 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/reg.vhd
+l0
+L6
+VO[C1MnA_1Fln4__EF>5903
+!s100 HEURK=l33WVUNHFg;8hR:0
+R7
+31
+R165
+!i10b 1
+R166
+Z176 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/reg.vhd|
+Z177 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/reg.vhd|
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+R4
+DEx4 work 3 reg 0 22 O[C1MnA_1Fln4__EF>5903
+l26
+L22
+VYiI]l6[akhWXokG>:WUf10
+!s100 C<ognD=aZnAYag]TBj[R:1
+R7
+31
+R165
+!i10b 1
+R166
+R176
+R177
+!i113 1
+R12
+R13
+Ereg_bank
+Z178 w1649110124
+R22
+R3
+R4
+R0
+Z179 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/reg_bank.vhd
+Z180 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/reg_bank.vhd
+l0
+L6
+VMTdNh<HfZC`2`MUz;T1l;2
+!s100 CI]L=XA>oHk6EoE:bAiB=3
+R7
+31
+R65
+!i10b 1
+R66
+Z181 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/reg_bank.vhd|
+Z182 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/reg_bank.vhd|
+!i113 1
+R12
+R13
+Aarch
+R22
+R3
+R4
+DEx4 work 8 reg_bank 0 22 MTdNh<HfZC`2`MUz;T1l;2
+l63
+L28
+V:SF[iQe_?JPcX4QK7NEnN0
+!s100 :NmBGmBfF8g:IbcMCLbRd0
+R7
+31
+R65
+!i10b 1
+R66
+R181
+R182
+!i113 1
+R12
+R13
+Ereg_bank_disc
+Z183 w1688044860
+R22
+R3
+R4
+R0
+Z184 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/reg_bank_disc.vhd
+Z185 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/reg_bank_disc.vhd
+l0
+L6
+VN9;N8:=OShPjW2F;S]l2?2
+!s100 ?T2A7zgA[2YX>7CE;a6B30
+R7
+31
+R65
+!i10b 1
+R66
+Z186 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/reg_bank_disc.vhd|
+Z187 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/reg_bank_disc.vhd|
+!i113 1
+R12
+R13
+Aarch
+R22
+R3
+R4
+DEx4 work 13 reg_bank_disc 0 22 N9;N8:=OShPjW2F;S]l2?2
+l50
+L27
+V:EC:<FCK;@fSzde?`MBQa3
+!s100 V5F5o_Zb4iC`lh;I96BZ@1
+R7
+31
+R65
+!i10b 1
+R66
+R186
+R187
+!i113 1
+R12
+R13
+Estep_counter
+Z188 w1621207226
+R22
+R2
+R3
+R4
+R0
+Z189 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/step_counter.vhd
+Z190 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/step_counter.vhd
+l0
+L6
+Ve@NY?RH_QLROe;8`ZFmd51
+!s100 S@KI]G0oz8WZ0akdlKl`d0
+R7
+31
+R17
+!i10b 1
+R18
+Z191 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/step_counter.vhd|
+Z192 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/step_counter.vhd|
+!i113 1
+R12
+R13
+Aarch
+R22
+R2
+R3
+R4
+DEx4 work 12 step_counter 0 22 e@NY?RH_QLROe;8`ZFmd51
+l37
+L25
+Vdc>OiH<0D?3c1:Mi^DHH@1
+!s100 KE]f8BiV;kF`RMD7VkeZN2
+R7
+31
+R17
+!i10b 1
+R18
+R191
+R192
+!i113 1
+R12
+R13
+Estimuli_wisdom
+Z193 w1689117188
+R22
+R2
+R3
+R4
+R0
+Z194 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/stimuli_wisdom.vhd
+Z195 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/stimuli_wisdom.vhd
+l0
+L7
+V[WQG4?2hQVC=ZSMkKzf?f2
+!s100 `N7inlOh7=kIIBeR?EY5n3
+R7
+31
+R8
+!i10b 1
+R9
+Z196 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/stimuli_wisdom.vhd|
+Z197 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/stimuli_wisdom.vhd|
+!i113 1
+R12
+R13
+Atest
+R22
+R2
+R3
+R4
+DEx4 work 14 stimuli_wisdom 0 22 [WQG4?2hQVC=ZSMkKzf?f2
+l48
+L25
+V`Sn[:oj^OYj0:WFTB[VK41
+!s100 :n=WTJ;_k2[8dP=XY?f3U0
+R7
+31
+R8
+!i10b 1
+R9
+R196
+R197
+!i113 1
+R12
+R13
+Etb_wisdom
+Z198 w1593966618
+R22
+R2
+R3
+R4
+R0
+Z199 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/tb_wisdom.vhd
+Z200 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/tb_wisdom.vhd
+l0
+L6
+V:_>69aJ0Ra:>lUWi`1=mz2
+!s100 >RN9YgcWk<MQ?<SVm_CYV1
+R7
+31
+R8
+!i10b 1
+R9
+Z201 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/tb_wisdom.vhd|
+Z202 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/tb_global/tb_wisdom.vhd|
+!i113 1
+R12
+R13
+Atest
+R22
+R2
+R3
+R4
+DEx4 work 9 tb_wisdom 0 22 :_>69aJ0Ra:>lUWi`1=mz2
+l71
+L12
+V9VmmjgKRH:HN9el@F6co:3
+!s100 NXcmfl2OPT8D^Can0m6ML3
+R7
+31
+R8
+!i10b 1
+R9
+R201
+R202
+!i113 1
+R12
+R13
+Ewisdom_circuit
+Z203 w1689100215
+R22
+R2
+R3
+R4
+R0
+Z204 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/wisdom_circuit.vhd
+Z205 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/wisdom_circuit.vhd
+l0
+L6
+VT:?OY?4iAULagdc0=ndA<1
+!s100 ^W4n@e;9Rk5JR6QMP^WnH1
+R7
+31
+R17
+!i10b 1
+R18
+Z206 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/wisdom_circuit.vhd|
+Z207 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/wisdom_circuit.vhd|
+!i113 1
+R12
+R13
+Aarch
+R22
+R2
+R3
+R4
+DEx4 work 14 wisdom_circuit 0 22 T:?OY?4iAULagdc0=ndA<1
+l95
+L27
+VWS0^K]Y`2f]=3EA:RV2jV3
+!s100 zn6Z@]H:DgM0@3E1U87n_1
+R7
+31
+R17
+!i10b 1
+R18
+R206
+R207
+!i113 1
+R12
+R13
+Pwisdom_package
+R3
+R4
+w1655954984
+R0
+8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/wisdom_package.vhd
+FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/wisdom_package.vhd
+l0
+L4
+V3Hef<B3nadS1Vf>JOnLD81
+!s100 WLdzm;KEABcO_SQb1@Bbc3
+R7
+31
+R165
+!i10b 1
+R166
+!s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/wisdom_package.vhd|
+!s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/wisdom_package.vhd|
+!i113 1
+R12
+R13
+Exor2
+Z208 w1590874144
+R3
+R4
+R0
+Z209 8C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/xor2.vhd
+Z210 FC:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/xor2.vhd
+l0
+L4
+V1BK4Tj^N4JEG?YZ?eiC>l0
+!s100 Qbf=jin8XYd7]0V_`F]`h0
+R7
+31
+R165
+!i10b 1
+R166
+Z211 !s90 -reportprogress|300|-93|-work|work|C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/xor2.vhd|
+Z212 !s107 C:/Users/gabri/OneDrive/Documentos/GitHub/PSI3451/projeto_final/xor2.vhd|
+!i113 1
+R12
+R13
+Adataflow
+R3
+R4
+DEx4 work 4 xor2 0 22 1BK4Tj^N4JEG?YZ?eiC>l0
+l12
+L10
+VjK<_5iaHMUR_^9;RJ1Z;I2
+!s100 h1ENI[zddWB0::GBXd3772
+R7
+31
+R165
+!i10b 1
+R166
+R211
+R212
+!i113 1
+R12
+R13

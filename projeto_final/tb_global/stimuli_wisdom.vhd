@@ -103,35 +103,59 @@ sim : process
 
 		begin
 		------------------------------------------------------------------------------------------------------------------	
-		-- SIM 1 : Iniciação do sistema
+		-- SIM 1 : Iniciaï¿½ï¿½o do sistema
 			
 			reset_activate;                       -- forca o sistema para fase inicial: FSM_MAIN->INIT_ACTIVATION	
 			                                      -- FSM_INIT->IDLE, FSM_GURU->START_ITERATION, FSM_GURU->START_WALKING
 			
-			-- Rodada com o botao pressionado  e velocidade X1 . Deve-se observar  a movimentacao do GURU e  DISCIPULO
-			checkWC('1',1);  
+		-- SIM 2 :  -- Cenarios descritos em 7
+		--a) guru sozinho (jogador nï¿½o age)
+		--b) guru e discï¿½pulo (velocidade 1 qualquer) sem interaï¿½ï¿½o entre si.
+		--c) guru e discï¿½pulo (velocidade 2 ? 1) com encontro formando duo.
+		--d) guru e discï¿½pulo (velocidade 3 ? 2 ? 1) com "guru right behi(N)d".
+			-- Rodada com o botao DE-pressionado  e velocidade X4 . Deve-se observar  a movimentacao do GURU e  DISCIPULO
+			checkWC('0',4);  
 			
 			file_open (f_status, l_file, "wisdom_log.txt", write_mode);
-			write(msg,LF & LF & "--------------------------" & LF & "*   Botão apertado com velocidade 1   *" & LF & "--------------------------",right, 0);
+			write(msg,LF & LF & "--------------------------" & LF & "*   Botï¿½o nao apertado com velocidade 4   *" & LF & "--------------------------",right, 0);
 			writeline(l_file, msg);
 			file_close (l_file);		
 
 			wait for 11500*CLK_PERIOD; 	
  
- 			-- Rodada com o botao pressionado  e velocidade X4 . Deve-se observar a movimentacao do GURU e  DISCIPULO
-			checkWC('1',4);	
+ 			-- Rodada com o botao pressionado  e velocidade X1 . Deve-se observar a movimentacao do GURU e  DISCIPULO
+			checkWC('1',1);	
+
+			file_open (f_status, l_file, "wisdom_log.txt", write_mode);
+			write(msg,LF & LF & "--------------------------" & LF & "*   Botï¿½o apertado com velocidade 1   *" & LF & "--------------------------",right, 0);
+			writeline(l_file, msg);
+			file_close (l_file);	
 			
 			wait for 8000*CLK_PERIOD; 
 
- 			-- Rodada com o botao DE-pressionado  e velocidade X4 (não importa - irrelevante) . Deve-se observar apenas a movimentacao do GURU 
-			checkWC('0',4);	
+ 			-- Rodada com o botao DE-pressionado  e velocidade X8 (nï¿½o importa - irrelevante) . Deve-se observar apenas a movimentacao do GURU 
+			checkWC('1',8);	
+
+			file_open (f_status, l_file, "wisdom_log.txt", write_mode);
+			write(msg,LF & LF & "--------------------------" & LF & "*   Botï¿½o apertado com velocidade 8   *" & LF & "--------------------------",right, 0);
+			writeline(l_file, msg);
+			file_close (l_file);	
 			
 			wait for 11000*CLK_PERIOD; 
+
+			checkWC('0',8);
+
+			wait for 4915*CLK_PERIOD;
 			
  			-- Rodada com o botao pressionado  e velocidade X2 . Deve-se observar a movimentacao do GURU e  DISCIPULO
 			checkWC('1',2);	
+
+			file_open (f_status, l_file, "wisdom_log.txt", write_mode);
+			write(msg,LF & LF & "--------------------------" & LF & "*   Botï¿½o apertado com velocidade 2   *" & LF & "--------------------------",right, 0);
+			writeline(l_file, msg);
+			file_close (l_file);	
 			
-			wait for 20000*CLK_PERIOD;               -- tempo suficiente para várias rodadas do jogo 
+			wait for 20000*CLK_PERIOD;               -- tempo suficiente para vï¿½rias rodadas do jogo 
 		----------------------------------------------------------------------------------------------------------	
 		
 		-- SIM 2 :  -- Produzir novos ciclos com novos/todos os cenarios

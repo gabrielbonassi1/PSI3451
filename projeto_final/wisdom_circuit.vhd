@@ -54,25 +54,24 @@ architecture arch of  wisdom_circuit is
 	component disciple_circuit is 
    	 generic
 		(
-			WIDTH						: NATURAL	:= 8
+			WIDTH				   : NATURAL	:= 8
 		);
 		port
 		(
-			clock							: in  STD_LOGIC;						
-			reset							: in  STD_LOGIC;						
-			cnt_disc_rdy				: in  STD_LOGIC;	
-			start_step     			: in  STD_LOGIC;	
-			go_disc           		: in  STD_LOGIC;
+			clk					: in  STD_LOGIC;						--from system
+			res					: in  STD_LOGIC;						--from system
+			cnt_disc_rdy		: in  STD_LOGIC;					
+			start_step     		: in  STD_LOGIC;					
+			go_disc             : in  STD_LOGIC;
+			duo_formed          : in  STD_LOGIC;
+			guru_right_behind   : in  STD_LOGIC;
+			disc_wr_en 		 	: out STD_LOGIC;
+			disc_address_2_mem	: out STD_LOGIC_VECTOR(WIDTH-3 downto 0);
+			disc_data			: out STD_LOGIC_VECTOR(WIDTH-1 downto 0);-- Dado para o porto a de mem_2port, com dado (8 bits)correspondente a um dos 3 códigos: DISCIPLE, BLANK ou DUO. 
+			end_of_disc			: out STD_LOGIC;
+			disc_addr_prev	: out STD_LOGIC_VECTOR(WIDTH-3 downto 0);
+			disc_addr		: out STD_LOGIC_VECTOR(WIDTH-3 downto 0)
 			
-			duo_formed        		: in  STD_LOGIC;
-			guru_right_behind  		: in  STD_LOGIC;
-			
-			end_of_disciple			: out STD_LOGIC;
-			disc_wr_en 		 			: out STD_LOGIC;
-			disc_data       			: out STD_LOGIC_VECTOR(WIDTH-1 downto 0);
-			disc_address_to_mem     : out STD_LOGIC_VECTOR(WIDTH-3 downto 0);
-			disc_address       		: out STD_LOGIC_VECTOR(WIDTH-3 downto 0);
-			disc_address_prev  		: out STD_LOGIC_VECTOR(WIDTH-3 downto 0)
 		);
 	end component;
 
@@ -115,8 +114,8 @@ begin
 		
 	cir2 : disciple_circuit 				port map
 														(
-														clock						=>clk_s,
-														reset						=>res_s,					
+														clk						=>clk_s,
+														res						=>res_s,					
 														cnt_disc_rdy			=>cnt_disc_rdy_s,
 														start_step        	=>start_step_s,	
 														go_disc          		=>ref_2_disc_s.go_disc,
@@ -124,12 +123,12 @@ begin
 														duo_formed        	=>ref_2_disc_s.duo_formed,
 														guru_right_behind  	=>ref_2_disc_s.guru_right_behind,
 														
-														end_of_disciple 		=>disc_2_base_s.end_of_disc ,
+														end_of_disc 		=>disc_2_base_s.end_of_disc ,
 														disc_wr_en 		 		=>disc_2_mem_s.mem_wr_en,
 														disc_data       		=>disc_2_mem_s.data_b,
-														disc_address_to_mem	=>disc_2_mem_s.mem_b_addr,
-														disc_address      	=>disc_address_s,
-														disc_address_prev 	=>disc_address_prev_s
+														disc_address_2_mem	=>disc_2_mem_s.mem_b_addr,
+														disc_addr      	=>disc_address_s,
+														disc_addr_prev 	=>disc_address_prev_s
 														);
 													
 	

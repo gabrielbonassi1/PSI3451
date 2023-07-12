@@ -1,0 +1,2614 @@
+|wisdom_circuit
+clk => base_circuit_extended:cir1.clk
+clk => disciple_circuit:cir2.clk
+res => base_circuit_extended:cir1.res
+res => disciple_circuit:cir2.res
+enable => base_circuit_extended:cir1.enable
+sys_speed[0] => base_circuit_extended:cir1.sys_speed[0]
+sys_speed[1] => base_circuit_extended:cir1.sys_speed[1]
+sys_speed[2] => base_circuit_extended:cir1.sys_speed[2]
+sys_speed[3] => base_circuit_extended:cir1.sys_speed[3]
+print_rdy <= base_circuit_extended:cir1.print_rdy
+start_step <= base_circuit_extended:cir1.start_step
+mem_a_data[0] <= base_circuit_extended:cir1.mem_a_data[0]
+mem_a_data[1] <= base_circuit_extended:cir1.mem_a_data[1]
+mem_a_data[2] <= base_circuit_extended:cir1.mem_a_data[2]
+mem_a_data[3] <= base_circuit_extended:cir1.mem_a_data[3]
+mem_a_data[4] <= base_circuit_extended:cir1.mem_a_data[4]
+mem_a_data[5] <= base_circuit_extended:cir1.mem_a_data[5]
+mem_a_data[6] <= base_circuit_extended:cir1.mem_a_data[6]
+mem_a_data[7] <= base_circuit_extended:cir1.mem_a_data[7]
+mem_a_addr[0] => base_circuit_extended:cir1.mem_a_addr[0]
+mem_a_addr[1] => base_circuit_extended:cir1.mem_a_addr[1]
+mem_a_addr[2] => base_circuit_extended:cir1.mem_a_addr[2]
+mem_a_addr[3] => base_circuit_extended:cir1.mem_a_addr[3]
+mem_a_addr[4] => base_circuit_extended:cir1.mem_a_addr[4]
+mem_a_addr[5] => base_circuit_extended:cir1.mem_a_addr[5]
+
+
+|wisdom_circuit|base_circuit_extended:cir1
+clk => button_handler:button.clk
+clk => mem_2port:mem.clock
+clk => base_circuit:basis.clk
+clk => step_counter:step.clk
+clk => referee:ref.clk
+clk => holder:hold.clk
+clk => holder:hold2.clk
+clk => holder:hold3.clk
+res => button_handler:button.res
+res => base_circuit:basis.res
+res => step_counter:step.res
+res => referee:ref.reset
+res => holder:hold.reset
+res => holder:hold2.reset
+res => holder:hold3.reset
+enable => button_handler:button.enable
+sys_speed[0] => button_handler:button.sys_speed[0]
+sys_speed[1] => button_handler:button.sys_speed[1]
+sys_speed[2] => button_handler:button.sys_speed[2]
+sys_speed[3] => button_handler:button.sys_speed[3]
+disc_2_base.end_of_disc => inSig_s.IN1
+disc_2_mem.cg_sel.DUO => ~NO_FANOUT~
+disc_2_mem.cg_sel.DISC => ~NO_FANOUT~
+disc_2_mem.cg_sel.GURU => ~NO_FANOUT~
+disc_2_mem.cg_sel.BLANK => ~NO_FANOUT~
+disc_2_mem.data_b[0] => mem_2port:mem.data_b[0]
+disc_2_mem.data_b[1] => mem_2port:mem.data_b[1]
+disc_2_mem.data_b[2] => mem_2port:mem.data_b[2]
+disc_2_mem.data_b[3] => mem_2port:mem.data_b[3]
+disc_2_mem.data_b[4] => mem_2port:mem.data_b[4]
+disc_2_mem.data_b[5] => mem_2port:mem.data_b[5]
+disc_2_mem.data_b[6] => mem_2port:mem.data_b[6]
+disc_2_mem.data_b[7] => mem_2port:mem.data_b[7]
+disc_2_mem.mem_wr_en => mem_2port:mem.wren_b
+disc_2_mem.mem_b_addr[0] => mem_2port:mem.address_b[0]
+disc_2_mem.mem_b_addr[1] => mem_2port:mem.address_b[1]
+disc_2_mem.mem_b_addr[2] => mem_2port:mem.address_b[2]
+disc_2_mem.mem_b_addr[3] => mem_2port:mem.address_b[3]
+disc_2_mem.mem_b_addr[4] => mem_2port:mem.address_b[4]
+disc_2_mem.mem_b_addr[5] => mem_2port:mem.address_b[5]
+disc_2_ref.disc_prev_addr[0] => disc_prev_s[0].DATAB
+disc_2_ref.disc_prev_addr[1] => disc_prev_s[1].DATAB
+disc_2_ref.disc_prev_addr[2] => disc_prev_s[2].DATAB
+disc_2_ref.disc_prev_addr[3] => disc_prev_s[3].DATAB
+disc_2_ref.disc_prev_addr[4] => disc_prev_s[4].DATAB
+disc_2_ref.disc_prev_addr[5] => disc_prev_s[5].DATAB
+disc_2_ref.disc_prev_addr[6] => disc_prev_s[6].DATAB
+disc_2_ref.disc_prev_addr[7] => disc_prev_s[7].DATAB
+disc_2_ref.disc_addr[0] => referee:ref.disc_addr[0]
+disc_2_ref.disc_addr[1] => referee:ref.disc_addr[1]
+disc_2_ref.disc_addr[2] => referee:ref.disc_addr[2]
+disc_2_ref.disc_addr[3] => referee:ref.disc_addr[3]
+disc_2_ref.disc_addr[4] => referee:ref.disc_addr[4]
+disc_2_ref.disc_addr[5] => referee:ref.disc_addr[5]
+disc_2_ref.disc_addr[6] => referee:ref.disc_addr[6]
+disc_2_ref.disc_addr[7] => referee:ref.disc_addr[7]
+disc_2_ref.end_of_disc => ~NO_FANOUT~
+print_rdy <= print_rdy.DB_MAX_OUTPUT_PORT_TYPE
+cnt_disc_rdy <= step_counter:step.cnt_disc_rdy
+ref_2_disc.guru_right_behind <= holder:hold2.holdedOut
+ref_2_disc.duo_formed <= holder:hold.holdedOut
+ref_2_disc.go_disc <= referee:ref.go_disc
+start_step <= base_circuit:basis.start_step
+mem_a_data[0] <= mem_2port:mem.q_a[0]
+mem_a_data[1] <= mem_2port:mem.q_a[1]
+mem_a_data[2] <= mem_2port:mem.q_a[2]
+mem_a_data[3] <= mem_2port:mem.q_a[3]
+mem_a_data[4] <= mem_2port:mem.q_a[4]
+mem_a_data[5] <= mem_2port:mem.q_a[5]
+mem_a_data[6] <= mem_2port:mem.q_a[6]
+mem_a_data[7] <= mem_2port:mem.q_a[7]
+mem_a_addr[0] => a_addr_s[0].DATAA
+mem_a_addr[1] => a_addr_s[1].DATAA
+mem_a_addr[2] => a_addr_s[2].DATAA
+mem_a_addr[3] => a_addr_s[3].DATAA
+mem_a_addr[4] => a_addr_s[4].DATAA
+mem_a_addr[5] => a_addr_s[5].DATAA
+
+
+|wisdom_circuit|base_circuit_extended:cir1|button_handler:button
+clk => speed_sync_s~5.DATAIN
+res => speed_sync_s.OUTPUTSELECT
+res => speed_sync_s.OUTPUTSELECT
+res => speed_sync_s.OUTPUTSELECT
+res => speed_sync_s.OUTPUTSELECT
+enable => speed_sync_s.OUTPUTSELECT
+enable => speed_sync_s.OUTPUTSELECT
+enable => speed_sync_s.OUTPUTSELECT
+enable => speed_sync_s.OUTPUTSELECT
+enable => enable_bypass.DATAIN
+enable_bypass <= enable.DB_MAX_OUTPUT_PORT_TYPE
+sys_speed[0] => Mux0.IN19
+sys_speed[0] => Mux1.IN19
+sys_speed[0] => Mux2.IN19
+sys_speed[0] => Mux3.IN19
+sys_speed[1] => Mux0.IN18
+sys_speed[1] => Mux1.IN18
+sys_speed[1] => Mux2.IN18
+sys_speed[1] => Mux3.IN18
+sys_speed[2] => Mux0.IN17
+sys_speed[2] => Mux1.IN17
+sys_speed[2] => Mux2.IN17
+sys_speed[2] => Mux3.IN17
+sys_speed[3] => Mux0.IN16
+sys_speed[3] => Mux1.IN16
+sys_speed[3] => Mux2.IN16
+sys_speed[3] => Mux3.IN16
+speed_sync.ONE_X <= speed_sync.ONE_X.DB_MAX_OUTPUT_PORT_TYPE
+speed_sync.TWO_X <= speed_sync.TWO_X.DB_MAX_OUTPUT_PORT_TYPE
+speed_sync.FOUR_X <= speed_sync.FOUR_X.DB_MAX_OUTPUT_PORT_TYPE
+speed_sync.EIGHT_X <= speed_sync.EIGHT_X.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|mem_2port:mem
+address_a[0] => altsyncram:altsyncram_component.address_a[0]
+address_a[1] => altsyncram:altsyncram_component.address_a[1]
+address_a[2] => altsyncram:altsyncram_component.address_a[2]
+address_a[3] => altsyncram:altsyncram_component.address_a[3]
+address_a[4] => altsyncram:altsyncram_component.address_a[4]
+address_a[5] => altsyncram:altsyncram_component.address_a[5]
+address_b[0] => altsyncram:altsyncram_component.address_b[0]
+address_b[1] => altsyncram:altsyncram_component.address_b[1]
+address_b[2] => altsyncram:altsyncram_component.address_b[2]
+address_b[3] => altsyncram:altsyncram_component.address_b[3]
+address_b[4] => altsyncram:altsyncram_component.address_b[4]
+address_b[5] => altsyncram:altsyncram_component.address_b[5]
+clock => altsyncram:altsyncram_component.clock0
+data_a[0] => altsyncram:altsyncram_component.data_a[0]
+data_a[1] => altsyncram:altsyncram_component.data_a[1]
+data_a[2] => altsyncram:altsyncram_component.data_a[2]
+data_a[3] => altsyncram:altsyncram_component.data_a[3]
+data_a[4] => altsyncram:altsyncram_component.data_a[4]
+data_a[5] => altsyncram:altsyncram_component.data_a[5]
+data_a[6] => altsyncram:altsyncram_component.data_a[6]
+data_a[7] => altsyncram:altsyncram_component.data_a[7]
+data_b[0] => altsyncram:altsyncram_component.data_b[0]
+data_b[1] => altsyncram:altsyncram_component.data_b[1]
+data_b[2] => altsyncram:altsyncram_component.data_b[2]
+data_b[3] => altsyncram:altsyncram_component.data_b[3]
+data_b[4] => altsyncram:altsyncram_component.data_b[4]
+data_b[5] => altsyncram:altsyncram_component.data_b[5]
+data_b[6] => altsyncram:altsyncram_component.data_b[6]
+data_b[7] => altsyncram:altsyncram_component.data_b[7]
+wren_a => altsyncram:altsyncram_component.wren_a
+wren_b => altsyncram:altsyncram_component.wren_b
+q_a[0] <= altsyncram:altsyncram_component.q_a[0]
+q_a[1] <= altsyncram:altsyncram_component.q_a[1]
+q_a[2] <= altsyncram:altsyncram_component.q_a[2]
+q_a[3] <= altsyncram:altsyncram_component.q_a[3]
+q_a[4] <= altsyncram:altsyncram_component.q_a[4]
+q_a[5] <= altsyncram:altsyncram_component.q_a[5]
+q_a[6] <= altsyncram:altsyncram_component.q_a[6]
+q_a[7] <= altsyncram:altsyncram_component.q_a[7]
+q_b[0] <= altsyncram:altsyncram_component.q_b[0]
+q_b[1] <= altsyncram:altsyncram_component.q_b[1]
+q_b[2] <= altsyncram:altsyncram_component.q_b[2]
+q_b[3] <= altsyncram:altsyncram_component.q_b[3]
+q_b[4] <= altsyncram:altsyncram_component.q_b[4]
+q_b[5] <= altsyncram:altsyncram_component.q_b[5]
+q_b[6] <= altsyncram:altsyncram_component.q_b[6]
+q_b[7] <= altsyncram:altsyncram_component.q_b[7]
+
+
+|wisdom_circuit|base_circuit_extended:cir1|mem_2port:mem|altsyncram:altsyncram_component
+wren_a => altsyncram_a1d2:auto_generated.wren_a
+rden_a => ~NO_FANOUT~
+wren_b => altsyncram_a1d2:auto_generated.wren_b
+rden_b => ~NO_FANOUT~
+data_a[0] => altsyncram_a1d2:auto_generated.data_a[0]
+data_a[1] => altsyncram_a1d2:auto_generated.data_a[1]
+data_a[2] => altsyncram_a1d2:auto_generated.data_a[2]
+data_a[3] => altsyncram_a1d2:auto_generated.data_a[3]
+data_a[4] => altsyncram_a1d2:auto_generated.data_a[4]
+data_a[5] => altsyncram_a1d2:auto_generated.data_a[5]
+data_a[6] => altsyncram_a1d2:auto_generated.data_a[6]
+data_a[7] => altsyncram_a1d2:auto_generated.data_a[7]
+data_b[0] => altsyncram_a1d2:auto_generated.data_b[0]
+data_b[1] => altsyncram_a1d2:auto_generated.data_b[1]
+data_b[2] => altsyncram_a1d2:auto_generated.data_b[2]
+data_b[3] => altsyncram_a1d2:auto_generated.data_b[3]
+data_b[4] => altsyncram_a1d2:auto_generated.data_b[4]
+data_b[5] => altsyncram_a1d2:auto_generated.data_b[5]
+data_b[6] => altsyncram_a1d2:auto_generated.data_b[6]
+data_b[7] => altsyncram_a1d2:auto_generated.data_b[7]
+address_a[0] => altsyncram_a1d2:auto_generated.address_a[0]
+address_a[1] => altsyncram_a1d2:auto_generated.address_a[1]
+address_a[2] => altsyncram_a1d2:auto_generated.address_a[2]
+address_a[3] => altsyncram_a1d2:auto_generated.address_a[3]
+address_a[4] => altsyncram_a1d2:auto_generated.address_a[4]
+address_a[5] => altsyncram_a1d2:auto_generated.address_a[5]
+address_b[0] => altsyncram_a1d2:auto_generated.address_b[0]
+address_b[1] => altsyncram_a1d2:auto_generated.address_b[1]
+address_b[2] => altsyncram_a1d2:auto_generated.address_b[2]
+address_b[3] => altsyncram_a1d2:auto_generated.address_b[3]
+address_b[4] => altsyncram_a1d2:auto_generated.address_b[4]
+address_b[5] => altsyncram_a1d2:auto_generated.address_b[5]
+addressstall_a => ~NO_FANOUT~
+addressstall_b => ~NO_FANOUT~
+clock0 => altsyncram_a1d2:auto_generated.clock0
+clock1 => ~NO_FANOUT~
+clocken0 => ~NO_FANOUT~
+clocken1 => ~NO_FANOUT~
+clocken2 => ~NO_FANOUT~
+clocken3 => ~NO_FANOUT~
+aclr0 => ~NO_FANOUT~
+aclr1 => ~NO_FANOUT~
+byteena_a[0] => ~NO_FANOUT~
+byteena_b[0] => ~NO_FANOUT~
+q_a[0] <= altsyncram_a1d2:auto_generated.q_a[0]
+q_a[1] <= altsyncram_a1d2:auto_generated.q_a[1]
+q_a[2] <= altsyncram_a1d2:auto_generated.q_a[2]
+q_a[3] <= altsyncram_a1d2:auto_generated.q_a[3]
+q_a[4] <= altsyncram_a1d2:auto_generated.q_a[4]
+q_a[5] <= altsyncram_a1d2:auto_generated.q_a[5]
+q_a[6] <= altsyncram_a1d2:auto_generated.q_a[6]
+q_a[7] <= altsyncram_a1d2:auto_generated.q_a[7]
+q_b[0] <= altsyncram_a1d2:auto_generated.q_b[0]
+q_b[1] <= altsyncram_a1d2:auto_generated.q_b[1]
+q_b[2] <= altsyncram_a1d2:auto_generated.q_b[2]
+q_b[3] <= altsyncram_a1d2:auto_generated.q_b[3]
+q_b[4] <= altsyncram_a1d2:auto_generated.q_b[4]
+q_b[5] <= altsyncram_a1d2:auto_generated.q_b[5]
+q_b[6] <= altsyncram_a1d2:auto_generated.q_b[6]
+q_b[7] <= altsyncram_a1d2:auto_generated.q_b[7]
+eccstatus[0] <= <GND>
+eccstatus[1] <= <GND>
+eccstatus[2] <= <GND>
+
+
+|wisdom_circuit|base_circuit_extended:cir1|mem_2port:mem|altsyncram:altsyncram_component|altsyncram_a1d2:auto_generated
+address_a[0] => ram_block1a0.PORTAADDR
+address_a[0] => ram_block1a1.PORTAADDR
+address_a[0] => ram_block1a2.PORTAADDR
+address_a[0] => ram_block1a3.PORTAADDR
+address_a[0] => ram_block1a4.PORTAADDR
+address_a[0] => ram_block1a5.PORTAADDR
+address_a[0] => ram_block1a6.PORTAADDR
+address_a[0] => ram_block1a7.PORTAADDR
+address_a[1] => ram_block1a0.PORTAADDR1
+address_a[1] => ram_block1a1.PORTAADDR1
+address_a[1] => ram_block1a2.PORTAADDR1
+address_a[1] => ram_block1a3.PORTAADDR1
+address_a[1] => ram_block1a4.PORTAADDR1
+address_a[1] => ram_block1a5.PORTAADDR1
+address_a[1] => ram_block1a6.PORTAADDR1
+address_a[1] => ram_block1a7.PORTAADDR1
+address_a[2] => ram_block1a0.PORTAADDR2
+address_a[2] => ram_block1a1.PORTAADDR2
+address_a[2] => ram_block1a2.PORTAADDR2
+address_a[2] => ram_block1a3.PORTAADDR2
+address_a[2] => ram_block1a4.PORTAADDR2
+address_a[2] => ram_block1a5.PORTAADDR2
+address_a[2] => ram_block1a6.PORTAADDR2
+address_a[2] => ram_block1a7.PORTAADDR2
+address_a[3] => ram_block1a0.PORTAADDR3
+address_a[3] => ram_block1a1.PORTAADDR3
+address_a[3] => ram_block1a2.PORTAADDR3
+address_a[3] => ram_block1a3.PORTAADDR3
+address_a[3] => ram_block1a4.PORTAADDR3
+address_a[3] => ram_block1a5.PORTAADDR3
+address_a[3] => ram_block1a6.PORTAADDR3
+address_a[3] => ram_block1a7.PORTAADDR3
+address_a[4] => ram_block1a0.PORTAADDR4
+address_a[4] => ram_block1a1.PORTAADDR4
+address_a[4] => ram_block1a2.PORTAADDR4
+address_a[4] => ram_block1a3.PORTAADDR4
+address_a[4] => ram_block1a4.PORTAADDR4
+address_a[4] => ram_block1a5.PORTAADDR4
+address_a[4] => ram_block1a6.PORTAADDR4
+address_a[4] => ram_block1a7.PORTAADDR4
+address_a[5] => ram_block1a0.PORTAADDR5
+address_a[5] => ram_block1a1.PORTAADDR5
+address_a[5] => ram_block1a2.PORTAADDR5
+address_a[5] => ram_block1a3.PORTAADDR5
+address_a[5] => ram_block1a4.PORTAADDR5
+address_a[5] => ram_block1a5.PORTAADDR5
+address_a[5] => ram_block1a6.PORTAADDR5
+address_a[5] => ram_block1a7.PORTAADDR5
+address_b[0] => ram_block1a0.PORTBADDR
+address_b[0] => ram_block1a1.PORTBADDR
+address_b[0] => ram_block1a2.PORTBADDR
+address_b[0] => ram_block1a3.PORTBADDR
+address_b[0] => ram_block1a4.PORTBADDR
+address_b[0] => ram_block1a5.PORTBADDR
+address_b[0] => ram_block1a6.PORTBADDR
+address_b[0] => ram_block1a7.PORTBADDR
+address_b[1] => ram_block1a0.PORTBADDR1
+address_b[1] => ram_block1a1.PORTBADDR1
+address_b[1] => ram_block1a2.PORTBADDR1
+address_b[1] => ram_block1a3.PORTBADDR1
+address_b[1] => ram_block1a4.PORTBADDR1
+address_b[1] => ram_block1a5.PORTBADDR1
+address_b[1] => ram_block1a6.PORTBADDR1
+address_b[1] => ram_block1a7.PORTBADDR1
+address_b[2] => ram_block1a0.PORTBADDR2
+address_b[2] => ram_block1a1.PORTBADDR2
+address_b[2] => ram_block1a2.PORTBADDR2
+address_b[2] => ram_block1a3.PORTBADDR2
+address_b[2] => ram_block1a4.PORTBADDR2
+address_b[2] => ram_block1a5.PORTBADDR2
+address_b[2] => ram_block1a6.PORTBADDR2
+address_b[2] => ram_block1a7.PORTBADDR2
+address_b[3] => ram_block1a0.PORTBADDR3
+address_b[3] => ram_block1a1.PORTBADDR3
+address_b[3] => ram_block1a2.PORTBADDR3
+address_b[3] => ram_block1a3.PORTBADDR3
+address_b[3] => ram_block1a4.PORTBADDR3
+address_b[3] => ram_block1a5.PORTBADDR3
+address_b[3] => ram_block1a6.PORTBADDR3
+address_b[3] => ram_block1a7.PORTBADDR3
+address_b[4] => ram_block1a0.PORTBADDR4
+address_b[4] => ram_block1a1.PORTBADDR4
+address_b[4] => ram_block1a2.PORTBADDR4
+address_b[4] => ram_block1a3.PORTBADDR4
+address_b[4] => ram_block1a4.PORTBADDR4
+address_b[4] => ram_block1a5.PORTBADDR4
+address_b[4] => ram_block1a6.PORTBADDR4
+address_b[4] => ram_block1a7.PORTBADDR4
+address_b[5] => ram_block1a0.PORTBADDR5
+address_b[5] => ram_block1a1.PORTBADDR5
+address_b[5] => ram_block1a2.PORTBADDR5
+address_b[5] => ram_block1a3.PORTBADDR5
+address_b[5] => ram_block1a4.PORTBADDR5
+address_b[5] => ram_block1a5.PORTBADDR5
+address_b[5] => ram_block1a6.PORTBADDR5
+address_b[5] => ram_block1a7.PORTBADDR5
+clock0 => ram_block1a0.CLK0
+clock0 => ram_block1a1.CLK0
+clock0 => ram_block1a2.CLK0
+clock0 => ram_block1a3.CLK0
+clock0 => ram_block1a4.CLK0
+clock0 => ram_block1a5.CLK0
+clock0 => ram_block1a6.CLK0
+clock0 => ram_block1a7.CLK0
+data_a[0] => ram_block1a0.PORTADATAIN
+data_a[1] => ram_block1a1.PORTADATAIN
+data_a[2] => ram_block1a2.PORTADATAIN
+data_a[3] => ram_block1a3.PORTADATAIN
+data_a[4] => ram_block1a4.PORTADATAIN
+data_a[5] => ram_block1a5.PORTADATAIN
+data_a[6] => ram_block1a6.PORTADATAIN
+data_a[7] => ram_block1a7.PORTADATAIN
+data_b[0] => ram_block1a0.PORTBDATAIN
+data_b[1] => ram_block1a1.PORTBDATAIN
+data_b[2] => ram_block1a2.PORTBDATAIN
+data_b[3] => ram_block1a3.PORTBDATAIN
+data_b[4] => ram_block1a4.PORTBDATAIN
+data_b[5] => ram_block1a5.PORTBDATAIN
+data_b[6] => ram_block1a6.PORTBDATAIN
+data_b[7] => ram_block1a7.PORTBDATAIN
+q_a[0] <= ram_block1a0.PORTADATAOUT
+q_a[1] <= ram_block1a1.PORTADATAOUT
+q_a[2] <= ram_block1a2.PORTADATAOUT
+q_a[3] <= ram_block1a3.PORTADATAOUT
+q_a[4] <= ram_block1a4.PORTADATAOUT
+q_a[5] <= ram_block1a5.PORTADATAOUT
+q_a[6] <= ram_block1a6.PORTADATAOUT
+q_a[7] <= ram_block1a7.PORTADATAOUT
+q_b[0] <= ram_block1a0.PORTBDATAOUT
+q_b[1] <= ram_block1a1.PORTBDATAOUT
+q_b[2] <= ram_block1a2.PORTBDATAOUT
+q_b[3] <= ram_block1a3.PORTBDATAOUT
+q_b[4] <= ram_block1a4.PORTBDATAOUT
+q_b[5] <= ram_block1a5.PORTBDATAOUT
+q_b[6] <= ram_block1a6.PORTBDATAOUT
+q_b[7] <= ram_block1a7.PORTBDATAOUT
+wren_a => ram_block1a0.PORTAWE
+wren_a => ram_block1a1.PORTAWE
+wren_a => ram_block1a2.PORTAWE
+wren_a => ram_block1a3.PORTAWE
+wren_a => ram_block1a4.PORTAWE
+wren_a => ram_block1a5.PORTAWE
+wren_a => ram_block1a6.PORTAWE
+wren_a => ram_block1a7.PORTAWE
+wren_b => ram_block1a0.PORTBWE
+wren_b => ram_block1a1.PORTBWE
+wren_b => ram_block1a2.PORTBWE
+wren_b => ram_block1a3.PORTBWE
+wren_b => ram_block1a4.PORTBWE
+wren_b => ram_block1a5.PORTBWE
+wren_b => ram_block1a6.PORTBWE
+wren_b => ram_block1a7.PORTBWE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis
+clk => base_control:control.clk
+clk => base_datapath:data.clk
+res => base_control:control.res
+res => base_datapath:data.res
+en_disc => base_control:control.en_disc
+cnt_guru_rdy => base_control:control.cnt_guru_rdy
+ref_2_base.go_guru => base_control:control.ref_2_base.go_guru
+ref_2_base.duo_formed => base_control:control.ref_2_base.duo_formed
+disc_2_base.end_of_disc => base_control:control.disc_2_base.end_of_disc
+disc_2_base.end_of_disc => base_datapath:data.disc_flags.end_of_disc
+start_step <= base_control:control.start_step
+en_cnt_step <= base_control:control.en_cnt_step
+base_2_ref.guru_prev_addr[0] <= base_datapath:data.base_2_ref.guru_prev_addr[0]
+base_2_ref.guru_prev_addr[1] <= base_datapath:data.base_2_ref.guru_prev_addr[1]
+base_2_ref.guru_prev_addr[2] <= base_datapath:data.base_2_ref.guru_prev_addr[2]
+base_2_ref.guru_prev_addr[3] <= base_datapath:data.base_2_ref.guru_prev_addr[3]
+base_2_ref.guru_prev_addr[4] <= base_datapath:data.base_2_ref.guru_prev_addr[4]
+base_2_ref.guru_prev_addr[5] <= base_datapath:data.base_2_ref.guru_prev_addr[5]
+base_2_ref.guru_prev_addr[6] <= base_datapath:data.base_2_ref.guru_prev_addr[6]
+base_2_ref.guru_prev_addr[7] <= base_datapath:data.base_2_ref.guru_prev_addr[7]
+base_2_ref.guru_addr[0] <= base_datapath:data.base_2_ref.guru_addr[0]
+base_2_ref.guru_addr[1] <= base_datapath:data.base_2_ref.guru_addr[1]
+base_2_ref.guru_addr[2] <= base_datapath:data.base_2_ref.guru_addr[2]
+base_2_ref.guru_addr[3] <= base_datapath:data.base_2_ref.guru_addr[3]
+base_2_ref.guru_addr[4] <= base_datapath:data.base_2_ref.guru_addr[4]
+base_2_ref.guru_addr[5] <= base_datapath:data.base_2_ref.guru_addr[5]
+base_2_ref.guru_addr[6] <= base_datapath:data.base_2_ref.guru_addr[6]
+base_2_ref.guru_addr[7] <= base_datapath:data.base_2_ref.guru_addr[7]
+base_2_mem.cg_sel.DUO <= base_2_mem.cg_sel.DUO.DB_MAX_OUTPUT_PORT_TYPE
+base_2_mem.cg_sel.DISC <= base_2_mem.cg_sel.DISC.DB_MAX_OUTPUT_PORT_TYPE
+base_2_mem.cg_sel.GURU <= base_2_mem.cg_sel.GURU.DB_MAX_OUTPUT_PORT_TYPE
+base_2_mem.cg_sel.BLANK <= base_2_mem.cg_sel.BLANK.DB_MAX_OUTPUT_PORT_TYPE
+base_2_mem.data_a[0] <= base_datapath:data.mem_data.data_a[0]
+base_2_mem.data_a[1] <= base_datapath:data.mem_data.data_a[1]
+base_2_mem.data_a[2] <= base_datapath:data.mem_data.data_a[2]
+base_2_mem.data_a[3] <= base_datapath:data.mem_data.data_a[3]
+base_2_mem.data_a[4] <= base_datapath:data.mem_data.data_a[4]
+base_2_mem.data_a[5] <= base_datapath:data.mem_data.data_a[5]
+base_2_mem.data_a[6] <= base_datapath:data.mem_data.data_a[6]
+base_2_mem.data_a[7] <= base_datapath:data.mem_data.data_a[7]
+base_2_mem.mem_wr_en <= base_control:control.ctrl_2_mem.mem_wr_en
+base_2_mem.mem_a_addr[0] <= base_datapath:data.mem_data.mem_a_addr[0]
+base_2_mem.mem_a_addr[1] <= base_datapath:data.mem_data.mem_a_addr[1]
+base_2_mem.mem_a_addr[2] <= base_datapath:data.mem_data.mem_a_addr[2]
+base_2_mem.mem_a_addr[3] <= base_datapath:data.mem_data.mem_a_addr[3]
+base_2_mem.mem_a_addr[4] <= base_datapath:data.mem_data.mem_a_addr[4]
+base_2_mem.mem_a_addr[5] <= base_datapath:data.mem_data.mem_a_addr[5]
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_control:control
+clk => fsm_main:main.clk
+clk => counter_trigger:cnt_prep.clk
+clk => counter_trigger:cnt_strat.clk
+clk => fsm_init:init.clk
+clk => fsm_guru:guru.clk
+res => fsm_main:main.res
+res => counter_trigger:cnt_prep.res
+res => counter_trigger:cnt_strat.res
+res => fsm_init:init.res
+res => fsm_guru:guru.res
+en_disc => fsm_main:main.en_disc
+cnt_guru_rdy => fsm_guru:guru.cnt_guru_rdy
+dp_2_ctrl.ovf_of_y => fsm_init:init.ovf_of_y
+dp_2_ctrl.end_of_guru => fsm_main:main.end_of_guru
+dp_2_ctrl.end_of_guru => fsm_guru:guru.end_of_guru
+disc_2_base.end_of_disc => fsm_main:main.end_of_disc
+ref_2_base.go_guru => fsm_guru:guru.go_guru
+ref_2_base.duo_formed => fsm_main:main.duo_formed
+ref_2_base.duo_formed => fsm_guru:guru.duo_formed
+en_cnt_step <= fsm_main:main.en_cnt_step
+start_step <= fsm_main:main.fsm_s_start
+ctrl_2_dp.cg_sel.DUO <= ctrl_2_dp.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_dp.cg_sel.DISC <= ctrl_2_dp.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_dp.cg_sel.GURU <= ctrl_2_dp.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_dp.cg_sel.BLANK <= ctrl_2_dp.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_dp.rb_out_sel.DISC_PREV_OUT <= ctrl_2_dp.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_dp.rb_out_sel.DISC_OUT <= ctrl_2_dp.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_dp.rb_out_sel.GURU_PREV_OUT <= ctrl_2_dp.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_dp.rb_out_sel.GURU_OUT <= ctrl_2_dp.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_dp.rb_out_sel.INIT_OUT <= ctrl_2_dp.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_dp.rb_PRE_GURU_en <= ctrl_2_dp.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_dp.rb_GURU_en <= ctrl_2_dp.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_dp.rb_INIT_en <= ctrl_2_dp.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_dp.alu_ctrl <= ctrl_2_dp.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_dp.ng_rand_zero <= ctrl_2_dp.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_dp.ng_cte_incr <= ctrl_2_dp.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_mem.cg_sel.DUO <= ctrl_2_mem.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_mem.cg_sel.DISC <= ctrl_2_mem.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_mem.cg_sel.GURU <= ctrl_2_mem.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_mem.cg_sel.BLANK <= ctrl_2_mem.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_mem.data_a[0] <= ctrl_2_mem.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_mem.data_a[1] <= ctrl_2_mem.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_mem.data_a[2] <= ctrl_2_mem.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_mem.data_a[3] <= ctrl_2_mem.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_mem.data_a[4] <= ctrl_2_mem.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_mem.data_a[5] <= ctrl_2_mem.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_mem.data_a[6] <= ctrl_2_mem.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_mem.data_a[7] <= ctrl_2_mem.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_mem.mem_wr_en <= ctrl_2_mem.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_mem.mem_a_addr[0] <= ctrl_2_mem.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_mem.mem_a_addr[1] <= ctrl_2_mem.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_mem.mem_a_addr[2] <= ctrl_2_mem.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_mem.mem_a_addr[3] <= ctrl_2_mem.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_mem.mem_a_addr[4] <= ctrl_2_mem.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_2_mem.mem_a_addr[5] <= ctrl_2_mem.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_control:control|fsm_main:main
+clk => STATE~1.DATAIN
+res => STATE.OUTPUTSELECT
+res => STATE.OUTPUTSELECT
+res => STATE.OUTPUTSELECT
+res => STATE.OUTPUTSELECT
+res => STATE.OUTPUTSELECT
+res => STATE.OUTPUTSELECT
+en_disc => upd_next_state.IN1
+en_disc => upd_next_state.IN1
+en_disc => upd_next_state.IN0
+fsm_i_done => Selector1.IN5
+fsm_i_done => NEXT_STATE.INIT_ACTIVATION.DATAB
+end_of_guru => upd_next_state.IN0
+end_of_guru => upd_next_state.IN1
+end_of_disc => upd_next_state.IN1
+duo_formed => upd_next_state.IN1
+duo_formed => upd_next_state.IN1
+duo_formed => upd_next_state.IN1
+cnt_prepare_f => NEXT_STATE.STEP_ACTIVATION.DATAB
+cnt_prepare_f => Selector1.IN2
+cnt_start_f => Selector0.IN3
+cnt_start_f => Selector2.IN2
+con_sel <= con_sel.DB_MAX_OUTPUT_PORT_TYPE
+en_cnt_step <= en_cnt_step.DB_MAX_OUTPUT_PORT_TYPE
+cnt_prepare_i <= cnt_prepare_i.DB_MAX_OUTPUT_PORT_TYPE
+cnt_start_i <= cnt_start_i.DB_MAX_OUTPUT_PORT_TYPE
+fsm_i_start <= fsm_i_start.DB_MAX_OUTPUT_PORT_TYPE
+fsm_s_start <= fsm_s_start.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_control:control|counter_trigger:cnt_prep
+clk => cnt_s[0].CLK
+clk => cnt_s[1].CLK
+clk => cnt_s[2].CLK
+clk => cnt_s[3].CLK
+clk => cnt_s[4].CLK
+clk => cnt_s[5].CLK
+clk => cnt_s[6].CLK
+clk => cnt_s[7].CLK
+clk => cnt_s[8].CLK
+clk => cnt_s[9].CLK
+clk => cnt_s[10].CLK
+clk => cnt_s[11].CLK
+clk => cnt_s[12].CLK
+clk => cnt_s[13].CLK
+clk => cnt_s[14].CLK
+clk => cnt_s[15].CLK
+clk => cnt_s[16].CLK
+clk => cnt_s[17].CLK
+clk => cnt_s[18].CLK
+clk => cnt_s[19].CLK
+clk => cnt_s[20].CLK
+clk => cnt_s[21].CLK
+clk => cnt_s[22].CLK
+clk => cnt_s[23].CLK
+clk => cnt_s[24].CLK
+clk => cnt_s[25].CLK
+clk => cnt_s[26].CLK
+clk => cnt_s[27].CLK
+clk => cnt_s[28].CLK
+clk => cnt_s[29].CLK
+clk => cnt_s[30].CLK
+clk => cnt_s[31].CLK
+clk => STATE.CLK
+res => STATE.OUTPUTSELECT
+trigger => NEXT_STATE.DATAB
+cnt_rdy <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_control:control|counter_trigger:cnt_strat
+clk => cnt_s[0].CLK
+clk => cnt_s[1].CLK
+clk => cnt_s[2].CLK
+clk => cnt_s[3].CLK
+clk => cnt_s[4].CLK
+clk => cnt_s[5].CLK
+clk => cnt_s[6].CLK
+clk => cnt_s[7].CLK
+clk => cnt_s[8].CLK
+clk => cnt_s[9].CLK
+clk => cnt_s[10].CLK
+clk => cnt_s[11].CLK
+clk => cnt_s[12].CLK
+clk => cnt_s[13].CLK
+clk => cnt_s[14].CLK
+clk => cnt_s[15].CLK
+clk => cnt_s[16].CLK
+clk => cnt_s[17].CLK
+clk => cnt_s[18].CLK
+clk => cnt_s[19].CLK
+clk => cnt_s[20].CLK
+clk => cnt_s[21].CLK
+clk => cnt_s[22].CLK
+clk => cnt_s[23].CLK
+clk => cnt_s[24].CLK
+clk => cnt_s[25].CLK
+clk => cnt_s[26].CLK
+clk => cnt_s[27].CLK
+clk => cnt_s[28].CLK
+clk => cnt_s[29].CLK
+clk => cnt_s[30].CLK
+clk => cnt_s[31].CLK
+clk => STATE.CLK
+res => STATE.OUTPUTSELECT
+trigger => NEXT_STATE.DATAB
+cnt_rdy <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_control:control|fsm_init:init
+clk => STATE~1.DATAIN
+res => STATE.OUTPUTSELECT
+res => STATE.OUTPUTSELECT
+res => STATE.OUTPUTSELECT
+res => STATE.OUTPUTSELECT
+start_init => NEXT_STATE.ZERO.DATAB
+start_init => Selector0.IN2
+ovf_of_y => NEXT_STATE.DONE.DATAB
+ovf_of_y => Selector1.IN2
+done_init <= done_init.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_dp.cg_sel.DUO <= <GND>
+flags_2_dp.cg_sel.DISC <= <GND>
+flags_2_dp.cg_sel.GURU <= <GND>
+flags_2_dp.cg_sel.BLANK <= <VCC>
+flags_2_dp.rb_out_sel.DISC_PREV_OUT <= flags_2_dp.rb_out_sel.DISC_PREV_OUT.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_dp.rb_out_sel.DISC_OUT <= flags_2_dp.rb_out_sel.DISC_OUT.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_dp.rb_out_sel.GURU_PREV_OUT <= flags_2_dp.rb_out_sel.GURU_PREV_OUT.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_dp.rb_out_sel.GURU_OUT <= flags_2_dp.rb_out_sel.GURU_OUT.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_dp.rb_out_sel.INIT_OUT <= flags_2_dp.rb_out_sel.INIT_OUT.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_dp.rb_PRE_GURU_en <= <GND>
+flags_2_dp.rb_GURU_en <= <GND>
+flags_2_dp.rb_INIT_en <= flags_2_dp.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_dp.alu_ctrl <= flags_2_dp.alu_ctrl.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_dp.ng_rand_zero <= flags_2_dp.ng_rand_zero.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_dp.ng_cte_incr <= flags_2_dp.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_mem.cg_sel.DUO <= flags_2_mem.cg_sel.DUO.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_mem.cg_sel.DISC <= flags_2_mem.cg_sel.DISC.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_mem.cg_sel.GURU <= flags_2_mem.cg_sel.GURU.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_mem.cg_sel.BLANK <= flags_2_mem.cg_sel.BLANK.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_mem.data_a[0] <= <GND>
+flags_2_mem.data_a[1] <= <GND>
+flags_2_mem.data_a[2] <= <GND>
+flags_2_mem.data_a[3] <= <GND>
+flags_2_mem.data_a[4] <= <GND>
+flags_2_mem.data_a[5] <= <GND>
+flags_2_mem.data_a[6] <= <GND>
+flags_2_mem.data_a[7] <= <GND>
+flags_2_mem.mem_wr_en <= flags_2_dp.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_mem.mem_a_addr[0] <= <GND>
+flags_2_mem.mem_a_addr[1] <= <GND>
+flags_2_mem.mem_a_addr[2] <= <GND>
+flags_2_mem.mem_a_addr[3] <= <GND>
+flags_2_mem.mem_a_addr[4] <= <GND>
+flags_2_mem.mem_a_addr[5] <= <GND>
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_control:control|fsm_guru:guru
+clk => STATE~1.DATAIN
+res => STATE.OUTPUTSELECT
+res => STATE.OUTPUTSELECT
+res => STATE.OUTPUTSELECT
+res => STATE.OUTPUTSELECT
+res => STATE.OUTPUTSELECT
+res => STATE.OUTPUTSELECT
+res => STATE.OUTPUTSELECT
+res => STATE.OUTPUTSELECT
+res => STATE.OUTPUTSELECT
+res => STATE.OUTPUTSELECT
+res => STATE.OUTPUTSELECT
+fsm_sg_start => NEXT_STATE.RAND.DATAB
+fsm_sg_start => Selector0.IN2
+end_of_guru => upd_next_state.IN0
+end_of_guru => upd_next_state.IN0
+cnt_guru_rdy => NEXT_STATE.INCR.DATAB
+cnt_guru_rdy => Selector1.IN2
+duo_formed => NEXT_STATE.WRITE_DUO.DATAB
+duo_formed => NEXT_STATE.WRITE_GURU.DATAB
+go_guru => upd_next_state.IN1
+go_guru => upd_next_state.IN1
+flags_2_dp.cg_sel.DUO <= flags_2_dp.cg_sel.DUO.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_dp.cg_sel.DISC <= flags_2_dp.cg_sel.DISC.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_dp.cg_sel.GURU <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_dp.cg_sel.BLANK <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_dp.rb_out_sel.DISC_PREV_OUT <= flags_2_dp.rb_out_sel.DISC_PREV_OUT.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_dp.rb_out_sel.DISC_OUT <= flags_2_dp.rb_out_sel.DISC_OUT.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_dp.rb_out_sel.GURU_PREV_OUT <= flags_2_dp.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_dp.rb_out_sel.GURU_OUT <= flags_2_dp.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_dp.rb_out_sel.INIT_OUT <= flags_2_dp.rb_out_sel.INIT_OUT.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_dp.rb_PRE_GURU_en <= flags_2_dp.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_dp.rb_GURU_en <= flags_2_dp.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_dp.rb_INIT_en <= <GND>
+flags_2_dp.alu_ctrl <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_dp.ng_rand_zero <= <GND>
+flags_2_dp.ng_cte_incr <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_mem.cg_sel.DUO <= flags_2_mem.cg_sel.DUO.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_mem.cg_sel.DISC <= flags_2_mem.cg_sel.DISC.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_mem.cg_sel.GURU <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_mem.cg_sel.BLANK <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_mem.data_a[0] <= <GND>
+flags_2_mem.data_a[1] <= <GND>
+flags_2_mem.data_a[2] <= <GND>
+flags_2_mem.data_a[3] <= <GND>
+flags_2_mem.data_a[4] <= <GND>
+flags_2_mem.data_a[5] <= <GND>
+flags_2_mem.data_a[6] <= <GND>
+flags_2_mem.data_a[7] <= <GND>
+flags_2_mem.mem_wr_en <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+flags_2_mem.mem_a_addr[0] <= <GND>
+flags_2_mem.mem_a_addr[1] <= <GND>
+flags_2_mem.mem_a_addr[2] <= <GND>
+flags_2_mem.mem_a_addr[3] <= <GND>
+flags_2_mem.mem_a_addr[4] <= <GND>
+flags_2_mem.mem_a_addr[5] <= <GND>
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data
+clk => num_gen:n_g.clk
+clk => reg_bank:rb.clk
+clk => coll_ovf:dut.clk
+res => num_gen:n_g.reset
+res => reg_bank:rb.res
+res => coll_ovf:dut.res
+ctrl_ctrl.cg_sel.DUO => num_gen:n_g.canal.cg_sel.DUO
+ctrl_ctrl.cg_sel.DUO => code_gen:c_g.ctrl_code_sel.DUO
+ctrl_ctrl.cg_sel.DUO => mem_data.cg_sel.DUO.IN0
+ctrl_ctrl.cg_sel.DISC => num_gen:n_g.canal.cg_sel.DISC
+ctrl_ctrl.cg_sel.DISC => code_gen:c_g.ctrl_code_sel.DISC
+ctrl_ctrl.cg_sel.DISC => mem_data.cg_sel.DISC.IN0
+ctrl_ctrl.cg_sel.GURU => num_gen:n_g.canal.cg_sel.GURU
+ctrl_ctrl.cg_sel.GURU => code_gen:c_g.ctrl_code_sel.GURU
+ctrl_ctrl.cg_sel.GURU => mem_data.cg_sel.GURU.IN0
+ctrl_ctrl.cg_sel.BLANK => num_gen:n_g.canal.cg_sel.BLANK
+ctrl_ctrl.cg_sel.BLANK => code_gen:c_g.ctrl_code_sel.BLANK
+ctrl_ctrl.cg_sel.BLANK => mem_data.cg_sel.BLANK.IN0
+ctrl_ctrl.rb_out_sel.DISC_PREV_OUT => num_gen:n_g.canal.rb_out_sel.DISC_PREV_OUT
+ctrl_ctrl.rb_out_sel.DISC_PREV_OUT => reg_bank:rb.out_sel.DISC_PREV_OUT
+ctrl_ctrl.rb_out_sel.DISC_OUT => num_gen:n_g.canal.rb_out_sel.DISC_OUT
+ctrl_ctrl.rb_out_sel.DISC_OUT => reg_bank:rb.out_sel.DISC_OUT
+ctrl_ctrl.rb_out_sel.GURU_PREV_OUT => num_gen:n_g.canal.rb_out_sel.GURU_PREV_OUT
+ctrl_ctrl.rb_out_sel.GURU_PREV_OUT => reg_bank:rb.out_sel.GURU_PREV_OUT
+ctrl_ctrl.rb_out_sel.GURU_OUT => num_gen:n_g.canal.rb_out_sel.GURU_OUT
+ctrl_ctrl.rb_out_sel.GURU_OUT => reg_bank:rb.out_sel.GURU_OUT
+ctrl_ctrl.rb_out_sel.INIT_OUT => num_gen:n_g.canal.rb_out_sel.INIT_OUT
+ctrl_ctrl.rb_out_sel.INIT_OUT => reg_bank:rb.out_sel.INIT_OUT
+ctrl_ctrl.rb_PRE_GURU_en => num_gen:n_g.canal.rb_PRE_GURU_en
+ctrl_ctrl.rb_PRE_GURU_en => reg_bank:rb.load_PRE_GURU
+ctrl_ctrl.rb_GURU_en => num_gen:n_g.canal.rb_GURU_en
+ctrl_ctrl.rb_GURU_en => reg_bank:rb.load_GURU
+ctrl_ctrl.rb_INIT_en => num_gen:n_g.canal.rb_INIT_en
+ctrl_ctrl.rb_INIT_en => reg_bank:rb.load_INIT
+ctrl_ctrl.alu_ctrl => num_gen:n_g.canal.alu_ctrl
+ctrl_ctrl.alu_ctrl => alu:alu_1.alu_ctrl
+ctrl_ctrl.ng_rand_zero => num_gen:n_g.canal.ng_rand_zero
+ctrl_ctrl.ng_cte_incr => num_gen:n_g.canal.ng_cte_incr
+disc_flags.end_of_disc => ~NO_FANOUT~
+base_2_ref.guru_prev_addr[0] <= reg_bank:rb.guru_prev_addr[0]
+base_2_ref.guru_prev_addr[1] <= reg_bank:rb.guru_prev_addr[1]
+base_2_ref.guru_prev_addr[2] <= reg_bank:rb.guru_prev_addr[2]
+base_2_ref.guru_prev_addr[3] <= reg_bank:rb.guru_prev_addr[3]
+base_2_ref.guru_prev_addr[4] <= reg_bank:rb.guru_prev_addr[4]
+base_2_ref.guru_prev_addr[5] <= reg_bank:rb.guru_prev_addr[5]
+base_2_ref.guru_prev_addr[6] <= reg_bank:rb.guru_prev_addr[6]
+base_2_ref.guru_prev_addr[7] <= reg_bank:rb.guru_prev_addr[7]
+base_2_ref.guru_addr[0] <= reg_bank:rb.guru_addr[0]
+base_2_ref.guru_addr[1] <= reg_bank:rb.guru_addr[1]
+base_2_ref.guru_addr[2] <= reg_bank:rb.guru_addr[2]
+base_2_ref.guru_addr[3] <= reg_bank:rb.guru_addr[3]
+base_2_ref.guru_addr[4] <= reg_bank:rb.guru_addr[4]
+base_2_ref.guru_addr[5] <= reg_bank:rb.guru_addr[5]
+base_2_ref.guru_addr[6] <= reg_bank:rb.guru_addr[6]
+base_2_ref.guru_addr[7] <= reg_bank:rb.guru_addr[7]
+mem_data.cg_sel.DUO <= mem_data.cg_sel.DUO.DB_MAX_OUTPUT_PORT_TYPE
+mem_data.cg_sel.DISC <= mem_data.cg_sel.DISC.DB_MAX_OUTPUT_PORT_TYPE
+mem_data.cg_sel.GURU <= mem_data.cg_sel.GURU.DB_MAX_OUTPUT_PORT_TYPE
+mem_data.cg_sel.BLANK <= mem_data.cg_sel.BLANK.DB_MAX_OUTPUT_PORT_TYPE
+mem_data.data_a[0] <= code_gen:c_g.mem_code_w[0]
+mem_data.data_a[1] <= code_gen:c_g.mem_code_w[1]
+mem_data.data_a[2] <= code_gen:c_g.mem_code_w[2]
+mem_data.data_a[3] <= code_gen:c_g.mem_code_w[3]
+mem_data.data_a[4] <= code_gen:c_g.mem_code_w[4]
+mem_data.data_a[5] <= code_gen:c_g.mem_code_w[5]
+mem_data.data_a[6] <= code_gen:c_g.mem_code_w[6]
+mem_data.data_a[7] <= code_gen:c_g.mem_code_w[7]
+mem_data.mem_wr_en <= <GND>
+mem_data.mem_a_addr[0] <= reg_bank:rb.rb_out[0]
+mem_data.mem_a_addr[1] <= reg_bank:rb.rb_out[1]
+mem_data.mem_a_addr[2] <= reg_bank:rb.rb_out[2]
+mem_data.mem_a_addr[3] <= reg_bank:rb.rb_out[3]
+mem_data.mem_a_addr[4] <= reg_bank:rb.rb_out[4]
+mem_data.mem_a_addr[5] <= reg_bank:rb.rb_out[5]
+ctrl_flags.ovf_of_y <= coll_ovf:dut.ctrl_flags.ovf_of_y
+ctrl_flags.end_of_guru <= coll_ovf:dut.ctrl_flags.end_of_guru
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g
+clk => rand_num:rand_number_gen.clk
+reset => rand_num:rand_number_gen.reset
+alu_2_ng[0] => ng_2_RB_s.DATAA
+alu_2_ng[1] => ng_2_RB_s.DATAA
+alu_2_ng[2] => ng_2_RB_s.DATAA
+alu_2_ng[3] => ng_2_RB_s.DATAA
+alu_2_ng[4] => ng_2_RB_s.DATAA
+alu_2_ng[5] => ng_2_RB_s.DATAA
+alu_2_ng[6] => ng_2_RB_s.DATAA
+alu_2_ng[7] => ng_2_RB_s.DATAA
+canal.cg_sel.DUO => ~NO_FANOUT~
+canal.cg_sel.DISC => ~NO_FANOUT~
+canal.cg_sel.GURU => ~NO_FANOUT~
+canal.cg_sel.BLANK => ~NO_FANOUT~
+canal.rb_out_sel.DISC_PREV_OUT => ~NO_FANOUT~
+canal.rb_out_sel.DISC_OUT => ~NO_FANOUT~
+canal.rb_out_sel.GURU_PREV_OUT => ~NO_FANOUT~
+canal.rb_out_sel.GURU_OUT => ~NO_FANOUT~
+canal.rb_out_sel.INIT_OUT => ~NO_FANOUT~
+canal.rb_PRE_GURU_en => ~NO_FANOUT~
+canal.rb_GURU_en => ~NO_FANOUT~
+canal.rb_INIT_en => ~NO_FANOUT~
+canal.alu_ctrl => ~NO_FANOUT~
+canal.ng_rand_zero => number_s[7].OUTPUTSELECT
+canal.ng_rand_zero => number_s[6].OUTPUTSELECT
+canal.ng_rand_zero => number_s[5].OUTPUTSELECT
+canal.ng_rand_zero => number_s[4].OUTPUTSELECT
+canal.ng_rand_zero => number_s[3].OUTPUTSELECT
+canal.ng_rand_zero => number_s[2].OUTPUTSELECT
+canal.ng_rand_zero => number_s[1].OUTPUTSELECT
+canal.ng_rand_zero => number_s[0].OUTPUTSELECT
+canal.ng_cte_incr => ng_2_RB_s.OUTPUTSELECT
+canal.ng_cte_incr => ng_2_RB_s.OUTPUTSELECT
+canal.ng_cte_incr => ng_2_RB_s.OUTPUTSELECT
+canal.ng_cte_incr => ng_2_RB_s.OUTPUTSELECT
+canal.ng_cte_incr => ng_2_RB_s.OUTPUTSELECT
+canal.ng_cte_incr => ng_2_RB_s.OUTPUTSELECT
+canal.ng_cte_incr => ng_2_RB_s.OUTPUTSELECT
+canal.ng_cte_incr => ng_2_RB_s.OUTPUTSELECT
+ng_2_RB[0] <= ng_2_RB_s.DB_MAX_OUTPUT_PORT_TYPE
+ng_2_RB[1] <= ng_2_RB_s.DB_MAX_OUTPUT_PORT_TYPE
+ng_2_RB[2] <= ng_2_RB_s.DB_MAX_OUTPUT_PORT_TYPE
+ng_2_RB[3] <= ng_2_RB_s.DB_MAX_OUTPUT_PORT_TYPE
+ng_2_RB[4] <= ng_2_RB_s.DB_MAX_OUTPUT_PORT_TYPE
+ng_2_RB[5] <= ng_2_RB_s.DB_MAX_OUTPUT_PORT_TYPE
+ng_2_RB[6] <= ng_2_RB_s.DB_MAX_OUTPUT_PORT_TYPE
+ng_2_RB[7] <= ng_2_RB_s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen
+clk => Galois_2bits:LFSR.clk
+reset => Galois_2bits:LFSR.clear
+rand_number[0] <= Galois_2bits:LFSR.two_bits[0]
+rand_number[1] <= Galois_2bits:LFSR.two_bits[1]
+rand_number[2] <= <GND>
+rand_number[3] <= <GND>
+rand_number[4] <= <GND>
+rand_number[5] <= <GND>
+rand_number[6] <= <GND>
+rand_number[7] <= <GND>
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR
+clk => reg:DFFs:0:FF.clk
+clk => reg:DFFs:1:FF.clk
+clk => reg:DFFs:2:FF.clk
+clk => reg:DFFs:3:FF.clk
+clk => reg:DFFs:4:FF.clk
+clk => reg:DFFs:5:FF.clk
+clk => reg:DFFs:6:FF.clk
+clk => reg:DFFs:7:FF.clk
+clk => reg:DFFs:8:FF.clk
+clk => reg:DFFs:9:FF.clk
+clk => reg:DFFs:10:FF.clk
+clk => reg:DFFs:11:FF.clk
+clear => or_2:Select_Ds:0:or_comp.y
+clear => or_2:Select_Ds:1:or_comp.y
+clear => or_2:Select_Ds:2:or_comp.y
+clear => or_2:Select_Ds:3:or_comp.y
+clear => or_2:Select_Ds:4:or_comp.y
+clear => or_2:Select_Ds:5:or_comp.y
+clear => or_2:Select_Ds:6:or_comp.y
+clear => or_2:Select_Ds:7:or_comp.y
+clear => or_2:Select_Ds:8:or_comp.y
+clear => or_2:Select_Ds:9:or_comp.y
+clear => or_2:Select_Ds:10:or_comp.y
+clear => or_2:Select_Ds:11:or_comp.y
+two_bits[0] <= xor2:TAP_XOR:11:xor_tap.z
+two_bits[1] <= xor2:TAP_XOR:0:xor_tap.z
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|or_2:\Select_Ds:0:or_comp
+x => z.IN0
+y => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|or_2:\Select_Ds:1:or_comp
+x => z.IN0
+y => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|or_2:\Select_Ds:2:or_comp
+x => z.IN0
+y => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|or_2:\Select_Ds:3:or_comp
+x => z.IN0
+y => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|or_2:\Select_Ds:4:or_comp
+x => z.IN0
+y => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|or_2:\Select_Ds:5:or_comp
+x => z.IN0
+y => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|or_2:\Select_Ds:6:or_comp
+x => z.IN0
+y => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|or_2:\Select_Ds:7:or_comp
+x => z.IN0
+y => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|or_2:\Select_Ds:8:or_comp
+x => z.IN0
+y => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|or_2:\Select_Ds:9:or_comp
+x => z.IN0
+y => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|or_2:\Select_Ds:10:or_comp
+x => z.IN0
+y => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|or_2:\Select_Ds:11:or_comp
+x => z.IN0
+y => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|reg:\DFFs:0:FF
+clk => q_s[0].CLK
+clr => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+d[0] => q_s.DATAB
+q[0] <= q_s[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|reg:\DFFs:1:FF
+clk => q_s[0].CLK
+clr => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+d[0] => q_s.DATAB
+q[0] <= q_s[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|reg:\DFFs:2:FF
+clk => q_s[0].CLK
+clr => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+d[0] => q_s.DATAB
+q[0] <= q_s[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|reg:\DFFs:3:FF
+clk => q_s[0].CLK
+clr => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+d[0] => q_s.DATAB
+q[0] <= q_s[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|reg:\DFFs:4:FF
+clk => q_s[0].CLK
+clr => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+d[0] => q_s.DATAB
+q[0] <= q_s[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|reg:\DFFs:5:FF
+clk => q_s[0].CLK
+clr => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+d[0] => q_s.DATAB
+q[0] <= q_s[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|reg:\DFFs:6:FF
+clk => q_s[0].CLK
+clr => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+d[0] => q_s.DATAB
+q[0] <= q_s[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|reg:\DFFs:7:FF
+clk => q_s[0].CLK
+clr => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+d[0] => q_s.DATAB
+q[0] <= q_s[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|reg:\DFFs:8:FF
+clk => q_s[0].CLK
+clr => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+d[0] => q_s.DATAB
+q[0] <= q_s[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|reg:\DFFs:9:FF
+clk => q_s[0].CLK
+clr => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+d[0] => q_s.DATAB
+q[0] <= q_s[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|reg:\DFFs:10:FF
+clk => q_s[0].CLK
+clr => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+d[0] => q_s.DATAB
+q[0] <= q_s[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|reg:\DFFs:11:FF
+clk => q_s[0].CLK
+clr => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+d[0] => q_s.DATAB
+q[0] <= q_s[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|xor2:\TAP_XOR:0:xor_tap
+x => z.IN0
+y => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|xor2:\TAP_XOR:1:xor_tap
+x => z.IN0
+y => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|xor2:\TAP_XOR:2:xor_tap
+x => z.IN0
+y => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|xor2:\TAP_XOR:3:xor_tap
+x => z.IN0
+y => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|xor2:\TAP_XOR:4:xor_tap
+x => z.IN0
+y => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|xor2:\TAP_XOR:5:xor_tap
+x => z.IN0
+y => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|xor2:\TAP_XOR:6:xor_tap
+x => z.IN0
+y => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|xor2:\TAP_XOR:7:xor_tap
+x => z.IN0
+y => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|xor2:\TAP_XOR:8:xor_tap
+x => z.IN0
+y => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|xor2:\TAP_XOR:9:xor_tap
+x => z.IN0
+y => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|xor2:\TAP_XOR:10:xor_tap
+x => z.IN0
+y => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|num_gen:n_g|rand_num:rand_number_gen|Galois_2bits:LFSR|xor2:\TAP_XOR:11:xor_tap
+x => z.IN0
+y => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|reg_bank:rb
+clk => reg:reg_INIT.clk
+clk => reg:reg_GURU.clk
+clk => reg:reg_PRE_GURU.clk
+res => reg:reg_INIT.clr
+res => reg:reg_GURU.clr
+res => reg:reg_PRE_GURU.clr
+ng_2_RB[0] => reg:reg_INIT.d[0]
+ng_2_RB[0] => reg:reg_GURU.d[0]
+ng_2_RB[1] => reg:reg_INIT.d[1]
+ng_2_RB[1] => reg:reg_GURU.d[1]
+ng_2_RB[2] => reg:reg_INIT.d[2]
+ng_2_RB[2] => reg:reg_GURU.d[2]
+ng_2_RB[3] => reg:reg_INIT.d[3]
+ng_2_RB[3] => reg:reg_GURU.d[3]
+ng_2_RB[4] => reg:reg_INIT.d[4]
+ng_2_RB[4] => reg:reg_GURU.d[4]
+ng_2_RB[5] => reg:reg_INIT.d[5]
+ng_2_RB[5] => reg:reg_GURU.d[5]
+ng_2_RB[6] => reg:reg_INIT.d[6]
+ng_2_RB[6] => reg:reg_GURU.d[6]
+ng_2_RB[7] => reg:reg_INIT.d[7]
+ng_2_RB[7] => reg:reg_GURU.d[7]
+load_INIT => reg:reg_INIT.load
+load_GURU => reg:reg_GURU.load
+load_PRE_GURU => reg:reg_PRE_GURU.load
+out_sel.INIT_OUT => rb_out.OUTPUTSELECT
+out_sel.INIT_OUT => rb_out.OUTPUTSELECT
+out_sel.INIT_OUT => rb_out.OUTPUTSELECT
+out_sel.INIT_OUT => rb_out.OUTPUTSELECT
+out_sel.INIT_OUT => rb_out.OUTPUTSELECT
+out_sel.INIT_OUT => rb_out.OUTPUTSELECT
+out_sel.INIT_OUT => rb_out.OUTPUTSELECT
+out_sel.INIT_OUT => rb_out.OUTPUTSELECT
+out_sel.GURU_OUT => rb_out.OUTPUTSELECT
+out_sel.GURU_OUT => rb_out.OUTPUTSELECT
+out_sel.GURU_OUT => rb_out.OUTPUTSELECT
+out_sel.GURU_OUT => rb_out.OUTPUTSELECT
+out_sel.GURU_OUT => rb_out.OUTPUTSELECT
+out_sel.GURU_OUT => rb_out.OUTPUTSELECT
+out_sel.GURU_OUT => rb_out.OUTPUTSELECT
+out_sel.GURU_OUT => rb_out.OUTPUTSELECT
+out_sel.GURU_PREV_OUT => ~NO_FANOUT~
+out_sel.DISC_OUT => ~NO_FANOUT~
+out_sel.DISC_PREV_OUT => ~NO_FANOUT~
+guru_addr[0] <= reg:reg_GURU.q[0]
+guru_addr[1] <= reg:reg_GURU.q[1]
+guru_addr[2] <= reg:reg_GURU.q[2]
+guru_addr[3] <= reg:reg_GURU.q[3]
+guru_addr[4] <= reg:reg_GURU.q[4]
+guru_addr[5] <= reg:reg_GURU.q[5]
+guru_addr[6] <= reg:reg_GURU.q[6]
+guru_addr[7] <= reg:reg_GURU.q[7]
+guru_prev_addr[0] <= reg:reg_PRE_GURU.q[0]
+guru_prev_addr[1] <= reg:reg_PRE_GURU.q[1]
+guru_prev_addr[2] <= reg:reg_PRE_GURU.q[2]
+guru_prev_addr[3] <= reg:reg_PRE_GURU.q[3]
+guru_prev_addr[4] <= reg:reg_PRE_GURU.q[4]
+guru_prev_addr[5] <= reg:reg_PRE_GURU.q[5]
+guru_prev_addr[6] <= reg:reg_PRE_GURU.q[6]
+guru_prev_addr[7] <= reg:reg_PRE_GURU.q[7]
+rb_out[0] <= rb_out.DB_MAX_OUTPUT_PORT_TYPE
+rb_out[1] <= rb_out.DB_MAX_OUTPUT_PORT_TYPE
+rb_out[2] <= rb_out.DB_MAX_OUTPUT_PORT_TYPE
+rb_out[3] <= rb_out.DB_MAX_OUTPUT_PORT_TYPE
+rb_out[4] <= rb_out.DB_MAX_OUTPUT_PORT_TYPE
+rb_out[5] <= rb_out.DB_MAX_OUTPUT_PORT_TYPE
+rb_out[6] <= rb_out.DB_MAX_OUTPUT_PORT_TYPE
+rb_out[7] <= rb_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|reg_bank:rb|reg:reg_INIT
+clk => q_s[0].CLK
+clk => q_s[1].CLK
+clk => q_s[2].CLK
+clk => q_s[3].CLK
+clk => q_s[4].CLK
+clk => q_s[5].CLK
+clk => q_s[6].CLK
+clk => q_s[7].CLK
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+d[0] => q_s.DATAB
+d[1] => q_s.DATAB
+d[2] => q_s.DATAB
+d[3] => q_s.DATAB
+d[4] => q_s.DATAB
+d[5] => q_s.DATAB
+d[6] => q_s.DATAB
+d[7] => q_s.DATAB
+q[0] <= q_s[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q_s[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q_s[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q_s[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q_s[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q_s[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q_s[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q_s[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|reg_bank:rb|reg:reg_GURU
+clk => q_s[0].CLK
+clk => q_s[1].CLK
+clk => q_s[2].CLK
+clk => q_s[3].CLK
+clk => q_s[4].CLK
+clk => q_s[5].CLK
+clk => q_s[6].CLK
+clk => q_s[7].CLK
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+d[0] => q_s.DATAB
+d[1] => q_s.DATAB
+d[2] => q_s.DATAB
+d[3] => q_s.DATAB
+d[4] => q_s.DATAB
+d[5] => q_s.DATAB
+d[6] => q_s.DATAB
+d[7] => q_s.DATAB
+q[0] <= q_s[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q_s[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q_s[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q_s[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q_s[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q_s[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q_s[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q_s[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|reg_bank:rb|reg:reg_PRE_GURU
+clk => q_s[0].CLK
+clk => q_s[1].CLK
+clk => q_s[2].CLK
+clk => q_s[3].CLK
+clk => q_s[4].CLK
+clk => q_s[5].CLK
+clk => q_s[6].CLK
+clk => q_s[7].CLK
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+d[0] => q_s.DATAB
+d[1] => q_s.DATAB
+d[2] => q_s.DATAB
+d[3] => q_s.DATAB
+d[4] => q_s.DATAB
+d[5] => q_s.DATAB
+d[6] => q_s.DATAB
+d[7] => q_s.DATAB
+q[0] <= q_s[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q_s[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q_s[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q_s[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q_s[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q_s[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q_s[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q_s[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|alu:alu_1
+one_op[0] => rc_adder:add.a_i[0]
+one_op[1] => rc_adder:add.a_i[1]
+one_op[2] => rc_adder:add.a_i[2]
+one_op[3] => rc_adder:add.a_i[3]
+one_op[4] => rc_adder:add.a_i[4]
+one_op[5] => rc_adder:add.a_i[5]
+one_op[6] => rc_adder:add.a_i[6]
+one_op[7] => rc_adder:add.a_i[7]
+rb_op[0] => alu_result.DATAB
+rb_op[0] => rc_adder:add.b_i[0]
+rb_op[1] => alu_result.DATAB
+rb_op[1] => rc_adder:add.b_i[1]
+rb_op[2] => alu_result.DATAB
+rb_op[2] => rc_adder:add.b_i[2]
+rb_op[3] => alu_result.DATAB
+rb_op[3] => rc_adder:add.b_i[3]
+rb_op[4] => alu_result.DATAB
+rb_op[4] => rc_adder:add.b_i[4]
+rb_op[5] => alu_result.DATAB
+rb_op[5] => rc_adder:add.b_i[5]
+rb_op[6] => alu_result.DATAB
+rb_op[6] => rc_adder:add.b_i[6]
+rb_op[7] => alu_result.DATAB
+rb_op[7] => rc_adder:add.b_i[7]
+alu_ctrl => alu_result.OUTPUTSELECT
+alu_ctrl => alu_result.OUTPUTSELECT
+alu_ctrl => alu_result.OUTPUTSELECT
+alu_ctrl => alu_result.OUTPUTSELECT
+alu_ctrl => alu_result.OUTPUTSELECT
+alu_ctrl => alu_result.OUTPUTSELECT
+alu_ctrl => alu_result.OUTPUTSELECT
+alu_ctrl => alu_result.OUTPUTSELECT
+alu_result[0] <= alu_result.DB_MAX_OUTPUT_PORT_TYPE
+alu_result[1] <= alu_result.DB_MAX_OUTPUT_PORT_TYPE
+alu_result[2] <= alu_result.DB_MAX_OUTPUT_PORT_TYPE
+alu_result[3] <= alu_result.DB_MAX_OUTPUT_PORT_TYPE
+alu_result[4] <= alu_result.DB_MAX_OUTPUT_PORT_TYPE
+alu_result[5] <= alu_result.DB_MAX_OUTPUT_PORT_TYPE
+alu_result[6] <= alu_result.DB_MAX_OUTPUT_PORT_TYPE
+alu_result[7] <= alu_result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|alu:alu_1|rc_adder:add
+a_i[0] => full_adder_1:adder_1.a_in
+a_i[1] => full_adder_1:adder_2.a_in
+a_i[2] => full_adder_1:adder_3.a_in
+a_i[3] => full_adder_1:adder_4.a_in
+a_i[4] => full_adder_1:adder_5.a_in
+a_i[5] => full_adder_1:adder_6.a_in
+a_i[6] => full_adder_1:adder_7.a_in
+a_i[7] => full_adder_1:adder_8.a_in
+b_i[0] => full_adder_1:adder_1.b_in
+b_i[1] => full_adder_1:adder_2.b_in
+b_i[2] => full_adder_1:adder_3.b_in
+b_i[3] => full_adder_1:adder_4.b_in
+b_i[4] => full_adder_1:adder_5.b_in
+b_i[5] => full_adder_1:adder_6.b_in
+b_i[6] => full_adder_1:adder_7.b_in
+b_i[7] => full_adder_1:adder_8.b_in
+z_o[0] <= full_adder_1:adder_1.z_out
+z_o[1] <= full_adder_1:adder_2.z_out
+z_o[2] <= full_adder_1:adder_3.z_out
+z_o[3] <= full_adder_1:adder_4.z_out
+z_o[4] <= full_adder_1:adder_5.z_out
+z_o[5] <= full_adder_1:adder_6.z_out
+z_o[6] <= full_adder_1:adder_7.z_out
+z_o[7] <= full_adder_1:adder_8.z_out
+c_i => full_adder_1:adder_1.c_in
+c_o <= full_adder_1:adder_8.c_out
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|alu:alu_1|rc_adder:add|full_adder_1:adder_1
+a_in => aux_xor.IN0
+a_in => aux_and_1.IN0
+a_in => aux_and_2.IN0
+b_in => aux_xor.IN1
+b_in => aux_and_1.IN1
+b_in => aux_and_3.IN0
+c_in => z_out.IN1
+c_in => aux_and_2.IN1
+c_in => aux_and_3.IN1
+z_out <= z_out.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|alu:alu_1|rc_adder:add|full_adder_1:adder_2
+a_in => aux_xor.IN0
+a_in => aux_and_1.IN0
+a_in => aux_and_2.IN0
+b_in => aux_xor.IN1
+b_in => aux_and_1.IN1
+b_in => aux_and_3.IN0
+c_in => z_out.IN1
+c_in => aux_and_2.IN1
+c_in => aux_and_3.IN1
+z_out <= z_out.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|alu:alu_1|rc_adder:add|full_adder_1:adder_3
+a_in => aux_xor.IN0
+a_in => aux_and_1.IN0
+a_in => aux_and_2.IN0
+b_in => aux_xor.IN1
+b_in => aux_and_1.IN1
+b_in => aux_and_3.IN0
+c_in => z_out.IN1
+c_in => aux_and_2.IN1
+c_in => aux_and_3.IN1
+z_out <= z_out.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|alu:alu_1|rc_adder:add|full_adder_1:adder_4
+a_in => aux_xor.IN0
+a_in => aux_and_1.IN0
+a_in => aux_and_2.IN0
+b_in => aux_xor.IN1
+b_in => aux_and_1.IN1
+b_in => aux_and_3.IN0
+c_in => z_out.IN1
+c_in => aux_and_2.IN1
+c_in => aux_and_3.IN1
+z_out <= z_out.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|alu:alu_1|rc_adder:add|full_adder_1:adder_5
+a_in => aux_xor.IN0
+a_in => aux_and_1.IN0
+a_in => aux_and_2.IN0
+b_in => aux_xor.IN1
+b_in => aux_and_1.IN1
+b_in => aux_and_3.IN0
+c_in => z_out.IN1
+c_in => aux_and_2.IN1
+c_in => aux_and_3.IN1
+z_out <= z_out.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|alu:alu_1|rc_adder:add|full_adder_1:adder_6
+a_in => aux_xor.IN0
+a_in => aux_and_1.IN0
+a_in => aux_and_2.IN0
+b_in => aux_xor.IN1
+b_in => aux_and_1.IN1
+b_in => aux_and_3.IN0
+c_in => z_out.IN1
+c_in => aux_and_2.IN1
+c_in => aux_and_3.IN1
+z_out <= z_out.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|alu:alu_1|rc_adder:add|full_adder_1:adder_7
+a_in => aux_xor.IN0
+a_in => aux_and_1.IN0
+a_in => aux_and_2.IN0
+b_in => aux_xor.IN1
+b_in => aux_and_1.IN1
+b_in => aux_and_3.IN0
+c_in => z_out.IN1
+c_in => aux_and_2.IN1
+c_in => aux_and_3.IN1
+z_out <= z_out.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|alu:alu_1|rc_adder:add|full_adder_1:adder_8
+a_in => aux_xor.IN0
+a_in => aux_and_1.IN0
+a_in => aux_and_2.IN0
+b_in => aux_xor.IN1
+b_in => aux_and_1.IN1
+b_in => aux_and_3.IN0
+c_in => z_out.IN1
+c_in => aux_and_2.IN1
+c_in => aux_and_3.IN1
+z_out <= z_out.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|code_gen:c_g
+ctrl_code_sel.BLANK => mem_code_w[0].IN0
+ctrl_code_sel.GURU => mem_code_w[1].IN0
+ctrl_code_sel.DISC => mem_code_w[2].IN0
+ctrl_code_sel.DUO => mem_code_w[3].IN0
+mem_code_w[0] <= mem_code_w[0].DB_MAX_OUTPUT_PORT_TYPE
+mem_code_w[1] <= mem_code_w[1].DB_MAX_OUTPUT_PORT_TYPE
+mem_code_w[2] <= mem_code_w[2].DB_MAX_OUTPUT_PORT_TYPE
+mem_code_w[3] <= mem_code_w[3].DB_MAX_OUTPUT_PORT_TYPE
+mem_code_w[4] <= <GND>
+mem_code_w[5] <= <GND>
+mem_code_w[6] <= <GND>
+mem_code_w[7] <= <GND>
+
+
+|wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_datapath:data|coll_ovf:dut
+clk => ~NO_FANOUT~
+res => ~NO_FANOUT~
+guru_addr[0] => ~NO_FANOUT~
+guru_addr[1] => ~NO_FANOUT~
+guru_addr[2] => ~NO_FANOUT~
+guru_addr[3] => ctrl_flags.end_of_guru.DATAIN
+guru_addr[4] => ~NO_FANOUT~
+guru_addr[5] => ~NO_FANOUT~
+guru_addr[6] => ctrl_flags.ovf_of_y.DATAIN
+guru_addr[7] => ~NO_FANOUT~
+ctrl_flags.ovf_of_y <= guru_addr[6].DB_MAX_OUTPUT_PORT_TYPE
+ctrl_flags.end_of_guru <= guru_addr[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|step_counter:step
+clk => cnt_value[0]~reg0.CLK
+clk => cnt_value[1]~reg0.CLK
+clk => cnt_value[2]~reg0.CLK
+clk => cnt_value[3]~reg0.CLK
+clk => cnt_value[4]~reg0.CLK
+clk => cnt_value[5]~reg0.CLK
+clk => cnt_value[6]~reg0.CLK
+clk => cnt_value[7]~reg0.CLK
+clk => cnt_value[8]~reg0.CLK
+clk => cnt_value[9]~reg0.CLK
+clk => cnt_value[10]~reg0.CLK
+clk => cnt_value[11]~reg0.CLK
+clk => cnt_value[12]~reg0.CLK
+clk => cnt_value[13]~reg0.CLK
+clk => cnt_value[14]~reg0.CLK
+clk => cnt_value[15]~reg0.CLK
+clk => rdy_v8_s.CLK
+clk => rdy_v4_s.CLK
+clk => rdy_v2_s.CLK
+clk => rdy_v1_s.CLK
+clk => cnt_s[0].CLK
+clk => cnt_s[1].CLK
+clk => cnt_s[2].CLK
+clk => cnt_s[3].CLK
+clk => cnt_s[4].CLK
+clk => cnt_s[5].CLK
+clk => cnt_s[6].CLK
+clk => cnt_s[7].CLK
+clk => cnt_s[8].CLK
+clk => cnt_s[9].CLK
+clk => cnt_s[10].CLK
+clk => cnt_s[11].CLK
+clk => cnt_s[12].CLK
+clk => cnt_s[13].CLK
+clk => cnt_s[14].CLK
+clk => cnt_s[15].CLK
+res => cnt_s.OUTPUTSELECT
+res => cnt_s.OUTPUTSELECT
+res => cnt_s.OUTPUTSELECT
+res => cnt_s.OUTPUTSELECT
+res => cnt_s.OUTPUTSELECT
+res => cnt_s.OUTPUTSELECT
+res => cnt_s.OUTPUTSELECT
+res => cnt_s.OUTPUTSELECT
+res => cnt_s.OUTPUTSELECT
+res => cnt_s.OUTPUTSELECT
+res => cnt_s.OUTPUTSELECT
+res => cnt_s.OUTPUTSELECT
+res => cnt_s.OUTPUTSELECT
+res => cnt_s.OUTPUTSELECT
+res => cnt_s.OUTPUTSELECT
+res => cnt_s.OUTPUTSELECT
+res => rdy_v4_s.ENA
+res => rdy_v8_s.ENA
+res => rdy_v2_s.ENA
+res => rdy_v1_s.ENA
+speed_sync.ONE_X => cnt_disc_rdy_s.OUTPUTSELECT
+speed_sync.ONE_X => cnt_disc_rdy_s.IN1
+speed_sync.TWO_X => cnt_disc_rdy_s.OUTPUTSELECT
+speed_sync.TWO_X => cnt_disc_rdy_s.IN1
+speed_sync.FOUR_X => cnt_disc_rdy_s.OUTPUTSELECT
+speed_sync.FOUR_X => cnt_disc_rdy_s.IN0
+speed_sync.EIGHT_X => cnt_disc_rdy_s.IN1
+en_disc => cnt_disc_rdy.IN1
+en_cnt => cnt_guru_rdy.IN1
+en_cnt => cnt_disc_rdy.IN1
+cnt_guru_rdy <= cnt_guru_rdy.DB_MAX_OUTPUT_PORT_TYPE
+cnt_disc_rdy <= cnt_disc_rdy.DB_MAX_OUTPUT_PORT_TYPE
+cnt_value[0] <= cnt_value[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt_value[1] <= cnt_value[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt_value[2] <= cnt_value[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt_value[3] <= cnt_value[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt_value[4] <= cnt_value[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt_value[5] <= cnt_value[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt_value[6] <= cnt_value[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt_value[7] <= cnt_value[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt_value[8] <= cnt_value[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt_value[9] <= cnt_value[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt_value[10] <= cnt_value[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt_value[11] <= cnt_value[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt_value[12] <= cnt_value[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt_value[13] <= cnt_value[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt_value[14] <= cnt_value[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt_value[15] <= cnt_value[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|referee:ref
+clk => mainCnt[0].CLK
+clk => mainCnt[1].CLK
+clk => mainCnt[2].CLK
+clk => mainCnt[3].CLK
+clk => mainCnt[4].CLK
+clk => mainCnt[5].CLK
+clk => mainCnt[6].CLK
+clk => mainCnt[7].CLK
+clk => mainCnt[8].CLK
+clk => mainCnt[9].CLK
+clk => mainCnt[10].CLK
+clk => mainCnt[11].CLK
+clk => mainCnt[12].CLK
+clk => mainCnt[13].CLK
+clk => mainCnt[14].CLK
+clk => mainCnt[15].CLK
+clk => mainCnt[16].CLK
+clk => mainCnt[17].CLK
+clk => mainCnt[18].CLK
+clk => mainCnt[19].CLK
+clk => mainCnt[20].CLK
+clk => mainCnt[21].CLK
+clk => mainCnt[22].CLK
+clk => mainCnt[23].CLK
+clk => mainCnt[24].CLK
+clk => mainCnt[25].CLK
+clk => mainCnt[26].CLK
+clk => mainCnt[27].CLK
+clk => mainCnt[28].CLK
+clk => mainCnt[29].CLK
+clk => mainCnt[30].CLK
+clk => mainCnt[31].CLK
+clk => waitNDCount[0].CLK
+clk => waitNDCount[1].CLK
+clk => waitNDCount[2].CLK
+clk => waitNDCount[3].CLK
+clk => waitNDCount[4].CLK
+clk => waitNDCount[5].CLK
+clk => waitNDCount[6].CLK
+clk => waitNDCount[7].CLK
+clk => waitNDCount[8].CLK
+clk => waitNDCount[9].CLK
+clk => waitNDCount[10].CLK
+clk => waitNDCount[11].CLK
+clk => waitNDCount[12].CLK
+clk => waitNDCount[13].CLK
+clk => waitNDCount[14].CLK
+clk => waitNDCount[15].CLK
+clk => waitNDCount[16].CLK
+clk => waitNDCount[17].CLK
+clk => waitNDCount[18].CLK
+clk => waitNDCount[19].CLK
+clk => waitNDCount[20].CLK
+clk => waitNDCount[21].CLK
+clk => waitNDCount[22].CLK
+clk => waitNDCount[23].CLK
+clk => waitNDCount[24].CLK
+clk => waitNDCount[25].CLK
+clk => waitNDCount[26].CLK
+clk => waitNDCount[27].CLK
+clk => waitNDCount[28].CLK
+clk => waitNDCount[29].CLK
+clk => waitNDCount[30].CLK
+clk => waitNDCount[31].CLK
+clk => waitNGCount[0].CLK
+clk => waitNGCount[1].CLK
+clk => waitNGCount[2].CLK
+clk => waitNGCount[3].CLK
+clk => waitNGCount[4].CLK
+clk => waitNGCount[5].CLK
+clk => waitNGCount[6].CLK
+clk => waitNGCount[7].CLK
+clk => waitNGCount[8].CLK
+clk => waitNGCount[9].CLK
+clk => waitNGCount[10].CLK
+clk => waitNGCount[11].CLK
+clk => waitNGCount[12].CLK
+clk => waitNGCount[13].CLK
+clk => waitNGCount[14].CLK
+clk => waitNGCount[15].CLK
+clk => waitNGCount[16].CLK
+clk => waitNGCount[17].CLK
+clk => waitNGCount[18].CLK
+clk => waitNGCount[19].CLK
+clk => waitNGCount[20].CLK
+clk => waitNGCount[21].CLK
+clk => waitNGCount[22].CLK
+clk => waitNGCount[23].CLK
+clk => waitNGCount[24].CLK
+clk => waitNGCount[25].CLK
+clk => waitNGCount[26].CLK
+clk => waitNGCount[27].CLK
+clk => waitNGCount[28].CLK
+clk => waitNGCount[29].CLK
+clk => waitNGCount[30].CLK
+clk => waitNGCount[31].CLK
+clk => state_reg~1.DATAIN
+clk => stateD_reg~1.DATAIN
+clk => stateG_reg~1.DATAIN
+reset => mainCnt[0].PRESET
+reset => mainCnt[1].PRESET
+reset => mainCnt[2].PRESET
+reset => mainCnt[3].PRESET
+reset => mainCnt[4].PRESET
+reset => mainCnt[5].PRESET
+reset => mainCnt[6].PRESET
+reset => mainCnt[7].PRESET
+reset => mainCnt[8].PRESET
+reset => mainCnt[9].PRESET
+reset => mainCnt[10].PRESET
+reset => mainCnt[11].PRESET
+reset => mainCnt[12].PRESET
+reset => mainCnt[13].PRESET
+reset => mainCnt[14].PRESET
+reset => mainCnt[15].PRESET
+reset => mainCnt[16].PRESET
+reset => mainCnt[17].PRESET
+reset => mainCnt[18].PRESET
+reset => mainCnt[19].PRESET
+reset => mainCnt[20].PRESET
+reset => mainCnt[21].PRESET
+reset => mainCnt[22].PRESET
+reset => mainCnt[23].PRESET
+reset => mainCnt[24].PRESET
+reset => mainCnt[25].PRESET
+reset => mainCnt[26].PRESET
+reset => mainCnt[27].PRESET
+reset => mainCnt[28].PRESET
+reset => mainCnt[29].PRESET
+reset => mainCnt[30].PRESET
+reset => mainCnt[31].PRESET
+reset => waitNDCount[0].ACLR
+reset => waitNDCount[1].ACLR
+reset => waitNDCount[2].ACLR
+reset => waitNDCount[3].ACLR
+reset => waitNDCount[4].ACLR
+reset => waitNDCount[5].ACLR
+reset => waitNDCount[6].ACLR
+reset => waitNDCount[7].ACLR
+reset => waitNDCount[8].ACLR
+reset => waitNDCount[9].ACLR
+reset => waitNDCount[10].ACLR
+reset => waitNDCount[11].ACLR
+reset => waitNDCount[12].ACLR
+reset => waitNDCount[13].ACLR
+reset => waitNDCount[14].ACLR
+reset => waitNDCount[15].ACLR
+reset => waitNDCount[16].ACLR
+reset => waitNDCount[17].ACLR
+reset => waitNDCount[18].ACLR
+reset => waitNDCount[19].ACLR
+reset => waitNDCount[20].ACLR
+reset => waitNDCount[21].ACLR
+reset => waitNDCount[22].ACLR
+reset => waitNDCount[23].ACLR
+reset => waitNDCount[24].ACLR
+reset => waitNDCount[25].ACLR
+reset => waitNDCount[26].ACLR
+reset => waitNDCount[27].ACLR
+reset => waitNDCount[28].ACLR
+reset => waitNDCount[29].ACLR
+reset => waitNDCount[30].ACLR
+reset => waitNDCount[31].ACLR
+reset => waitNGCount[0].ACLR
+reset => waitNGCount[1].ACLR
+reset => waitNGCount[2].ACLR
+reset => waitNGCount[3].ACLR
+reset => waitNGCount[4].ACLR
+reset => waitNGCount[5].ACLR
+reset => waitNGCount[6].ACLR
+reset => waitNGCount[7].ACLR
+reset => waitNGCount[8].ACLR
+reset => waitNGCount[9].ACLR
+reset => waitNGCount[10].ACLR
+reset => waitNGCount[11].ACLR
+reset => waitNGCount[12].ACLR
+reset => waitNGCount[13].ACLR
+reset => waitNGCount[14].ACLR
+reset => waitNGCount[15].ACLR
+reset => waitNGCount[16].ACLR
+reset => waitNGCount[17].ACLR
+reset => waitNGCount[18].ACLR
+reset => waitNGCount[19].ACLR
+reset => waitNGCount[20].ACLR
+reset => waitNGCount[21].ACLR
+reset => waitNGCount[22].ACLR
+reset => waitNGCount[23].ACLR
+reset => waitNGCount[24].ACLR
+reset => waitNGCount[25].ACLR
+reset => waitNGCount[26].ACLR
+reset => waitNGCount[27].ACLR
+reset => waitNGCount[28].ACLR
+reset => waitNGCount[29].ACLR
+reset => waitNGCount[30].ACLR
+reset => waitNGCount[31].ACLR
+reset => state_reg~3.DATAIN
+reset => stateD_reg~3.DATAIN
+reset => stateG_reg~3.DATAIN
+cnt_disc_rdy => stateD_next.rdy1.DATAB
+cnt_disc_rdy => Selector10.IN4
+cnt_disc_rdy => Selector8.IN1
+cnt_guru_rdy => stateG_next.rdy1.DATAB
+cnt_guru_rdy => Selector4.IN4
+cnt_guru_rdy => Selector2.IN1
+guru_addr[0] => Equal2.IN7
+guru_addr[0] => Equal3.IN7
+guru_addr[0] => Equal4.IN7
+guru_addr[0] => Equal6.IN7
+guru_addr[1] => Equal2.IN6
+guru_addr[1] => Equal3.IN6
+guru_addr[1] => Equal4.IN6
+guru_addr[1] => Equal6.IN6
+guru_addr[2] => Equal2.IN5
+guru_addr[2] => Equal3.IN5
+guru_addr[2] => Equal4.IN5
+guru_addr[2] => Equal6.IN5
+guru_addr[3] => Equal2.IN4
+guru_addr[3] => Equal3.IN4
+guru_addr[3] => Equal4.IN4
+guru_addr[3] => Equal6.IN4
+guru_addr[4] => Equal2.IN3
+guru_addr[4] => Equal3.IN3
+guru_addr[4] => Equal4.IN3
+guru_addr[4] => Equal6.IN3
+guru_addr[5] => Equal2.IN2
+guru_addr[5] => Equal3.IN2
+guru_addr[5] => Equal4.IN2
+guru_addr[5] => Equal6.IN2
+guru_addr[6] => Equal2.IN1
+guru_addr[6] => Equal3.IN1
+guru_addr[6] => Equal4.IN1
+guru_addr[6] => Equal6.IN1
+guru_addr[7] => Equal2.IN0
+guru_addr[7] => Equal3.IN0
+guru_addr[7] => Equal4.IN0
+guru_addr[7] => Equal6.IN0
+disc_addr[0] => Equal3.IN15
+disc_addr[0] => Equal4.IN15
+disc_addr[0] => Equal5.IN7
+disc_addr[1] => Equal3.IN14
+disc_addr[1] => Equal4.IN14
+disc_addr[1] => Equal5.IN6
+disc_addr[2] => Equal3.IN13
+disc_addr[2] => Equal4.IN13
+disc_addr[2] => Equal5.IN5
+disc_addr[3] => Equal3.IN12
+disc_addr[3] => Equal4.IN12
+disc_addr[3] => Equal5.IN4
+disc_addr[4] => Equal3.IN11
+disc_addr[4] => Equal4.IN11
+disc_addr[4] => Equal5.IN3
+disc_addr[5] => Equal3.IN10
+disc_addr[5] => Equal4.IN10
+disc_addr[5] => Equal5.IN2
+disc_addr[6] => Equal3.IN9
+disc_addr[6] => Equal4.IN9
+disc_addr[6] => Equal5.IN1
+disc_addr[7] => Equal3.IN8
+disc_addr[7] => Equal4.IN8
+disc_addr[7] => Equal5.IN0
+guru_prev_addr[0] => Equal5.IN15
+guru_prev_addr[1] => Equal5.IN14
+guru_prev_addr[2] => Equal5.IN13
+guru_prev_addr[3] => Equal5.IN12
+guru_prev_addr[4] => Equal5.IN11
+guru_prev_addr[5] => Equal5.IN10
+guru_prev_addr[6] => Equal5.IN9
+guru_prev_addr[7] => Equal5.IN8
+disc_prev_addr[0] => Equal2.IN15
+disc_prev_addr[0] => Equal6.IN15
+disc_prev_addr[1] => Equal2.IN14
+disc_prev_addr[1] => Equal6.IN14
+disc_prev_addr[2] => Equal2.IN13
+disc_prev_addr[2] => Equal6.IN13
+disc_prev_addr[3] => Equal2.IN12
+disc_prev_addr[3] => Equal6.IN12
+disc_prev_addr[4] => Equal2.IN11
+disc_prev_addr[4] => Equal6.IN11
+disc_prev_addr[5] => Equal2.IN10
+disc_prev_addr[5] => Equal6.IN10
+disc_prev_addr[6] => Equal2.IN9
+disc_prev_addr[6] => Equal6.IN9
+disc_prev_addr[7] => Equal2.IN8
+disc_prev_addr[7] => Equal6.IN8
+go_guru <= go_guruV.DB_MAX_OUTPUT_PORT_TYPE
+go_disc <= go_discV.DB_MAX_OUTPUT_PORT_TYPE
+guru_right_behind <= guru_right_behindV.DB_MAX_OUTPUT_PORT_TYPE
+duo_formed <= duo_formedV.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|holder:hold
+clk => state_reg.CLK
+reset => state_reg.ACLR
+inSig => holdedOut.IN1
+inSig => state_next.DATAA
+inSig => state_next.IN0
+releaseS => holdedOut.IN1
+releaseS => state_next.DATAB
+releaseS => state_next.IN1
+holdedOut <= holdedOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|holder:hold2
+clk => state_reg.CLK
+reset => state_reg.ACLR
+inSig => holdedOut.IN1
+inSig => state_next.DATAA
+inSig => state_next.IN0
+releaseS => holdedOut.IN1
+releaseS => state_next.DATAB
+releaseS => state_next.IN1
+holdedOut <= holdedOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|base_circuit_extended:cir1|holder:hold3
+clk => state_reg.CLK
+reset => state_reg.ACLR
+inSig => holdedOut.IN1
+inSig => state_next.DATAA
+inSig => state_next.IN0
+releaseS => holdedOut.IN1
+releaseS => state_next.DATAB
+releaseS => state_next.IN1
+holdedOut <= holdedOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|disciple_circuit:cir2
+clk => disc_control:control.clock
+clk => disc_datapath:data.clk
+res => disc_control:control.reset
+res => disc_datapath:data.res
+cnt_disc_rdy => disc_control:control.cnt_disc_rdy
+start_step => disc_control:control.start_step
+go_disc => disc_control:control.go_disc
+duo_formed => disc_control:control.duo_formed
+duo_formed => disc_datapath:data.duo_formed
+guru_right_behind => disc_control:control.guru_right_behind
+disc_wr_en <= disc_control:control.disc_wr_en
+disc_address_2_mem[0] <= disc_datapath:data.disc_address_2_mem[0]
+disc_address_2_mem[1] <= disc_datapath:data.disc_address_2_mem[1]
+disc_address_2_mem[2] <= disc_datapath:data.disc_address_2_mem[2]
+disc_address_2_mem[3] <= disc_datapath:data.disc_address_2_mem[3]
+disc_address_2_mem[4] <= disc_datapath:data.disc_address_2_mem[4]
+disc_address_2_mem[5] <= disc_datapath:data.disc_address_2_mem[5]
+disc_data[0] <= disc_datapath:data.disc_data[0]
+disc_data[1] <= disc_datapath:data.disc_data[1]
+disc_data[2] <= disc_datapath:data.disc_data[2]
+disc_data[3] <= disc_datapath:data.disc_data[3]
+disc_data[4] <= disc_datapath:data.disc_data[4]
+disc_data[5] <= disc_datapath:data.disc_data[5]
+disc_data[6] <= disc_datapath:data.disc_data[6]
+disc_data[7] <= disc_datapath:data.disc_data[7]
+end_of_disc <= disc_datapath:data.end_of_disc
+disc_addr_prev[0] <= disc_datapath:data.disc_addr_prev[0]
+disc_addr_prev[1] <= disc_datapath:data.disc_addr_prev[1]
+disc_addr_prev[2] <= disc_datapath:data.disc_addr_prev[2]
+disc_addr_prev[3] <= disc_datapath:data.disc_addr_prev[3]
+disc_addr_prev[4] <= disc_datapath:data.disc_addr_prev[4]
+disc_addr_prev[5] <= disc_datapath:data.disc_addr_prev[5]
+disc_addr[0] <= disc_datapath:data.disc_addr[0]
+disc_addr[1] <= disc_datapath:data.disc_addr[1]
+disc_addr[2] <= disc_datapath:data.disc_addr[2]
+disc_addr[3] <= disc_datapath:data.disc_addr[3]
+disc_addr[4] <= disc_datapath:data.disc_addr[4]
+disc_addr[5] <= disc_datapath:data.disc_addr[5]
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_control:control
+clock => state~1.DATAIN
+reset => state~3.DATAIN
+cnt_disc_rdy => next_state.INCR.DATAB
+cnt_disc_rdy => Selector1.IN2
+start_step => next_state.RAND.DATAB
+start_step => Selector0.IN2
+go_disc => COMBINATIONAL.IN0
+go_disc => COMBINATIONAL.IN0
+duo_formed => COMBINATIONAL.IN0
+duo_formed => next_state.WRITE_DUO.DATAB
+duo_formed => next_state.WRITE_DISC.DATAB
+guru_right_behind => COMBINATIONAL.IN1
+end_of_disc => COMBINATIONAL.IN1
+end_of_disc => COMBINATIONAL.IN1
+disc_wr_en <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+cg_sel.BLANK <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+cg_sel.GURU <= cg_sel.GURU.DB_MAX_OUTPUT_PORT_TYPE
+cg_sel.DISC <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+cg_sel.DUO <= cg_sel.DUO.DB_MAX_OUTPUT_PORT_TYPE
+ng_cte_incr <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+alu_ctrl <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+rb_disc_en <= rb_disc_en.DB_MAX_OUTPUT_PORT_TYPE
+rb_disc_prev_en <= rb_disc_prev_en.DB_MAX_OUTPUT_PORT_TYPE
+reg_out_sel.INIT_OUT <= reg_out_sel.INIT_OUT.DB_MAX_OUTPUT_PORT_TYPE
+reg_out_sel.GURU_OUT <= reg_out_sel.GURU_OUT.DB_MAX_OUTPUT_PORT_TYPE
+reg_out_sel.GURU_PREV_OUT <= reg_out_sel.GURU_PREV_OUT.DB_MAX_OUTPUT_PORT_TYPE
+reg_out_sel.DISC_OUT <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+reg_out_sel.DISC_PREV_OUT <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data
+clk => num_gen_disc:n_g.clk
+clk => reg_bank_disc:rb.clk
+clk => coll_ovf_disc:dut.clk
+res => num_gen_disc:n_g.reset
+res => reg_bank_disc:rb.res
+res => coll_ovf_disc:dut.res
+cg_sel.BLANK => code_gen:c_g.ctrl_code_sel.BLANK
+cg_sel.GURU => code_gen:c_g.ctrl_code_sel.GURU
+cg_sel.DISC => code_gen:c_g.ctrl_code_sel.DISC
+cg_sel.DUO => code_gen:c_g.ctrl_code_sel.DUO
+ng_cte_incr => num_gen_disc:n_g.ng_cte_incr
+alu_ctrl => alu:alu_1.alu_ctrl
+rb_disc_en => reg_bank_disc:rb.load_DISC
+rb_disc_prev_en => reg_bank_disc:rb.load_PREV_DISC
+reg_out_sel.INIT_OUT => reg_bank_disc:rb.out_sel.INIT_OUT
+reg_out_sel.GURU_OUT => reg_bank_disc:rb.out_sel.GURU_OUT
+reg_out_sel.GURU_PREV_OUT => reg_bank_disc:rb.out_sel.GURU_PREV_OUT
+reg_out_sel.DISC_OUT => reg_bank_disc:rb.out_sel.DISC_OUT
+reg_out_sel.DISC_PREV_OUT => reg_bank_disc:rb.out_sel.DISC_PREV_OUT
+duo_formed => ~NO_FANOUT~
+disc_address_2_mem[0] <= reg_bank_disc:rb.rb_out[0]
+disc_address_2_mem[1] <= reg_bank_disc:rb.rb_out[1]
+disc_address_2_mem[2] <= reg_bank_disc:rb.rb_out[2]
+disc_address_2_mem[3] <= reg_bank_disc:rb.rb_out[3]
+disc_address_2_mem[4] <= reg_bank_disc:rb.rb_out[4]
+disc_address_2_mem[5] <= reg_bank_disc:rb.rb_out[5]
+disc_data[0] <= code_gen:c_g.mem_code_w[0]
+disc_data[1] <= code_gen:c_g.mem_code_w[1]
+disc_data[2] <= code_gen:c_g.mem_code_w[2]
+disc_data[3] <= code_gen:c_g.mem_code_w[3]
+disc_data[4] <= code_gen:c_g.mem_code_w[4]
+disc_data[5] <= code_gen:c_g.mem_code_w[5]
+disc_data[6] <= code_gen:c_g.mem_code_w[6]
+disc_data[7] <= code_gen:c_g.mem_code_w[7]
+end_of_disc <= coll_ovf_disc:dut.end_of_disc
+disc_addr_prev[0] <= reg_bank_disc:rb.disc_prev_addr[0]
+disc_addr_prev[1] <= reg_bank_disc:rb.disc_prev_addr[1]
+disc_addr_prev[2] <= reg_bank_disc:rb.disc_prev_addr[2]
+disc_addr_prev[3] <= reg_bank_disc:rb.disc_prev_addr[3]
+disc_addr_prev[4] <= reg_bank_disc:rb.disc_prev_addr[4]
+disc_addr_prev[5] <= reg_bank_disc:rb.disc_prev_addr[5]
+disc_addr[0] <= reg_bank_disc:rb.disc_addr[0]
+disc_addr[1] <= reg_bank_disc:rb.disc_addr[1]
+disc_addr[2] <= reg_bank_disc:rb.disc_addr[2]
+disc_addr[3] <= reg_bank_disc:rb.disc_addr[3]
+disc_addr[4] <= reg_bank_disc:rb.disc_addr[4]
+disc_addr[5] <= reg_bank_disc:rb.disc_addr[5]
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|num_gen_disc:n_g
+clk => rand_num_disc:rand_num_output_gen.clk
+reset => rand_num_disc:rand_num_output_gen.rst
+alu_result[0] => ng_2_rb_s.DATAA
+alu_result[1] => ng_2_rb_s.DATAA
+alu_result[2] => ng_2_rb_s.DATAA
+alu_result[3] => ng_2_rb_s.DATAA
+alu_result[4] => ng_2_rb_s.DATAA
+alu_result[5] => ng_2_rb_s.DATAA
+alu_result[6] => ng_2_rb_s.DATAA
+alu_result[7] => ng_2_rb_s.DATAA
+ng_cte_incr => ng_2_rb_s.OUTPUTSELECT
+ng_cte_incr => ng_2_rb_s.OUTPUTSELECT
+ng_cte_incr => ng_2_rb_s.OUTPUTSELECT
+ng_cte_incr => ng_2_rb_s.OUTPUTSELECT
+ng_cte_incr => ng_2_rb_s.OUTPUTSELECT
+ng_cte_incr => ng_2_rb_s.OUTPUTSELECT
+ng_cte_incr => ng_2_rb_s.OUTPUTSELECT
+ng_cte_incr => ng_2_rb_s.OUTPUTSELECT
+ng_2_rb[0] <= ng_2_rb_s.DB_MAX_OUTPUT_PORT_TYPE
+ng_2_rb[1] <= ng_2_rb_s.DB_MAX_OUTPUT_PORT_TYPE
+ng_2_rb[2] <= ng_2_rb_s.DB_MAX_OUTPUT_PORT_TYPE
+ng_2_rb[3] <= ng_2_rb_s.DB_MAX_OUTPUT_PORT_TYPE
+ng_2_rb[4] <= ng_2_rb_s.DB_MAX_OUTPUT_PORT_TYPE
+ng_2_rb[5] <= ng_2_rb_s.DB_MAX_OUTPUT_PORT_TYPE
+ng_2_rb[6] <= ng_2_rb_s.DB_MAX_OUTPUT_PORT_TYPE
+ng_2_rb[7] <= ng_2_rb_s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|num_gen_disc:n_g|rand_num_disc:rand_num_output_gen
+clk => lfsr:L0.clk
+rst => lfsr:L0.rst
+rand_num_output[0] <= lfsr:L0.Q[0]
+rand_num_output[1] <= lfsr:L0.Q[1]
+rand_num_output[2] <= <VCC>
+rand_num_output[3] <= <VCC>
+rand_num_output[4] <= <VCC>
+rand_num_output[5] <= <VCC>
+rand_num_output[6] <= <GND>
+rand_num_output[7] <= <GND>
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|num_gen_disc:n_g|rand_num_disc:rand_num_output_gen|lfsr:L0
+Q[0] <= d_reg:generate_lfsr:0:zero:D2.q
+Q[1] <= d_reg:generate_lfsr:1:with_tap:D0.q
+Q[2] <= d_reg:generate_lfsr:2:without_tap:D1.q
+Q[3] <= d_reg:generate_lfsr:3:without_tap:D1.q
+Q[4] <= d_reg:generate_lfsr:4:with_tap:D0.q
+Q[5] <= d_reg:generate_lfsr:5:without_tap:D1.q
+Q[6] <= d_reg:generate_lfsr:6:with_tap:D0.q
+Q[7] <= d_reg:generate_lfsr:7:with_tap:D0.q
+Q[8] <= d_reg:generate_lfsr:8:with_tap:D0.q
+Q[9] <= d_reg:generate_lfsr:9:without_tap:D1.q
+Q[10] <= d_reg:generate_lfsr:10:without_tap:D1.q
+Q[11] <= d_reg:generate_lfsr:11:with_tap:D0.q
+clk => d_reg:generate_lfsr:11:with_tap:D0.clk
+clk => d_reg:generate_lfsr:10:without_tap:D1.clk
+clk => d_reg:generate_lfsr:9:without_tap:D1.clk
+clk => d_reg:generate_lfsr:8:with_tap:D0.clk
+clk => d_reg:generate_lfsr:7:with_tap:D0.clk
+clk => d_reg:generate_lfsr:6:with_tap:D0.clk
+clk => d_reg:generate_lfsr:5:without_tap:D1.clk
+clk => d_reg:generate_lfsr:4:with_tap:D0.clk
+clk => d_reg:generate_lfsr:3:without_tap:D1.clk
+clk => d_reg:generate_lfsr:2:without_tap:D1.clk
+clk => d_reg:generate_lfsr:1:with_tap:D0.clk
+clk => d_reg:generate_lfsr:0:zero:D2.clk
+rst => d_s[11].IN1
+rst => d_s[10].IN1
+rst => d_s[9].IN1
+rst => d_s[8].IN1
+rst => d_s[7].IN1
+rst => d_s[6].IN1
+rst => d_s[5].IN1
+rst => d_s[4].IN1
+rst => d_s[3].IN1
+rst => d_s[2].IN1
+rst => d_s[1].IN1
+rst => d_s[0].IN1
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|num_gen_disc:n_g|rand_num_disc:rand_num_output_gen|lfsr:L0|d_reg:\generate_lfsr:11:with_tap:D0
+clk => q_s.CLK
+load => q_s.ENA
+d => q_s.DATAIN
+q <= q_s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|num_gen_disc:n_g|rand_num_disc:rand_num_output_gen|lfsr:L0|d_reg:\generate_lfsr:10:without_tap:D1
+clk => q_s.CLK
+load => q_s.ENA
+d => q_s.DATAIN
+q <= q_s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|num_gen_disc:n_g|rand_num_disc:rand_num_output_gen|lfsr:L0|d_reg:\generate_lfsr:9:without_tap:D1
+clk => q_s.CLK
+load => q_s.ENA
+d => q_s.DATAIN
+q <= q_s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|num_gen_disc:n_g|rand_num_disc:rand_num_output_gen|lfsr:L0|d_reg:\generate_lfsr:8:with_tap:D0
+clk => q_s.CLK
+load => q_s.ENA
+d => q_s.DATAIN
+q <= q_s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|num_gen_disc:n_g|rand_num_disc:rand_num_output_gen|lfsr:L0|d_reg:\generate_lfsr:7:with_tap:D0
+clk => q_s.CLK
+load => q_s.ENA
+d => q_s.DATAIN
+q <= q_s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|num_gen_disc:n_g|rand_num_disc:rand_num_output_gen|lfsr:L0|d_reg:\generate_lfsr:6:with_tap:D0
+clk => q_s.CLK
+load => q_s.ENA
+d => q_s.DATAIN
+q <= q_s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|num_gen_disc:n_g|rand_num_disc:rand_num_output_gen|lfsr:L0|d_reg:\generate_lfsr:5:without_tap:D1
+clk => q_s.CLK
+load => q_s.ENA
+d => q_s.DATAIN
+q <= q_s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|num_gen_disc:n_g|rand_num_disc:rand_num_output_gen|lfsr:L0|d_reg:\generate_lfsr:4:with_tap:D0
+clk => q_s.CLK
+load => q_s.ENA
+d => q_s.DATAIN
+q <= q_s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|num_gen_disc:n_g|rand_num_disc:rand_num_output_gen|lfsr:L0|d_reg:\generate_lfsr:3:without_tap:D1
+clk => q_s.CLK
+load => q_s.ENA
+d => q_s.DATAIN
+q <= q_s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|num_gen_disc:n_g|rand_num_disc:rand_num_output_gen|lfsr:L0|d_reg:\generate_lfsr:2:without_tap:D1
+clk => q_s.CLK
+load => q_s.ENA
+d => q_s.DATAIN
+q <= q_s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|num_gen_disc:n_g|rand_num_disc:rand_num_output_gen|lfsr:L0|d_reg:\generate_lfsr:1:with_tap:D0
+clk => q_s.CLK
+load => q_s.ENA
+d => q_s.DATAIN
+q <= q_s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|num_gen_disc:n_g|rand_num_disc:rand_num_output_gen|lfsr:L0|d_reg:\generate_lfsr:0:zero:D2
+clk => q_s.CLK
+load => q_s.ENA
+d => q_s.DATAIN
+q <= q_s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|reg_bank_disc:rb
+clk => reg:reg_DISC.clk
+clk => reg:reg_PREV_DISC.clk
+res => reg:reg_DISC.clr
+res => reg:reg_PREV_DISC.clr
+ng_2_rb[0] => reg:reg_DISC.d[0]
+ng_2_rb[1] => reg:reg_DISC.d[1]
+ng_2_rb[2] => reg:reg_DISC.d[2]
+ng_2_rb[3] => reg:reg_DISC.d[3]
+ng_2_rb[4] => reg:reg_DISC.d[4]
+ng_2_rb[5] => reg:reg_DISC.d[5]
+ng_2_rb[6] => reg:reg_DISC.d[6]
+ng_2_rb[7] => reg:reg_DISC.d[7]
+load_DISC => reg:reg_DISC.load
+load_PREV_DISC => reg:reg_PREV_DISC.load
+out_sel.INIT_OUT => ~NO_FANOUT~
+out_sel.GURU_OUT => ~NO_FANOUT~
+out_sel.GURU_PREV_OUT => ~NO_FANOUT~
+out_sel.DISC_OUT => rb_out.OUTPUTSELECT
+out_sel.DISC_OUT => rb_out.OUTPUTSELECT
+out_sel.DISC_OUT => rb_out.OUTPUTSELECT
+out_sel.DISC_OUT => rb_out.OUTPUTSELECT
+out_sel.DISC_OUT => rb_out.OUTPUTSELECT
+out_sel.DISC_OUT => rb_out.OUTPUTSELECT
+out_sel.DISC_OUT => rb_out.OUTPUTSELECT
+out_sel.DISC_OUT => rb_out.OUTPUTSELECT
+out_sel.DISC_PREV_OUT => ~NO_FANOUT~
+disc_addr[0] <= reg:reg_DISC.q[0]
+disc_addr[1] <= reg:reg_DISC.q[1]
+disc_addr[2] <= reg:reg_DISC.q[2]
+disc_addr[3] <= reg:reg_DISC.q[3]
+disc_addr[4] <= reg:reg_DISC.q[4]
+disc_addr[5] <= reg:reg_DISC.q[5]
+disc_addr[6] <= reg:reg_DISC.q[6]
+disc_addr[7] <= reg:reg_DISC.q[7]
+disc_prev_addr[0] <= reg:reg_PREV_DISC.q[0]
+disc_prev_addr[1] <= reg:reg_PREV_DISC.q[1]
+disc_prev_addr[2] <= reg:reg_PREV_DISC.q[2]
+disc_prev_addr[3] <= reg:reg_PREV_DISC.q[3]
+disc_prev_addr[4] <= reg:reg_PREV_DISC.q[4]
+disc_prev_addr[5] <= reg:reg_PREV_DISC.q[5]
+disc_prev_addr[6] <= reg:reg_PREV_DISC.q[6]
+disc_prev_addr[7] <= reg:reg_PREV_DISC.q[7]
+rb_out[0] <= rb_out.DB_MAX_OUTPUT_PORT_TYPE
+rb_out[1] <= rb_out.DB_MAX_OUTPUT_PORT_TYPE
+rb_out[2] <= rb_out.DB_MAX_OUTPUT_PORT_TYPE
+rb_out[3] <= rb_out.DB_MAX_OUTPUT_PORT_TYPE
+rb_out[4] <= rb_out.DB_MAX_OUTPUT_PORT_TYPE
+rb_out[5] <= rb_out.DB_MAX_OUTPUT_PORT_TYPE
+rb_out[6] <= rb_out.DB_MAX_OUTPUT_PORT_TYPE
+rb_out[7] <= rb_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|reg_bank_disc:rb|reg:reg_DISC
+clk => q_s[0].CLK
+clk => q_s[1].CLK
+clk => q_s[2].CLK
+clk => q_s[3].CLK
+clk => q_s[4].CLK
+clk => q_s[5].CLK
+clk => q_s[6].CLK
+clk => q_s[7].CLK
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+d[0] => q_s.DATAB
+d[1] => q_s.DATAB
+d[2] => q_s.DATAB
+d[3] => q_s.DATAB
+d[4] => q_s.DATAB
+d[5] => q_s.DATAB
+d[6] => q_s.DATAB
+d[7] => q_s.DATAB
+q[0] <= q_s[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q_s[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q_s[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q_s[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q_s[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q_s[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q_s[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q_s[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|reg_bank_disc:rb|reg:reg_PREV_DISC
+clk => q_s[0].CLK
+clk => q_s[1].CLK
+clk => q_s[2].CLK
+clk => q_s[3].CLK
+clk => q_s[4].CLK
+clk => q_s[5].CLK
+clk => q_s[6].CLK
+clk => q_s[7].CLK
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+clr => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+load => q_s.OUTPUTSELECT
+d[0] => q_s.DATAB
+d[1] => q_s.DATAB
+d[2] => q_s.DATAB
+d[3] => q_s.DATAB
+d[4] => q_s.DATAB
+d[5] => q_s.DATAB
+d[6] => q_s.DATAB
+d[7] => q_s.DATAB
+q[0] <= q_s[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q_s[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q_s[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q_s[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q_s[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q_s[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q_s[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q_s[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|alu:alu_1
+one_op[0] => rc_adder:add.a_i[0]
+one_op[1] => rc_adder:add.a_i[1]
+one_op[2] => rc_adder:add.a_i[2]
+one_op[3] => rc_adder:add.a_i[3]
+one_op[4] => rc_adder:add.a_i[4]
+one_op[5] => rc_adder:add.a_i[5]
+one_op[6] => rc_adder:add.a_i[6]
+one_op[7] => rc_adder:add.a_i[7]
+rb_op[0] => alu_result.DATAB
+rb_op[0] => rc_adder:add.b_i[0]
+rb_op[1] => alu_result.DATAB
+rb_op[1] => rc_adder:add.b_i[1]
+rb_op[2] => alu_result.DATAB
+rb_op[2] => rc_adder:add.b_i[2]
+rb_op[3] => alu_result.DATAB
+rb_op[3] => rc_adder:add.b_i[3]
+rb_op[4] => alu_result.DATAB
+rb_op[4] => rc_adder:add.b_i[4]
+rb_op[5] => alu_result.DATAB
+rb_op[5] => rc_adder:add.b_i[5]
+rb_op[6] => alu_result.DATAB
+rb_op[6] => rc_adder:add.b_i[6]
+rb_op[7] => alu_result.DATAB
+rb_op[7] => rc_adder:add.b_i[7]
+alu_ctrl => alu_result.OUTPUTSELECT
+alu_ctrl => alu_result.OUTPUTSELECT
+alu_ctrl => alu_result.OUTPUTSELECT
+alu_ctrl => alu_result.OUTPUTSELECT
+alu_ctrl => alu_result.OUTPUTSELECT
+alu_ctrl => alu_result.OUTPUTSELECT
+alu_ctrl => alu_result.OUTPUTSELECT
+alu_ctrl => alu_result.OUTPUTSELECT
+alu_result[0] <= alu_result.DB_MAX_OUTPUT_PORT_TYPE
+alu_result[1] <= alu_result.DB_MAX_OUTPUT_PORT_TYPE
+alu_result[2] <= alu_result.DB_MAX_OUTPUT_PORT_TYPE
+alu_result[3] <= alu_result.DB_MAX_OUTPUT_PORT_TYPE
+alu_result[4] <= alu_result.DB_MAX_OUTPUT_PORT_TYPE
+alu_result[5] <= alu_result.DB_MAX_OUTPUT_PORT_TYPE
+alu_result[6] <= alu_result.DB_MAX_OUTPUT_PORT_TYPE
+alu_result[7] <= alu_result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|alu:alu_1|rc_adder:add
+a_i[0] => full_adder_1:adder_1.a_in
+a_i[1] => full_adder_1:adder_2.a_in
+a_i[2] => full_adder_1:adder_3.a_in
+a_i[3] => full_adder_1:adder_4.a_in
+a_i[4] => full_adder_1:adder_5.a_in
+a_i[5] => full_adder_1:adder_6.a_in
+a_i[6] => full_adder_1:adder_7.a_in
+a_i[7] => full_adder_1:adder_8.a_in
+b_i[0] => full_adder_1:adder_1.b_in
+b_i[1] => full_adder_1:adder_2.b_in
+b_i[2] => full_adder_1:adder_3.b_in
+b_i[3] => full_adder_1:adder_4.b_in
+b_i[4] => full_adder_1:adder_5.b_in
+b_i[5] => full_adder_1:adder_6.b_in
+b_i[6] => full_adder_1:adder_7.b_in
+b_i[7] => full_adder_1:adder_8.b_in
+z_o[0] <= full_adder_1:adder_1.z_out
+z_o[1] <= full_adder_1:adder_2.z_out
+z_o[2] <= full_adder_1:adder_3.z_out
+z_o[3] <= full_adder_1:adder_4.z_out
+z_o[4] <= full_adder_1:adder_5.z_out
+z_o[5] <= full_adder_1:adder_6.z_out
+z_o[6] <= full_adder_1:adder_7.z_out
+z_o[7] <= full_adder_1:adder_8.z_out
+c_i => full_adder_1:adder_1.c_in
+c_o <= full_adder_1:adder_8.c_out
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|alu:alu_1|rc_adder:add|full_adder_1:adder_1
+a_in => aux_xor.IN0
+a_in => aux_and_1.IN0
+a_in => aux_and_2.IN0
+b_in => aux_xor.IN1
+b_in => aux_and_1.IN1
+b_in => aux_and_3.IN0
+c_in => z_out.IN1
+c_in => aux_and_2.IN1
+c_in => aux_and_3.IN1
+z_out <= z_out.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|alu:alu_1|rc_adder:add|full_adder_1:adder_2
+a_in => aux_xor.IN0
+a_in => aux_and_1.IN0
+a_in => aux_and_2.IN0
+b_in => aux_xor.IN1
+b_in => aux_and_1.IN1
+b_in => aux_and_3.IN0
+c_in => z_out.IN1
+c_in => aux_and_2.IN1
+c_in => aux_and_3.IN1
+z_out <= z_out.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|alu:alu_1|rc_adder:add|full_adder_1:adder_3
+a_in => aux_xor.IN0
+a_in => aux_and_1.IN0
+a_in => aux_and_2.IN0
+b_in => aux_xor.IN1
+b_in => aux_and_1.IN1
+b_in => aux_and_3.IN0
+c_in => z_out.IN1
+c_in => aux_and_2.IN1
+c_in => aux_and_3.IN1
+z_out <= z_out.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|alu:alu_1|rc_adder:add|full_adder_1:adder_4
+a_in => aux_xor.IN0
+a_in => aux_and_1.IN0
+a_in => aux_and_2.IN0
+b_in => aux_xor.IN1
+b_in => aux_and_1.IN1
+b_in => aux_and_3.IN0
+c_in => z_out.IN1
+c_in => aux_and_2.IN1
+c_in => aux_and_3.IN1
+z_out <= z_out.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|alu:alu_1|rc_adder:add|full_adder_1:adder_5
+a_in => aux_xor.IN0
+a_in => aux_and_1.IN0
+a_in => aux_and_2.IN0
+b_in => aux_xor.IN1
+b_in => aux_and_1.IN1
+b_in => aux_and_3.IN0
+c_in => z_out.IN1
+c_in => aux_and_2.IN1
+c_in => aux_and_3.IN1
+z_out <= z_out.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|alu:alu_1|rc_adder:add|full_adder_1:adder_6
+a_in => aux_xor.IN0
+a_in => aux_and_1.IN0
+a_in => aux_and_2.IN0
+b_in => aux_xor.IN1
+b_in => aux_and_1.IN1
+b_in => aux_and_3.IN0
+c_in => z_out.IN1
+c_in => aux_and_2.IN1
+c_in => aux_and_3.IN1
+z_out <= z_out.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|alu:alu_1|rc_adder:add|full_adder_1:adder_7
+a_in => aux_xor.IN0
+a_in => aux_and_1.IN0
+a_in => aux_and_2.IN0
+b_in => aux_xor.IN1
+b_in => aux_and_1.IN1
+b_in => aux_and_3.IN0
+c_in => z_out.IN1
+c_in => aux_and_2.IN1
+c_in => aux_and_3.IN1
+z_out <= z_out.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|alu:alu_1|rc_adder:add|full_adder_1:adder_8
+a_in => aux_xor.IN0
+a_in => aux_and_1.IN0
+a_in => aux_and_2.IN0
+b_in => aux_xor.IN1
+b_in => aux_and_1.IN1
+b_in => aux_and_3.IN0
+c_in => z_out.IN1
+c_in => aux_and_2.IN1
+c_in => aux_and_3.IN1
+z_out <= z_out.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|code_gen:c_g
+ctrl_code_sel.BLANK => mem_code_w[0].IN0
+ctrl_code_sel.GURU => mem_code_w[1].IN0
+ctrl_code_sel.DISC => mem_code_w[2].IN0
+ctrl_code_sel.DUO => mem_code_w[3].IN0
+mem_code_w[0] <= mem_code_w[0].DB_MAX_OUTPUT_PORT_TYPE
+mem_code_w[1] <= mem_code_w[1].DB_MAX_OUTPUT_PORT_TYPE
+mem_code_w[2] <= mem_code_w[2].DB_MAX_OUTPUT_PORT_TYPE
+mem_code_w[3] <= mem_code_w[3].DB_MAX_OUTPUT_PORT_TYPE
+mem_code_w[4] <= <GND>
+mem_code_w[5] <= <GND>
+mem_code_w[6] <= <GND>
+mem_code_w[7] <= <GND>
+
+
+|wisdom_circuit|disciple_circuit:cir2|disc_datapath:data|coll_ovf_disc:dut
+clk => ~NO_FANOUT~
+res => ~NO_FANOUT~
+disc_addr[0] => ~NO_FANOUT~
+disc_addr[1] => ~NO_FANOUT~
+disc_addr[2] => ~NO_FANOUT~
+disc_addr[3] => ~NO_FANOUT~
+disc_addr[4] => ~NO_FANOUT~
+disc_addr[5] => ~NO_FANOUT~
+disc_addr[6] => end_of_disc.IN0
+disc_addr[7] => end_of_disc.IN1
+end_of_disc <= end_of_disc.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Tue Jul 11 15:30:38 2023
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : wisdom_circuit
+Top-level Entity Name : wisdom_circuit
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 309
+Total pins : 23
+Total virtual pins : 0
+Total block memory bits : 512
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0
+Total DLLs : 0

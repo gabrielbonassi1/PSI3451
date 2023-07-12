@@ -1,0 +1,87 @@
+
+State Machine - |wisdom_circuit|disciple_circuit:cir2|disc_control:control|state
+Name state.LAST_WITH_GURU state.LAST state.CHECK_BEHIND_DUO state.CLEAR_PREV state.WRITE_DISC state.WRITE_DUO state.CHECK_DUO state.CHECK_LAST state.INCR state.WAIT_CONT_DISC state.WRITE_RAND state.RAND state.START 
+state.START 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.RAND 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.WRITE_RAND 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.WAIT_CONT_DISC 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.INCR 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.CHECK_LAST 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.CHECK_DUO 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.WRITE_DUO 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.WRITE_DISC 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.CLEAR_PREV 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.CHECK_BEHIND_DUO 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.LAST 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.LAST_WITH_GURU 1 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |wisdom_circuit|base_circuit_extended:cir1|referee:ref|state_reg
+Name state_reg.unm_go_guru state_reg.wait50l state_reg.wait55 state_reg.unm_godisc_BL state_reg.unm_go_discB state_reg.conflict state_reg.wait50b state_reg.detect state_reg.go_guru_state state_reg.checkMiddle state_reg.detect1 state_reg.conflict1 state_reg.checkTop state_reg.wait50 state_reg.idle 
+state_reg.idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state_reg.wait50 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state_reg.checkTop 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state_reg.conflict1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state_reg.detect1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state_reg.checkMiddle 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state_reg.go_guru_state 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state_reg.detect 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state_reg.wait50b 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state_reg.conflict 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state_reg.unm_go_discB 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state_reg.unm_godisc_BL 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state_reg.wait55 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state_reg.wait50l 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state_reg.unm_go_guru 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |wisdom_circuit|base_circuit_extended:cir1|referee:ref|stateD_reg
+Name stateD_reg.rdy0 stateD_reg.tick0 stateD_reg.waitNClk stateD_reg.rdy1 stateD_reg.waitRdy0 
+stateD_reg.waitRdy0 0 0 0 0 0 
+stateD_reg.rdy1 0 0 0 1 1 
+stateD_reg.waitNClk 0 0 1 0 1 
+stateD_reg.tick0 0 1 0 0 1 
+stateD_reg.rdy0 1 0 0 0 1 
+
+State Machine - |wisdom_circuit|base_circuit_extended:cir1|referee:ref|stateG_reg
+Name stateG_reg.rdy0 stateG_reg.tick0 stateG_reg.waitNClk stateG_reg.rdy1 stateG_reg.waitRdy0 
+stateG_reg.waitRdy0 0 0 0 0 0 
+stateG_reg.rdy1 0 0 0 1 1 
+stateG_reg.waitNClk 0 0 1 0 1 
+stateG_reg.tick0 0 1 0 0 1 
+stateG_reg.rdy0 1 0 0 0 1 
+
+State Machine - |wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_control:control|fsm_guru:guru|STATE
+Name STATE.CLEAR_PREV STATE.LAST STATE.CHECK_LAST STATE.WRITE_GURU STATE.WRITE_DUO STATE.CHECK_SAME_ADDR STATE.INCR STATE.WAIT_COUNT_GURU STATE.WRITE_RAND STATE.RAND STATE.START_WALKING 
+STATE.START_WALKING 0 0 0 0 0 0 0 0 0 0 0 
+STATE.RAND 0 0 0 0 0 0 0 0 0 1 1 
+STATE.WRITE_RAND 0 0 0 0 0 0 0 0 1 0 1 
+STATE.WAIT_COUNT_GURU 0 0 0 0 0 0 0 1 0 0 1 
+STATE.INCR 0 0 0 0 0 0 1 0 0 0 1 
+STATE.CHECK_SAME_ADDR 0 0 0 0 0 1 0 0 0 0 1 
+STATE.WRITE_DUO 0 0 0 0 1 0 0 0 0 0 1 
+STATE.WRITE_GURU 0 0 0 1 0 0 0 0 0 0 1 
+STATE.CHECK_LAST 0 0 1 0 0 0 0 0 0 0 1 
+STATE.LAST 0 1 0 0 0 0 0 0 0 0 1 
+STATE.CLEAR_PREV 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_control:control|fsm_init:init|STATE
+Name STATE.DONE STATE.MEM_WALK STATE.ZERO STATE.IDLE 
+STATE.IDLE 0 0 0 0 
+STATE.ZERO 0 0 1 1 
+STATE.MEM_WALK 0 1 0 1 
+STATE.DONE 1 0 0 1 
+
+State Machine - |wisdom_circuit|base_circuit_extended:cir1|base_circuit:basis|base_control:control|fsm_main:main|STATE
+Name STATE.CNT_START STATE.CNT_PREPARE STATE.HIT_POINT STATE.CHECK_END STATE.STEP_ACTIVATION STATE.INIT_ACTIVATION 
+STATE.INIT_ACTIVATION 0 0 0 0 0 0 
+STATE.STEP_ACTIVATION 0 0 0 0 1 1 
+STATE.CHECK_END 0 0 0 1 0 1 
+STATE.HIT_POINT 0 0 1 0 0 1 
+STATE.CNT_PREPARE 0 1 0 0 0 1 
+STATE.CNT_START 1 0 0 0 0 1 
+
+State Machine - |wisdom_circuit|base_circuit_extended:cir1|button_handler:button|speed_sync_s
+Name speed_sync_s.EIGHT_X speed_sync_s.FOUR_X speed_sync_s.TWO_X speed_sync_s.ONE_X 
+speed_sync_s.ONE_X 0 0 0 0 
+speed_sync_s.TWO_X 0 0 1 1 
+speed_sync_s.FOUR_X 0 1 0 1 
+speed_sync_s.EIGHT_X 1 0 0 1 
